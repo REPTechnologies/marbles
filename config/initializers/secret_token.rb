@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Marbles::Application.config.secret_key_base = '918468e66ac3be44d3c58d3366ea2b188a28024c0f3d61cd48b1fc2b13edf2ac7184956ecb0ceabd162e06e0d7a0154946f2469b8fa65f84090fbb7a2428da6a'
+Marbles::Application.config.secret_key_base = '280116cd2a139e70352a270aeb842e52d1cbbb65c572823a1356c248deb422cba84b5699e1e7d0bb4cb7f960677e4539bd95be9b098d898af58120a3348ad46d'
