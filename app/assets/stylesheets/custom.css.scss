@@ -1,0 +1,82 @@
+@import 'defs';
+
+body {
+  background-color: $white-color;
+}
+
+#page {
+  background-color: $white-color;
+  min-height: 500px;
+  padding-bottom: $footer-height;
+}
+
+header, footer {
+  background-color: $primary-color;
+  color: $light-text-color;
+  position: relative;
+}
+
+header.main, footer {
+  z-index: 10;
+  padding: $padding-size;
+}
+
+.fixed {
+  @include border-box;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+}
+
+header.fixed {
+  height: 60px;
+  z-index: 5;
+  padding-top: 10px;
+}
+
+div.fixed {
+  z-index: 15;
+}
+
+footer {
+  @include border-box();
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: $footer-height;
+}
+
+.center {
+  width: $content-width;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.right {
+  text-align:right;
+}
+
+.accent {
+  color: $accent-color;
+}
+
+section {
+  padding-top: $padding-size;
+  padding-bottom: $padding-size;
+}
+
+section:nth-child(even) {
+  background-color: $light-gray-color;
+}
+
+section:nth-child(odd) {
+  background-color: $white-color;
+}
+
+
+
+
+
+

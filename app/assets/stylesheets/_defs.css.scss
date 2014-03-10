@@ -1,0 +1,19 @@
+$dark-gray-color: #666;
+$light-gray-color: #ccc;
+$marbles-orange-color: #fc6523;
+$white-color: #fff;
+
+$primary-color: $dark-gray-color;
+$accent-color: $marbles-orange-color;
+$light-text-color: $light-gray-color;
+$dark-text-color: $dark-gray-color;
+
+$content-width: 1200px;
+$padding-size: 10px;
+$footer-height: 54px;
+
+@mixin border-box() {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
