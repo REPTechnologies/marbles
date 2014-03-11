@@ -11,6 +11,9 @@ gem 'interactor-rails', '~> 1.0'
 # See http://vigetlabs.github.io/sprig/about.html
 gem 'sprig', '~> 0.1'
 
+# Use devise as authentication engine
+gem 'devise', '~> 3.2'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
@@ -68,4 +71,5 @@ group :test, :development do
   gem "database_cleaner"
   gem "guard", ">=2.1.0"
   gem "guard-rspec"
+  gem "faker"
 end

@@ -1,0 +1,21 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/donovan/Checkout/reptech/marbles/app/controllers/home_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/home/donovan/Checkout/reptech/marbles/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1394503720
+  }
+}
