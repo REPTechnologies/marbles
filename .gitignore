@@ -14,4 +14,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore environment file
 .env
+
+# Ignore coverage reports
+/coverage
