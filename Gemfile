@@ -36,6 +36,9 @@ gem 'jquery-rails'
 # Use backbone as the JavaScript framework
 gem 'backbone-on-rails'
 
+# Use Acts-as-taggable-on as tagging library
+gem "acts-as-taggable-on", "~> 3.0.2"
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'
 
