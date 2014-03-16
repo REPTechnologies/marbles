@@ -11,7 +11,76 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140315011630) do
+ActiveRecord::Schema.define(version: 20140316230747) do
+
+  create_table "attendees_events", id: false, force: true do |t|
+    t.integer "event_id",    null: false
+    t.integer "attendee_id", null: false
+  end
+
+  create_table "events", force: true do |t|
+    t.string   "title"
+    t.integer  "organization_id"
+    t.integer  "primary_focus_id"
+    t.integer  "secondary_focus_id"
+    t.integer  "type",               default: 0
+    t.datetime "held_at"
+    t.string   "location"
+    t.integer  "seats"
+    t.decimal  "cost"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "events", ["organization_id"], name: "index_events_on_organization_id"
+  add_index "events", ["primary_focus_id"], name: "index_events_on_primary_focus_id"
+  add_index "events", ["secondary_focus_id"], name: "index_events_on_secondary_focus_id"
+
+  create_table "events_scopes", id: false, force: true do |t|
+    t.integer "event_id", null: false
+    t.integer "scope_id", null: false
+  end
+
+  create_table "focus", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "organizations", force: true do |t|
+    t.string   "name"
+    t.integer  "owner_id"
+    t.integer  "plan_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "organizations", ["owner_id"], name: "index_organizations_on_owner_id"
+  add_index "organizations", ["plan_id"], name: "index_organizations_on_plan_id"
+
+  create_table "organizations_users", id: false, force: true do |t|
+    t.integer "organization_id", null: false
+    t.integer "user_id",         null: false
+  end
+
+  create_table "packages", force: true do |t|
+    t.string   "name"
+    t.decimal  "cost"
+    t.boolean  "trial"
+    t.boolean  "negotiated"
+    t.datetime "renew_at"
+    t.boolean  "user_selectable"
+    t.integer  "billing_schedule", default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "scopes", force: true do |t|
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "taggings", force: true do |t|
     t.integer  "tag_id"

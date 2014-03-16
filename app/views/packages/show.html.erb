@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @package.name %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @package.cost %>
+</p>
+
+<p>
+  <strong>Trial:</strong>
+  <%= @package.trial %>
+</p>
+
+<p>
+  <strong>Negotiated:</strong>
+  <%= @package.negotiated %>
+</p>
+
+<p>
+  <strong>Renew at:</strong>
+  <%= @package.renew_at %>
+</p>
+
+<p>
+  <strong>User selectable:</strong>
+  <%= @package.user_selectable %>
+</p>
+
+<p>
+  <strong>Billing schedule:</strong>
+  <%= @package.billing_schedule %>
+</p>
+
+<%= link_to 'Edit', edit_package_path(@package) %> |
+<%= link_to 'Back', packages_path %>
