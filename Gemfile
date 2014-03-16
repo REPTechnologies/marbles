@@ -33,8 +33,8 @@ gem 'uglifier', '>= 1.3.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-# Use backbone as the JavaScript framework
-gem 'backbone-on-rails'
+# Use backbone, marionette and dust as the JavaScript framework
+gem 'marionette_dust', '~> 0.1'
 
 # Use Acts-as-taggable-on as tagging library
 gem "acts-as-taggable-on", "~> 3.0.2"
