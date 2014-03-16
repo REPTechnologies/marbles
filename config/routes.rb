@@ -1,4 +1,6 @@
 Marbles::Application.routes.draw do
+  resources :packages
+
   resources :organizations
 
   resources :events
