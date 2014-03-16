@@ -1,4 +1,6 @@
 Marbles::Application.routes.draw do
+  resources :organizations
+
   resources :events
 
   devise_for :users
