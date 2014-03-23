@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140316230747) do
+ActiveRecord::Schema.define(version: 20140323031810) do
 
   create_table "attendees_events", id: false, force: true do |t|
     t.integer "event_id",    null: false
@@ -72,6 +72,31 @@ ActiveRecord::Schema.define(version: 20140316230747) do
     t.datetime "renew_at"
     t.boolean  "user_selectable"
     t.integer  "billing_schedule", default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "polls", force: true do |t|
+    t.integer  "version"
+    t.string   "name"
+    t.string   "description"
+    t.integer  "organization_id"
+    t.integer  "question_id"
+    t.boolean  "isValid"
+    t.datetime "creationDateTime"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "polls", ["organization_id"], name: "index_polls_on_organization_id"
+  add_index "polls", ["question_id"], name: "index_polls_on_question_id"
+
+  create_table "questions", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "slidermin"
+    t.integer  "slidermax"
+    t.boolean  "hasAllocation"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
