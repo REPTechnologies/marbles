@@ -8,7 +8,7 @@ describe "events/new" do
     ).as_new_record)
   end
 
-  it "renders new event form" do
+  pending "renders new event form" do
     render
 
     # Run the generator again with the --webrat flag if you want to use webrat matchers
