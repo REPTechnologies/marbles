@@ -8,7 +8,7 @@ describe "organizations/edit" do
     ))
   end
 
-  it "renders the edit organization form" do
+  pending "renders the edit organization form" do
     render
 
     # Run the generator again with the --webrat flag if you want to use webrat matchers

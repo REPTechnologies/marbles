@@ -8,7 +8,7 @@ describe "events/edit" do
     ))
   end
 
-  it "renders the edit event form" do
+  pending "renders the edit event form" do
     render
 
     # Run the generator again with the --webrat flag if you want to use webrat matchers

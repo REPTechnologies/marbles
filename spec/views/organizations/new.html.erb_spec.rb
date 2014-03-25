@@ -8,7 +8,7 @@ describe "organizations/new" do
     ).as_new_record)
   end
 
-  it "renders new organization form" do
+  pending "renders new organization form" do
     render
 
     # Run the generator again with the --webrat flag if you want to use webrat matchers
