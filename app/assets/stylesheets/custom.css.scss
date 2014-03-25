@@ -1,22 +1,21 @@
 @import 'defs';
 
 body {
-  background-color: $white-color;
+  background-color: $primary-color;
+  color: $dark-text-color;
 }
 
 #page {
-  background-color: $white-color;
-  min-height: 500px;
   padding-bottom: $footer-height;
+  background-color: $primary-color;
+}
+
+header {
+  position: relative;
+  background-color: $white-color;
 }
 
 header, footer {
-  background-color: $primary-color;
-  color: $light-text-color;
-  position: relative;
-}
-
-header.main, footer {
   z-index: 10;
   padding: $padding-size;
 }
@@ -30,9 +29,8 @@ header.main, footer {
 }
 
 header.fixed {
-  height: 60px;
+  height: $header-height;
   z-index: 5;
-  padding-top: 10px;
 }
 
 div.fixed {
@@ -41,38 +39,47 @@ div.fixed {
 
 footer {
   @include border-box();
-  position: fixed;
-  width: 100%;
+  position: absolute;
   bottom: 0;
-  left: 0;
+  width: 100%;
   height: $footer-height;
+  background-color: $marbles-green-color;
+  color: $white-text-color;
 }
 
-.center {
-  width: $content-width;
-  margin: 0 auto;
-  overflow: hidden;
+#content {
+  margin-top: $header-height;
+  padding: $padding-size;
 }
 
 .right {
-  text-align:right;
+  text-align: right;
+}
+
+.center {
+  text-align: center;
 }
 
 .accent {
   color: $accent-color;
 }
 
+.header-button {
+  border: 1px solid $dark-gray-color;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  height: $header-height - 2 * $padding-size;
+  margin-right: -1px;
+}
+
+.huge-text {
+  font-size: $huge-text-size;
+}
+
 section {
+  @include border-box();
   padding-top: $padding-size;
   padding-bottom: $padding-size;
-}
-
-section:nth-child(even) {
-  background-color: $light-gray-color;
-}
-
-section:nth-child(odd) {
-  background-color: $white-color;
 }
 
 

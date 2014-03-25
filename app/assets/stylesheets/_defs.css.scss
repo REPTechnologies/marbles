@@ -1,16 +1,22 @@
-$dark-gray-color: #666;
-$light-gray-color: #ccc;
+$darkest-gray-color: #333;
+$dark-gray-color: #5c5c5c;
+$medium-gray-color: #999;
+$light-gray-color: #e5e5e5;
 $marbles-orange-color: #fc6523;
+$marbles-green-color: #006600;
 $white-color: #fff;
 
-$primary-color: $dark-gray-color;
+$primary-color: $light-gray-color;
 $accent-color: $marbles-orange-color;
-$light-text-color: $light-gray-color;
-$dark-text-color: $dark-gray-color;
+$white-text-color: $white-color;
+$light-text-color: $medium-gray-color;
+$dark-text-color: $darkest-gray-color;
 
 $content-width: 1200px;
 $padding-size: 10px;
-$footer-height: 54px;
+$footer-height: 120px;
+$header-height: 80px;
+$huge-text-size: 25px;
 
 @mixin border-box() {
   -moz-box-sizing: border-box;
