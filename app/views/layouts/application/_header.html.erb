@@ -1,13 +1,33 @@
-<header class="main">
-  <div class="container text-center">
-    <%= image_tag "logo2.png" %>
-    <p class="lead">get in the mix</p>
-  </div>
-</header>
 <header class="fixed">
   <div class="container">
-    <%= image_tag "icon.png", height: '40'%>
-    <span class="accent">marbles.mx</span> get in the mix
+    <div class="row">
+      <div class="col-md-2">
+        <%= image_tag "logo2.png", height: '60'%>
+      </div>
+      <div class="header-button col-md-2">
+        <span class="accent huge-text">Find</span>
+        <div class="container">a marbles event</div>
+      </div>
+      <div class="header-button col-md-2">
+        <span class="accent huge-text">Add</span>
+        <div class="container">a new event</div>
+      </div>
+      <div class="header-button col-md-2">
+        <span class="accent huge-text">Trends</span>
+        <div class="container">track progress</div>
+      </div>
+      <div class="col-md-3 col-md-offset-1">
+        <div class="row">
+          <div class="col-md-6">Log In</div>
+          <div class="col-md-6 right">Sign Up</div>
+        </div>
+        <div class="row center">
+          <div class="col-md-12">
+            <input type="search" placeholder="Search" name="search" class="form-control"/>
+            </div>
+        </div>
+      </div>
+    </row>
   </div>
 </header>
 <%= render "layouts/application/error_messages" %>
