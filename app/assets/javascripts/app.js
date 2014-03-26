@@ -1,32 +1,40 @@
-var Marbles = new Marionette.Application();
+/*jslint indent: 2, nomen: true*/
+/*global Marionette, Backbone */
+(function () {
+  "use strict";
 
-Marbles.addRegions({
-  headerRegion: '#header-region',
-  mainRegion: '#main-region',
-  footerRegion: '#footer-region'
-});
+  var Marbles = new Marionette.Application();
+  window.Marbles = Marbles; // Add Marbles to Global scope
 
-Marbles.addInitializer(function() {
-  Marbles.module('HeaderApp').start();
-  Marbles.module('FooterApp').start();
-});
+  Marbles.addRegions({
+    headerRegion: '#header-region',
+    mainRegion: '#main-region',
+    footerRegion: '#footer-region'
+  });
 
-//Navigate to specific route
-Marbles.navigate = function (route, options) {
-  options || (options = {});
-  Backbone.history.navigate(route, options);
-};
+  Marbles.addInitializer(function () {
+    Marbles.module('HeaderApp').start();
+    Marbles.module('FooterApp').start();
+  });
 
-//Returns current route
-Marbles.getCurrentRoute = function () {
-  return Backbone.history.fragment;
-};
+  //Navigate to specific route
+  Marbles.navigate = function (route, options) {
+    options = options || {};
+    Backbone.history.navigate(route, options);
+  };
 
-Marbles.on('initialize:after', function () {
-  //Things to do after app initialize
-  if (Backbone.history) {
-    Backbone.history.start({
-      pushState: true
-    });
-  }
-});
+  //Returns current route
+  Marbles.getCurrentRoute = function () {
+    return Backbone.history.fragment;
+  };
+
+  Marbles.on('initialize:after', function () {
+    //Things to do after app initialize
+    if (Backbone.history) {
+      Backbone.history.start({
+        pushState: true
+      });
+    }
+  });
+
+}());

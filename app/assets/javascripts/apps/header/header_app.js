@@ -1,11 +1,18 @@
-Marbles.module('HeaderApp', function (HeaderApp, Marbles, Backbone, Marionette, $, _) {
-  this.startWithParent = false;
+/*jslint indent: 2, nomen: true*/
+/*global Marbles */
+(function () {
+  "use strict";
 
-  var API = {
-    showHeader: function () {
-      HeaderApp.Show.Controller.showHeader();
-    }
-  };
+  Marbles.module('HeaderApp', function (HeaderApp, Marbles, Backbone, Marionette, $, _) {
+    this.startWithParent = false;
 
-  HeaderApp.on('start', API.showHeader);
-});
+    var API = {
+      showHeader: function () {
+        HeaderApp.Show.Controller.showHeader();
+      }
+    };
+
+    HeaderApp.on('start', API.showHeader);
+  });
+
+}());

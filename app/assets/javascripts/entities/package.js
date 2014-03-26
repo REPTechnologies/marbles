@@ -1,9 +1,16 @@
-Marbles.module("Entities", function (Entities, Marbles, Backbone, Marionette, $, _) {
+/*jslint indent: 2, nomen: true*/
+/*global Marbles */
+(function () {
+  "use strict";
 
-  Entities.Package = Backbone.Model.extend({});
+  Marbles.module("Entities", function (Entities, Marbles, Backbone, Marionette, $, _) {
 
-  Entities.PackagesCollection = Backbone.Collection.extend({});
+    Entities.Package = Backbone.Model.extend({});
 
-  var API = {};
+    Entities.PackagesCollection = Backbone.Collection.extend({});
 
-});
+    var API = {};
+
+  });
+
+}());
