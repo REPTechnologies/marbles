@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140316230747) do
+ActiveRecord::Schema.define(version: 20140323034037) do
+
+  create_table "answers", force: true do |t|
+    t.integer  "slider"
+    t.integer  "question_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "answers", ["question_id"], name: "index_answers_on_question_id"
 
   create_table "attendees_events", id: false, force: true do |t|
     t.integer "event_id",    null: false
@@ -76,6 +85,31 @@ ActiveRecord::Schema.define(version: 20140316230747) do
     t.datetime "updated_at"
   end
 
+  create_table "polls", force: true do |t|
+    t.integer  "version"
+    t.string   "name"
+    t.string   "description"
+    t.integer  "organization_id"
+    t.integer  "question_id"
+    t.boolean  "isValid"
+    t.datetime "creationDateTime"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "polls", ["organization_id"], name: "index_polls_on_organization_id"
+  add_index "polls", ["question_id"], name: "index_polls_on_question_id"
+
+  create_table "questions", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "slidermin"
+    t.integer  "slidermax"
+    t.boolean  "hasAllocation"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "scopes", force: true do |t|
     t.string   "title"
     t.datetime "created_at"
@@ -99,6 +133,16 @@ ActiveRecord::Schema.define(version: 20140316230747) do
   end
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true
+
+  create_table "userpolls", force: true do |t|
+    t.integer  "poll_id"
+    t.integer  "answer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "userpolls", ["answer_id"], name: "index_userpolls_on_answer_id"
+  add_index "userpolls", ["poll_id"], name: "index_userpolls_on_poll_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
