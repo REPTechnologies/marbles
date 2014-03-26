@@ -1,7 +1,14 @@
 var Marbles = new Marionette.Application();
 
 Marbles.addRegions({
-  //Add application regions here
+  headerRegion: '#header-region',
+  mainRegion: '#main-region',
+  footerRegion: '#footer-region'
+});
+
+Marbles.addInitializer(function() {
+  Marbles.module('HeaderApp').start();
+  Marbles.module('FooterApp').start();
 });
 
 //Navigate to specific route
