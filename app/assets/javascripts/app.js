@@ -4,6 +4,10 @@
   "use strict";
 
   var Marbles = new Marionette.Application();
+<<<<<<< HEAD
+=======
+  window.Marbles = Marbles; // Add Marbles to Global scope
+>>>>>>> Add JSHints
 
   Marbles.addRegions({
     headerRegion: '#header-region',
