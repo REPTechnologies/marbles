@@ -1,13 +1,20 @@
-Marbles.module("EventApp", function (EventApp, Marbles, Backbone, Marionette, $, _) {
-  EventApp.Router = Marionette.AppRouter.extend({
-    appRoutes: {}
-  });
+/*jslint indent: 2, nomen: true*/
+/*global Marbles */
+(function () {
+  "use strict";
 
-  var API = {};
+  Marbles.module("EventApp", function (EventApp, Marbles, Backbone, Marionette, $, _) {
+    EventApp.Router = Marionette.AppRouter.extend({
+      appRoutes: {}
+    });
 
-  EventApp.addInitializer(function() {
-    router = new EventApp.Router({
-      controller: API
+    var API = {};
+
+    EventApp.addInitializer(function () {
+      router = new EventApp.Router({
+        controller: API
+      });
     });
   });
-});
+
+}());
