@@ -2,33 +2,8 @@
 
 {<img alt="Status?branch=master" src="https://www.codeship.io/projects/0a6e88a0-8af7-0131-24aa-76e0f8cb0f8a/status?branch=master" />}[https://www.codeship.io/projects/15703]
 
-<<<<<<< HEAD
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-Creating user polls!
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
-=======
 * {Developer Setup Guide}[https://github.com/REPTechnologies/marbles/wiki/Developer-Setup-Guide]
->>>>>>> Update README.rdoc
+
+* {CodeShip Continuous Integration}[https://www.codeship.io/] (Sign in with GitHub)
+
+* {Heroku Cloud Hosting}[https://dashboard.heroku.com/apps]
