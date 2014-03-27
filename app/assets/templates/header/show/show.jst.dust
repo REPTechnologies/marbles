@@ -2,23 +2,15 @@
   <div class="container">
     <div class="row visible-xs">
       <div class="col-xs-6">
-        <%= image_tag "logo2.png", height: '60'%>
+        {>"logo2"/}
       </div>
       <div class="col-xs-6">
-        <div class="row">
-          <div class="col-xs-6">Log In</div>
-          <div class="col-xs-6 right">Sign Up</div>
-        </div>
-        <div class="row center">
-          <div class="col-xs-12">
-            <input type="search" placeholder="Search" name="search" class="form-control"/>
-            </div>
-        </div>
+        {>"auth/login"/}
       </div>
     </div>
     <div class="row">
       <div class="col-sm-2 hidden-xs">
-        <%= image_tag "logo2.png", height: '60'%>
+        {>"logo2"/}
       </div>
       <div class="header-button col-lg-2 col-md-3 col-sm-2 col-xs-4">
         <span class="accent huge-text">Find</span>
@@ -42,15 +34,7 @@
         </div>
       </div>
       <div class="col-sm-3 col-lg-offset-1 hidden-xs">
-        <div class="row">
-          <div class="col-xs-6">Log In</div>
-          <div class="col-xs-6 right">Sign Up</div>
-        </div>
-        <div class="row center">
-          <div class="col-xs-12">
-            <input type="search" placeholder="Search" name="search" class="form-control"/>
-            </div>
-        </div>
+        {>"auth/login"/}
       </div>
     </div>
   </div>
