@@ -1,32 +1,57 @@
 <header class="fixed">
   <div class="container">
-    <div class="row">
-      <div class="col-md-2">
+    <div class="row visible-xs">
+      <div class="col-xs-6">
         <%= image_tag "logo2.png", height: '60'%>
       </div>
-      <div class="header-button col-md-2">
-        <span class="accent huge-text">Find</span>
-        <div class="container">a marbles event</div>
-      </div>
-      <div class="header-button col-md-2">
-        <span class="accent huge-text">Add</span>
-        <div class="container">a new event</div>
-      </div>
-      <div class="header-button col-md-2">
-        <span class="accent huge-text">Trends</span>
-        <div class="container">track progress</div>
-      </div>
-      <div class="col-md-3 col-md-offset-1">
+      <div class="col-xs-6">
         <div class="row">
-          <div class="col-md-6">Log In</div>
-          <div class="col-md-6 right">Sign Up</div>
+          <div class="col-xs-6">Log In</div>
+          <div class="col-xs-6 right">Sign Up</div>
         </div>
         <div class="row center">
-          <div class="col-md-12">
+          <div class="col-xs-12">
             <input type="search" placeholder="Search" name="search" class="form-control"/>
             </div>
         </div>
       </div>
-    </row>
+    </div>
+    <div class="row">
+      <div class="col-sm-2 hidden-xs">
+        <%= image_tag "logo2.png", height: '60'%>
+      </div>
+      <div class="header-button col-lg-2 col-md-3 col-sm-2 col-xs-4">
+        <span class="accent huge-text">Find</span>
+        <div class="container-fluid">
+          <span class="hidden-sm">a marbles event</span>
+          <span class="hidden-lg hidden-md hidden-xs">an event</span>
+        </div>
+      </div>
+      <div class="header-button col-sm-2 col-xs-4">
+        <span class="accent huge-text">Add</span>
+        <div class="container-fluid">
+          <span class="hidden-sm">a new event</span>
+          <span class="hidden-md hidden-lg hidden-xs">an event</span>
+        </div>
+      </div>
+      <div class="header-button col-sm-2 col-xs-4">
+        <span class="accent huge-text">Trends</span>
+        <div class="container-fluid">
+          <span class="hidden-sm">track progress</span>
+          <span class="hidden-md hidden-lg hidden-xs">progress</span>
+        </div>
+      </div>
+      <div class="col-sm-3 col-lg-offset-1 hidden-xs">
+        <div class="row">
+          <div class="col-xs-6">Log In</div>
+          <div class="col-xs-6 right">Sign Up</div>
+        </div>
+        <div class="row center">
+          <div class="col-xs-12">
+            <input type="search" placeholder="Search" name="search" class="form-control"/>
+            </div>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
