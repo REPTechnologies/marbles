@@ -59,6 +59,9 @@ end
 # Use unicorn as the app server
 gem 'unicorn'
 
+# Use therubyracer for execjs runtime
+gem 'therubyracer'
+
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
