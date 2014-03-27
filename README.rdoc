@@ -3,3 +3,7 @@
 {<img alt="Status?branch=master" src="https://www.codeship.io/projects/0a6e88a0-8af7-0131-24aa-76e0f8cb0f8a/status?branch=master" />}[https://www.codeship.io/projects/15703]
 
 * {Developer Setup Guide}[https://github.com/REPTechnologies/marbles/wiki/Developer-Setup-Guide]
+
+* {CodeShip Continuous Integration}[https://www.codeship.io/] (Sign in with GitHub)
+
+* {Heroku Cloud Hosting}[https://dashboard.heroku.com/apps]
