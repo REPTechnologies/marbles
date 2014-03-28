@@ -12,11 +12,12 @@
 </head>
 <body>
   <div id="page" class="<%= params[:controller] %>">
-    <%= render "layouts/application/header" %>
-    <div id="content">
+    <%= render "layouts/application/error_messages" %>
+    <div id="header-region"></div>
+    <div id="main-region">
       <%= yield %>
     </div>
-    <%= render "layouts/application/footer" %>
+    <div id="footer-region"></div>
   </div>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <script type="text/javascript">
