@@ -13,7 +13,8 @@
 <body>
   <div id="page" class="<%= params[:controller] %>">
     <%= render "layouts/application/error_messages" %>
-    <div id="header-region"></div>
+    <div id="header-region" class="fixed"></div>
+    <div id="fake-header">get in the mix</div>
     <div id="main-region">
       <%= yield %>
     </div>

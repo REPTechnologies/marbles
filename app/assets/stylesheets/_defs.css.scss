@@ -12,7 +12,7 @@ $white-text-color: $white-color;
 $light-text-color: $medium-gray-color;
 $dark-text-color: $darkest-gray-color;
 
-$content-width: 1200px;
+$min-width: 360px;
 $padding-size: 10px;
 $footer-height: 120px;
 $header-height: 80px;
@@ -22,4 +22,8 @@ $huge-text-size: 25px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+@mixin width-min() {
+  min-width: $min-width;
 }
