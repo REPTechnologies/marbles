@@ -1,22 +1,21 @@
 <footer>
   <div class="container">
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-3 col-sm-6 col-xs-3">
         <h4>Mission</h4>
-        sharing opportunities for health and wellness
+        <span class="hidden-xs">sharing opportunities for health and wellness</span>
       </div>
-      <div class="col-md-3">
-        <h4>Blog</h4>
-        understand more about the marbles team
-      </div>
-      <div class="col-md-3">
+      <div class="col-md-3 col-sm-6 col-xs-3">
         <h4>Help</h4>
-        answers to FAQs
+        <span class="hidden-xs">answers to FAQs</span>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3 col-sm-6 col-xs-3">
+        <h4>Blog</h4>
+        <span class="hidden-xs">understand more about the marbles.mx team</span>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-3">
         <h4>Contact</h4>
-        we would love to hear from you<br/>
-        please reach out with comments, questions and suggestions
+        <span class="hidden-xs">we would love to hear from you</span>
       </div>
     </div>
   </div>
