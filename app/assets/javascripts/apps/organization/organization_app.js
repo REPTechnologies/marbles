@@ -10,8 +10,8 @@
 
     var API = {};
 
-    OrganizationApp.addInitializer(function () {
-      router = new OrganizationApp.Router({
+    Marbles.addInitializer(function () {
+      new OrganizationApp.Router({
         controller: API
       });
     });
