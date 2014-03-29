@@ -2,11 +2,20 @@
 
 html, body, #page {
   height: 100%;
+  font-family: Rosario, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Hero, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 body {
   background-color: $primary-color;
   color: $dark-text-color;
+  
+  a {
+    color: $dark-text-color;
+  }
 }
 
 #page {
@@ -35,10 +44,9 @@ body {
   width: 100%;
   background-color: $marbles-green-color;
   color: $white-text-color;
-  
-  h4:hover {
-    cursor: pointer;
-    text-decoration: underline;
+
+  a {
+    color: $white-text-color;
   }
 }
 
@@ -56,7 +64,10 @@ header, footer {
   margin-top: $padding-size;
   text-align: center;
   padding-top: $padding-size;
-  cursor: pointer;
+  
+  .accent {
+    font-family: Hero, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
 }
 
 @media (min-width: 768px) {
@@ -100,14 +111,20 @@ header, footer {
   font-size: $huge-text-size;
 }
 
+.small-text {
+  font-size: $small-text-size;
+}
+
+.tiny-text {
+  font-size: $tiny-text-size;
+}
+
+.padding-top {
+  padding-top: $padding-size;
+}
+
 section {
   @include border-box();
   padding-top: $padding-size;
   padding-bottom: $padding-size;
 }
-
-
-
-
-
-
