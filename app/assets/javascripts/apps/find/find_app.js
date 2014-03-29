@@ -6,15 +6,22 @@
   Marbles.module("FindApp", function (FindApp, Marbles, Backbone, Marionette, $, _) {
     FindApp.Router = Marionette.AppRouter.extend({
       appRoutes: {
-        '': 'showFind'
+        '': 'showList',
+        find: 'showList'
       }
     });
 
     var API = {
-      showFind: function () {
+      showList: function () {
+        M.fn.nav('find');
         FindApp.List.Controller.showList();
       }
     };
+    
+    Marbles.vent.on('find:list', function () {
+      M.fn.nav('find');
+      API.showList();
+    });
 
     Marbles.addInitializer(function () {
       new FindApp.Router({
