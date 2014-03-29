@@ -25,6 +25,9 @@
       nav: Backbone.history.navigate.bind(Backbone.history)
     };
 
+    // Shortcuts and Aliases
+    M.respond = M.reqres;
+
     // Start the application
     Marbles.start();
   });
