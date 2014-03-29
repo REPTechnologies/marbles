@@ -6,7 +6,11 @@
   Marbles.module("FindApp.List", function (List, Marbles, Backbone, Marionette, $, _) {
     List.Controller = {
       showList: function () {
-        Marbles.mainRegion.show(M.fn.getLayout(List));
+        Marbles.mainRegion.show(M.fn.getLayout(List, {
+          show: function () {
+            
+          }
+        }));
       }
     };
   });

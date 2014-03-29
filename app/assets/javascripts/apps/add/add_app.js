@@ -15,6 +15,11 @@
         AddApp.New.Controller.showNew();
       }
     };
+    
+    Marbles.vent.on('add:new', function () {
+      M.fn.nav('add');
+      API.showNew();
+    });
 
     Marbles.addInitializer(function () {
       new AddApp.Router({

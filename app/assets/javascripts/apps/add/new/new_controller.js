@@ -3,10 +3,14 @@
 (function () {
   "use strict";
 
-  Marbles.module("AddApp.New", function (New, Marbles, Backbone, Marionette, $, _) {
+  Marbles.module('AddApp.New', function (New, Marbles, Backbone, Marionette, $, _) {
     New.Controller = {
       showNew: function () {
-        Marbles.mainRegion.show(M.fn.getLayout(New));
+        Marbles.mainRegion.show(M.fn.getLayout(New, {
+          show: function () {
+            
+          }
+        }));
       }
     };
   });
