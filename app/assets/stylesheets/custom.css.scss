@@ -1,23 +1,73 @@
 @import 'defs';
 
+html, body, #page {
+  height: 100%;
+}
+
 body {
   background-color: $primary-color;
   color: $dark-text-color;
 }
 
 #page {
-  padding-bottom: $footer-height;
+  @include width-min;
   background-color: $primary-color;
+  position: relative;
 }
 
-header {
-  position: relative;
+#header-region {
+  height: $header-height * 2;
   background-color: $white-color;
 }
 
-header, footer {
-  z-index: 10;
+#fake-header {
+  height: $header-height * 2;
+  visibility: hidden;
+}
+
+#main-region {
   padding: $padding-size;
+}
+
+#footer-region {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: $marbles-green-color;
+  color: $white-text-color;
+}
+
+header, footer {
+  @include width-min;
+  padding: $padding-size;
+}
+
+.header-button {
+  border: 1px solid $dark-gray-color;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  height: $header-height - 2 * $padding-size;
+  margin-right: -1px;
+  margin-top: $padding-size;
+  text-align: center;
+  padding-top: $padding-size;
+}
+
+@media (min-width: 768px) {
+  
+  #header-region {
+    height: $header-height;
+  }
+  
+  #fake-header {
+    height: $header-height;
+  }
+  
+  .header-button {
+    margin-top: 0;
+    padding-top: 0;
+    text-align: left;
+  }
 }
 
 .fixed {
@@ -26,30 +76,6 @@ header, footer {
   top: 0;
   width: 100%;
   left: 0;
-}
-
-header.fixed {
-  height: $header-height;
-  z-index: 5;
-}
-
-div.fixed {
-  z-index: 15;
-}
-
-footer {
-  @include border-box();
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: $footer-height;
-  background-color: $marbles-green-color;
-  color: $white-text-color;
-}
-
-#main-region {
-  margin-top: $header-height;
-  padding: $padding-size;
 }
 
 .right {
@@ -62,14 +88,6 @@ footer {
 
 .accent {
   color: $accent-color;
-}
-
-.header-button {
-  border: 1px solid $dark-gray-color;
-  border-top-width: 0;
-  border-bottom-width: 0;
-  height: $header-height - 2 * $padding-size;
-  margin-right: -1px;
 }
 
 .huge-text {
