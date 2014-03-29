@@ -10,8 +10,8 @@
 
     var API = {};
 
-    PackageApp.addInitializer(function () {
-      router = new PackageApp.Router({
+    Marbles.addInitializer(function () {
+      new PackageApp.Router({
         controller: API
       });
     });

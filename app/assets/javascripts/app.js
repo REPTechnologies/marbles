@@ -5,6 +5,7 @@
 
   var Marbles = new Marionette.Application();
   window.Marbles = Marbles; // Add Marbles to Global scope
+  window.M = Marbles; // Add M shortcut to Global scope
 
   Marbles.addRegions({
     headerRegion: '#header-region',
