@@ -35,6 +35,11 @@ body {
   width: 100%;
   background-color: $marbles-green-color;
   color: $white-text-color;
+  
+  h4:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
 }
 
 header, footer {
@@ -51,6 +56,7 @@ header, footer {
   margin-top: $padding-size;
   text-align: center;
   padding-top: $padding-size;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {

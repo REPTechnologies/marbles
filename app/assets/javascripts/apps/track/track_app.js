@@ -15,6 +15,11 @@
         TrackApp.Show.Controller.showTrack();
       }
     };
+    
+    Marbles.vent.on('track:show', function () {
+      M.fn.nav('track');
+      API.showTrack();
+    });
 
     Marbles.addInitializer(function () {
       new TrackApp.Router({
