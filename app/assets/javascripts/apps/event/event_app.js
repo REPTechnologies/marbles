@@ -10,8 +10,8 @@
 
     var API = {};
 
-    EventApp.addInitializer(function () {
-      router = new EventApp.Router({
+    Marbles.addInitializer(function () {
+      new EventApp.Router({
         controller: API
       });
     });
