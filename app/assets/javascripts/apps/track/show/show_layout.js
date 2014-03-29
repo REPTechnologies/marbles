@@ -4,7 +4,7 @@
   "use strict";
 
   Marbles.module("TrackApp.Show", function (Show, Marbles, Backbone, Marionette, $, _) {
-    Show.View = Marionette.ItemView.extend({
+    Show.Layout = Marionette.Layout.extend({
       template: "track/show/show"
     });
   });

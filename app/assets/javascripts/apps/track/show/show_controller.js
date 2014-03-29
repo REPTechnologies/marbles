@@ -4,14 +4,9 @@
   "use strict";
 
   Marbles.module("TrackApp.Show", function (Show, Marbles, Backbone, Marionette, $, _) {
-
-    function getShowView() {
-      return new Show.View();
-    }
-
     Show.Controller = {
       showTrack: function () {
-        Marbles.mainRegion.show(getShowView());
+        Marbles.mainRegion.show(M.fn.getLayout(Show));
       }
     };
   });

@@ -7,7 +7,11 @@
 <<<<<<< HEAD
 =======
   window.Marbles = Marbles; // Add Marbles to Global scope
+<<<<<<< HEAD
 >>>>>>> Add JSHints
+=======
+  window.M = Marbles; // Add M shortcut to Global scope
+>>>>>>> Convert generated item views into layouts
 
   Marbles.addRegions({
     headerRegion: '#header-region',

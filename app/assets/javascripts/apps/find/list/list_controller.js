@@ -4,14 +4,9 @@
   "use strict";
 
   Marbles.module("FindApp.List", function (List, Marbles, Backbone, Marionette, $, _) {
-
-    function getListView() {
-      return new List.View();
-    }
-
     List.Controller = {
       showList: function () {
-        Marbles.mainRegion.show(getListView());
+        Marbles.mainRegion.show(M.fn.getLayout(List));
       }
     };
   });
