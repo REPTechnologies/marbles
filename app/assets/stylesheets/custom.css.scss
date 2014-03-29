@@ -44,16 +44,9 @@ body {
   width: 100%;
   background-color: $marbles-green-color;
   color: $white-text-color;
-<<<<<<< HEAD
-  
-  h4:hover {
-    cursor: pointer;
-    text-decoration: underline;
-=======
 
   a {
     color: $white-text-color;
->>>>>>> Add Rosario, Hero fonts, Add copyright and font links to footer
   }
 }
 
@@ -71,14 +64,10 @@ header, footer {
   margin-top: $padding-size;
   text-align: center;
   padding-top: $padding-size;
-<<<<<<< HEAD
-  cursor: pointer;
-=======
   
   .accent {
     font-family: Hero, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
->>>>>>> Add Rosario, Hero fonts, Add copyright and font links to footer
 }
 
 @media (min-width: 768px) {
@@ -139,9 +128,3 @@ section {
   padding-top: $padding-size;
   padding-bottom: $padding-size;
 }
-
-
-
-
-
-
