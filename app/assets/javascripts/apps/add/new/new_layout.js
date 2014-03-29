@@ -4,7 +4,7 @@
   "use strict";
 
   Marbles.module("AddApp.New", function (New, Marbles, Backbone, Marionette, $, _) {
-    New.View = Marionette.ItemView.extend({
+    New.Layout = Marionette.Layout.extend({
       template: "add/new/new"
     });
   });

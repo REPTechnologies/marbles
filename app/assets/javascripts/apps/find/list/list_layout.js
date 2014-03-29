@@ -4,7 +4,7 @@
   "use strict";
 
   Marbles.module("FindApp.List", function (List, Marbles, Backbone, Marionette, $, _) {
-    List.View = Marionette.ItemView.extend({
+    List.Layout = Marionette.Layout.extend({
       template: "find/list/list"
     });
   });
