@@ -11,8 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-// require turbolinks
 //= require args
 //= require marionette_dust
 //= require app
