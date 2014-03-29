@@ -17,6 +17,8 @@ $padding-size: 10px;
 $footer-height: 120px;
 $header-height: 80px;
 $huge-text-size: 25px;
+$small-text-size: 12px;
+$tiny-text-size: 8px;
 
 @mixin border-box() {
   -moz-box-sizing: border-box;

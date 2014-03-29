@@ -6,8 +6,9 @@
   <meta name="description" content="marbles.mx landing page">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>marbles.mx | get in the mix</title>
-  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
-  <%= favicon_link_tag 'icon.ico' %>
+  <link href='http://fonts.googleapis.com/css?family=Rosario:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag "application", media: "all" %>
+  <%= favicon_link_tag "icon.ico" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -20,7 +21,7 @@
     </div>
     <div id="footer-region"></div>
   </div>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application" %>
   <script type="text/javascript">
     var $buoop = {};
     $buoop.ol = window.onload;
@@ -30,9 +31,9 @@
           $buoop.ol();
         }
       } catch (e) {}
-      var e = document.createElement("script");
-      e.setAttribute("type", "text/javascript");
-      e.setAttribute("src", "//browser-update.org/update.js");
+      var e = document.createElement('script');
+      e.setAttribute('type', 'text/javascript');
+      e.setAttribute('src', '//browser-update.org/update.js');
       document.body.appendChild(e);
     };
   </script>
