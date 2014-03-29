@@ -7,7 +7,7 @@ class CreateQuestions < ActiveRecord::Migration
       t.integer :slidermax
       t.boolean :hasAllocation
       t.belongs_to :primary_focus, index: true
-      has_and_belongs_to_many :secondary_focus, index: true
+     
       
 
       t.timestamps
