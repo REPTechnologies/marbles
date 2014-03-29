@@ -18,5 +18,13 @@
         <span class="hidden-xs">we would love to hear from you</span>
       </div>
     </div>
+    <div class="row tiny-text padding-top">
+      <div class="col-xs-6">
+        &copy; 2014 RealEmpowerment Techologies
+      </div>
+      <div class="col-xs-6 right">
+        <a href="http://fontfabric.com/hero-free-font/">Hero Font</a> provided by <a href="http://fontfabric.com/">Font Fabric</a>
+      </div>
+    </div>
   </div>
 </footer>
