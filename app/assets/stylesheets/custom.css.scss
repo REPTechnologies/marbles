@@ -44,6 +44,11 @@ body {
   width: 100%;
   background-color: $marbles-green-color;
   color: $white-text-color;
+  
+  h4:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 
   a {
     color: $white-text-color;
@@ -64,6 +69,7 @@ header, footer {
   margin-top: $padding-size;
   text-align: center;
   padding-top: $padding-size;
+  cursor: pointer;
   
   .accent {
     font-family: Hero, 'Helvetica Neue', Helvetica, Arial, sans-serif;
