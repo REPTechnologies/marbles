@@ -1,0 +1,46 @@
+#header-region {
+  height: $header-height * 2;
+  background-color: $white-color;
+}
+
+#fake-header {
+  height: $header-height * 2;
+  visibility: hidden;
+}
+
+header {
+  @include width-min;
+  padding: $padding-size;
+}
+
+.header-button {
+  border: 1px solid $dark-gray-color;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  height: $header-height - 2 * $padding-size;
+  margin-right: -1px;
+  margin-top: $padding-size;
+  text-align: center;
+  padding-top: $padding-size;
+  cursor: pointer;
+  
+  .accent {
+    font-family: Hero, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+}
+
+@media (min-width: 768px) {
+  #header-region {
+    height: $header-height;
+  }
+  
+  #fake-header {
+    height: $header-height;
+  }
+  
+  .header-button {
+    margin-top: 0;
+    padding-top: 0;
+    text-align: left;
+  }
+}

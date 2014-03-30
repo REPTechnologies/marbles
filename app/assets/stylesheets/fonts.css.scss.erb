@@ -1,0 +1,5 @@
+$hero-files: font-files("<%= font_url 'hero-webfont.woff' %>", "<%= font_url 'hero-webfont.ttf' %>", "<%= font_url 'hero-webfont.svg#hero' %>");
+$hero-light-files: font-files("<%= font_url 'hero_light-webfont.woff' %>", "<%= font_url 'hero_light-webfont.ttf' %>", "<%= font_url 'hero_light-webfont.svg#herolight' %>");
+
+@include font-face("hero", $hero-files, "<%= font_url 'hero-webfont.eot' %>", normal, normal);
+@include font-face("hero", $hero-light-files, "<%= font_url 'hero_light-webfont.eot' %>", lighter, normal);
