@@ -23,3 +23,6 @@
 
 # Ignore Aptana project file
 .project
+
+# Ignore Railroady graphs
+/doc/*.svg
