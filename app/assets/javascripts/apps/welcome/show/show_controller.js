@@ -3,9 +3,9 @@
 (function () {
   "use strict";
 
-  Marbles.module("TrackApp.Show", function (Show, Marbles, Backbone, Marionette, $, _) {
+  Marbles.module("WelcomeApp.Show", function (Show, Marbles, Backbone, Marionette, $, _) {
     Show.Controller = {
-      showTrack: function () {
+      showWelcome: function () {
         Marbles.mainRegion.show(M.fn.getLayout(Show));
       }
     };

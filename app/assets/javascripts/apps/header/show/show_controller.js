@@ -13,8 +13,11 @@
       headerView.on('header:add', function () {
         Marbles.vent.trigger('add:new');
       });
-      headerView.on('header:track', function () {
-        Marbles.vent.trigger('track:show');
+      headerView.on('header:trends', function () {
+        Marbles.vent.trigger('trends:show');
+      });
+      headerView.on('header:logo', function () {
+        Marbles.vent.trigger('welcome:show');
       });
       return headerView;
     }

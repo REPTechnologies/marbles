@@ -6,7 +6,6 @@
   Marbles.module("FindApp", function (FindApp, Marbles, Backbone, Marionette, $, _) {
     FindApp.Router = Marionette.AppRouter.extend({
       appRoutes: {
-        '': 'showList',
         find: 'showList'
       }
     });

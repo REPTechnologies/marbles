@@ -25,7 +25,7 @@
         <span class="hidden-md hidden-lg hidden-xs">an event</span>
       </div>
     </div>
-    <div id="header-track" class="header-button col-sm-2 col-xs-4">
+    <div id="header-trends" class="header-button col-sm-2 col-xs-4">
       <span class="accent huge-text">Trends</span>
       <div class="container-fluid hidden-xs">
         <span class="hidden-sm">track progress</span>

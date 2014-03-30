@@ -13,6 +13,10 @@ header {
   padding: $padding-size;
 }
 
+.header-logo {
+  cursor: pointer;
+}
+
 .header-button {
   border: 1px solid $dark-gray-color;
   border-top-width: 0;

@@ -3,9 +3,9 @@
 (function () {
   "use strict";
 
-  Marbles.module("TrackApp.Show", function (Show, Marbles, Backbone, Marionette, $, _) {
+  Marbles.module("TrendsApp.Show", function (Show, Marbles, Backbone, Marionette, $, _) {
     Show.Layout = Marionette.Layout.extend({
-      template: "track/show/show"
+      template: "trends/show/show"
     });
   });
 

@@ -15,8 +15,11 @@
         'click #header-add': function () {
           this.trigger('header:add');
         },
-        'click #header-track': function () {
-          this.trigger('header:track');
+        'click #header-trends': function () {
+          this.trigger('header:trends');
+        },
+        'click .header-logo': function () {
+          this.trigger('header:logo');
         }
       }
     });
