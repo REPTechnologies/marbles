@@ -1,41 +1,39 @@
-<header class="fixed">
-  <div class="container">
-    <div class="row visible-xs">
-      <div class="col-xs-6">
-        {>"logo2"/}
-      </div>
-      <div class="col-xs-6">
-        {>"auth/login"/}
-      </div>
+<div class="container">
+  <div class="row visible-xs">
+    <div class="col-xs-6">
+      {>"logo2"/}
     </div>
-    <div class="row">
-      <div class="col-sm-2 hidden-xs">
-        {>"logo2"/}
-      </div>
-      <div id="header-find" class="header-button col-lg-2 col-md-3 col-sm-2 col-xs-4">
-        <span class="accent huge-text">Find</span>
-        <div class="container-fluid hidden-xs">
-          <span class="hidden-sm">a marbles event</span>
-          <span class="hidden-lg hidden-md hidden-xs">an event</span>
-        </div>
-      </div>
-      <div id="header-add" class="header-button col-sm-2 col-xs-4">
-        <span class="accent huge-text">Add</span>
-        <div class="container-fluid hidden-xs">
-          <span class="hidden-sm">a new event</span>
-          <span class="hidden-md hidden-lg hidden-xs">an event</span>
-        </div>
-      </div>
-      <div id="header-track" class="header-button col-sm-2 col-xs-4">
-        <span class="accent huge-text">Trends</span>
-        <div class="container-fluid hidden-xs">
-          <span class="hidden-sm">track progress</span>
-          <span class="hidden-md hidden-lg hidden-xs">progress</span>
-        </div>
-      </div>
-      <div class="col-sm-3 col-lg-offset-1 hidden-xs">
-        {>"auth/login"/}
-      </div>
+    <div class="col-xs-6">
+      {>"auth/login"/}
     </div>
   </div>
-</header>
+  <div class="row">
+    <div class="col-sm-2 hidden-xs">
+      {>"logo2"/}
+    </div>
+    <div id="header-find" class="header-button col-lg-2 col-md-3 col-sm-2 col-xs-4">
+      <span class="accent huge-text">Find</span>
+      <div class="container-fluid hidden-xs">
+        <span class="hidden-sm">a marbles event</span>
+        <span class="hidden-lg hidden-md hidden-xs">an event</span>
+      </div>
+    </div>
+    <div id="header-add" class="header-button col-sm-2 col-xs-4">
+      <span class="accent huge-text">Add</span>
+      <div class="container-fluid hidden-xs">
+        <span class="hidden-sm">a new event</span>
+        <span class="hidden-md hidden-lg hidden-xs">an event</span>
+      </div>
+    </div>
+    <div id="header-track" class="header-button col-sm-2 col-xs-4">
+      <span class="accent huge-text">Trends</span>
+      <div class="container-fluid hidden-xs">
+        <span class="hidden-sm">track progress</span>
+        <span class="hidden-md hidden-lg hidden-xs">progress</span>
+      </div>
+    </div>
+    <div class="col-sm-3 col-lg-offset-1 hidden-xs">
+      {>"auth/login"/}
+    </div>
+  </div>
+</div>

@@ -6,6 +6,8 @@
   Marbles.module('HeaderApp.Show', function (Show, Marbles, Backbone, Marionette, $, _) {
     Show.View = Marionette.ItemView.extend({
       template: 'header/show/show',
+      tagName: 'header',
+      className: 'fixed',
       events: {
         'click #header-find': function () {
           this.trigger('header:find');
