@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140323034037) do
+ActiveRecord::Schema.define(version: 20140329211042) do
 
   create_table "answers", force: true do |t|
     t.integer  "slider"
@@ -106,8 +106,16 @@ ActiveRecord::Schema.define(version: 20140323034037) do
     t.integer  "slidermin"
     t.integer  "slidermax"
     t.boolean  "hasAllocation"
+    t.integer  "primary_focus_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  add_index "questions", ["primary_focus_id"], name: "index_questions_on_primary_focus_id"
+
+  create_table "questions_secondary_focus", id: false, force: true do |t|
+    t.integer "question_id",       null: false
+    t.integer "secondary_focu_id", null: false
   end
 
   create_table "scopes", force: true do |t|
