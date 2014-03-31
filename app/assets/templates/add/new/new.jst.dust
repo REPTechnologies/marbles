@@ -1,1 +1,55 @@
-<h2>Add Page</h2>
+<div class="row">
+  <div class="col-xs-12">
+    <section class="card">
+      <div class="row">
+        <div class="col-xs-12 text-center visible-xs">
+          <img src="//placehold.it/270x150&text=spilled+marbles+graphic"/>
+        </div>
+        <div class="col-sm-5 col-md-4 hidden-xs">
+          <img src="//placehold.it/270x150&text=spilled+marbles+graphic"/>
+        </div>
+        <div class="cols-xs-12 col-sm-7 col-md-8">
+          <p class="lead">Looking for a way to engage a broader community at your next event? Marbles can help connect you to a diverse audience who share common characteristics and intentions. Start attracting your ideal attendee now!</p>
+          <p>Your first event is free! After that Premium plans start at $19 a month.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <section class="card">
+      <h3>Event Focus Picker</h3>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <section class="card">
+      <h3>Event Type Picker</h3>
+      <h3>Event Scope Picker</h3>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <section class="card">
+      <h3>Event Info</h3>
+    </section>
+  </div>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <section class="card">
+      <h3>Event Details</h3>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <section class="card">
+      <h3>Event Graphic Upload</h3>
+    </section>
+  </div>
+</div>

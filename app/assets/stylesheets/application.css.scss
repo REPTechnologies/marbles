@@ -1,13 +1,22 @@
+// 001 Vendor Styles
 @import "compass";
 @import "fonts";
 @import "normalize";
 @import "main";
 @import "bootstrap";
+
+// 002 Foundation Styles
 @import "defs";
 @import "foundation";
 
-@import "apps/footer/footer";
-@import "apps/header/header";
+// 003 Model Styles
 @import "apps/events/events";
 @import "apps/organizations/organizations";
 @import "apps/packages/packages";
+
+// 004 All Pages Styles
+@import "apps/footer/footer";
+@import "apps/header/header";
+
+// 005 App Specific Styles
+@import "apps/add/new";

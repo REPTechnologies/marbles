@@ -1,9 +1,11 @@
 #footer-region {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   background-color: $marbles-green-color;
   color: $white-text-color;
+  z-index: 5;
+  @include single-box-shadow;
   
   h4 {
     @include hover-link();
@@ -15,7 +17,11 @@
   }
 }
 
-footer {
+#fake-footer {
+  visibility: hidden;
+}
+
+#footer {
   @include width-min;
   padding: $padding-size;
 }

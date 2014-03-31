@@ -1,5 +1,5 @@
 /*jslint indent: 2, nomen: true*/
-/*global $, Marbles, JST, Backbone */
+/*global $, Marbles, JST, Backbone, M, Args */
 (function () {
   "use strict";
 

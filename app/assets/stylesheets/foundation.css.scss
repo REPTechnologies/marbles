@@ -1,4 +1,8 @@
-html, body, #page {
+html {
+  overflow-y: scroll; 
+}
+
+html, body {
   height: 100%;
   font-family: Rosario, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -16,10 +20,13 @@ body {
   }
 }
 
-section {
+.card {
   @include border-box();
-  padding-top: $padding-size;
-  padding-bottom: $padding-size;
+  padding: $padding-size;
+  margin-top: $margin-size;
+  margin-bottom: $margin-size;
+  background-color: $white-color;
+  @include single-box-shadow($default-box-shadow-color, 1px, 1px);
 }
 
 #page {
@@ -38,14 +45,6 @@ section {
   top: 0;
   width: 100%;
   left: 0;
-}
-
-.right {
-  text-align: right;
-}
-
-.center {
-  text-align: center;
 }
 
 .accent {

@@ -1,6 +1,8 @@
 #header-region {
   height: $header-height * 2;
   background-color: $white-color;
+  z-index: 5;
+  @include single-box-shadow;
 }
 
 #fake-header {
