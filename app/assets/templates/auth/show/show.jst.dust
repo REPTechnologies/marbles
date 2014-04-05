@@ -1,0 +1,13 @@
+<div class="not-authenticated show row">
+  <div class="log-in col-xs-6">Log In</div>
+  <div class="sign-up col-xs-6 text-right">Sign Up</div>
+</div>
+<div class="authenticated hidden row">
+  <div class="user col-xs-7">user@email.com</div>
+  <div class="log-out col-xs-5 text-right">Log Out</div>
+</div>
+<div class="row center">
+  <div class="col-xs-12">
+    <input type="search" placeholder="Search" name="search" class="form-control"/>
+  </div>
+</div>

@@ -37,6 +37,9 @@ gem 'jquery-rails'
 # Use backbone, marionette and dust as the JavaScript framework
 gem 'marionette_dust', '~> 0.1'
 
+# Use js-routes to make route helpers available in JavaScript
+gem 'js-routes', '~> 0.9'
+
 # Use Acts-as-taggable-on as tagging library
 gem "acts-as-taggable-on", "~> 3.0.2"
 

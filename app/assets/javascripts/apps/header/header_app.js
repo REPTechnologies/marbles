@@ -8,11 +8,14 @@
 
     var API = {
       showHeader: function () {
-        HeaderApp.Show.Controller.showHeader();
+        return HeaderApp.Show.Controller.showHeader();
       }
     };
 
-    HeaderApp.on('start', API.showHeader);
+    HeaderApp.on('start', function() {
+      var headerLayout = API.showHeader();
+      Marbles.module('AuthApp').start(headerLayout);
+    });
   });
 
 }());

@@ -4,9 +4,13 @@
   "use strict";
 
   Marbles.module('HeaderApp.Show', function (Show, Marbles, Backbone, Marionette, $, _) {
-    Show.View = Marionette.ItemView.extend({
+    Show.Layout = Marionette.Layout.extend({
       template: 'header/show/show',
       tagName: 'header',
+      regions: {
+        authXSRegion: '#auth-xs-region',
+        authRegion: '#auth-region'
+      },
       events: {
         'click #header-find': function () {
           this.trigger('header:find');

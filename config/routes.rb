@@ -10,7 +10,7 @@ Marbles::Application.routes.draw do
     resources :events
   end
 
-  devise_for :users
+  devise_for :users, path_names: {sign_in: "log_in", sign_out: "log_out"}
 
   # You can have the root of your site routed with "root"
   root 'home#index'

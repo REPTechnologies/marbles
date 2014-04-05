@@ -5,28 +5,29 @@
 
   Marbles.module('HeaderApp.Show', function (Show, Marbles, Backbone, Marionette, $, _) {
 
-    function getHeaderView() {
-      var headerView = new Show.View();
-      headerView.on('header:find', function () {
+    function getHeaderLayout() {
+      var layout = M.fn.getLayout(Show);
+      layout.on('header:find', function () {
         Marbles.vent.trigger('find:list');
       });
-      headerView.on('header:add', function () {
+      layout.on('header:add', function () {
         Marbles.vent.trigger('add:new');
       });
-      headerView.on('header:trends', function () {
+      layout.on('header:trends', function () {
         Marbles.vent.trigger('trends:show');
       });
-      headerView.on('header:logo', function () {
+      layout.on('header:logo', function () {
         Marbles.vent.trigger('welcome:show');
       });
-      return headerView;
+      return layout;
     }
 
     Show.Controller = {
       showHeader: function () {
-        Marbles.headerRegion.show(getHeaderView());
-      },
-      
+        var headerLayout = getHeaderLayout();
+        Marbles.headerRegion.show(headerLayout);
+        return headerLayout;
+      }
     };
   });
   
