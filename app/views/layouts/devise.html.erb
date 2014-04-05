@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="marbles.mx landing page">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>marbles.mx | get in the mix</title>
+  <link href='http://fonts.googleapis.com/css?family=Rosario:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag "application", media: "all" %>
+  <%= favicon_link_tag "icon.ico" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="page" class="<%= params[:controller] %>">
+    <div id="header-region">
+      <header>
+        <div class="container">
+          <a href="/"><%= image_tag "logo2.png", height: "60", class: "header-logo" %></a>
+        </div>
+      </header>
+    </div>
+    <%= render "layouts/application/error_messages" %>
+    <div class="container">
+      <div id="main-region">
+        <%= yield %>
+      </div>
+    </div>
+    <div id="footer-region">
+      <div id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-3">
+              <h4>Mission</h4>
+              <span class="hidden-xs">sharing opportunities for health and wellness</span>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-3">
+              <h4>Help</h4>
+              <span class="hidden-xs">answers to FAQs</span>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-3">
+              <h4>Blog</h4>
+              <span class="hidden-xs">understand more about the marbles.mx team</span>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-3">
+              <h4>Contact</h4>
+              <span class="hidden-xs">we would love to hear from you</span>
+            </div>
+          </div>
+          <div class="row tiny-text padding-top">
+            <div class="col-xs-6">© 2014 RealEmpowerment Techologies</div>
+            <div class="col-xs-6 text-right">
+              <a href="http://fontfabric.com/hero-free-font/">Hero Font</a> provided by <a href="http://fontfabric.com/">Font Fabric</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= javascript_include_tag "devise" %>
+  <%= render "layouts/application/browser_update" %>
+</body>
+</html>

@@ -21,20 +21,6 @@
     <div id="footer-region"></div>
   </div>
   <%= javascript_include_tag "application" %>
-  <script type="text/javascript">
-    var $buoop = {};
-    $buoop.ol = window.onload;
-    window.onload = function() {
-      try {
-        if ($buoop.ol) {
-          $buoop.ol();
-        }
-      } catch (e) {}
-      var e = document.createElement('script');
-      e.setAttribute('type', 'text/javascript');
-      e.setAttribute('src', '//browser-update.org/update.js');
-      document.body.appendChild(e);
-    };
-  </script>
+  <%= render "layouts/application/browser_update" %>
 </body>
 </html>
