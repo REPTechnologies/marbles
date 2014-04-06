@@ -7,6 +7,13 @@
   window.Marbles = Marbles; // Add Marbles to Global scope
   window.M = Marbles; // Add M shortcut to Global scope
 
+  // Shortcuts and Aliases
+  M.respond = M.reqres;
+
+  Marbles.on('initialize:before', function (options) {
+    this.currentUser = Marbles.request("set:current:user", options.currentUser);
+  });
+
   Marbles.addRegions({
     headerRegion: '#header-region',
     mainRegion: '#main-region',
