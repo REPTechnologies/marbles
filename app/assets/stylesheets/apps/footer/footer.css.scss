@@ -1,5 +1,6 @@
 #footer-region {
-  position: fixed;
+  position: absolute;
+  display: none;
   bottom: 0;
   width: 100%;
   background-color: $marbles-green-color;
