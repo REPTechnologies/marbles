@@ -3,6 +3,8 @@ Marbles::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   scope 'api' do
+    resources :users
+
     resources :packages
 
     resources :organizations
