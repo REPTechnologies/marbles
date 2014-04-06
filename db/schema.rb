@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140329211042) do
+ActiveRecord::Schema.define(version: 20140406191924) do
 
   create_table "answers", force: true do |t|
     t.integer  "slider"
@@ -147,10 +147,12 @@ ActiveRecord::Schema.define(version: 20140329211042) do
     t.integer  "answer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   add_index "userpolls", ["answer_id"], name: "index_userpolls_on_answer_id"
   add_index "userpolls", ["poll_id"], name: "index_userpolls_on_poll_id"
+  add_index "userpolls", ["user_id"], name: "index_userpolls_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
