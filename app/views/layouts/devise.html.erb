@@ -12,7 +12,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="page" class="<%= params[:controller] %>">
+  <div id="page" class="<%= params[:controller].gsub('/', ' ') %>">
     <div id="header-region">
       <header>
         <div class="container">
@@ -21,9 +21,13 @@
       </header>
     </div>
     <%= render "layouts/application/error_messages" %>
-    <div class="container">
-      <div id="main-region">
-        <%= yield %>
+    <div id="main-region" class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
+          <section class="card">
+            <%= yield %>
+          </section>
+        </div>
       </div>
     </div>
     <div id="footer-region">

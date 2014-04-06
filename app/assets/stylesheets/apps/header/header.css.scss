@@ -50,3 +50,13 @@ header {
     text-align: left;
   }
 }
+
+#page.devise {
+  #header-region {
+    height: $header-height
+  }
+  
+  #fake-header {
+    height: $header-height;
+  }
+}
