@@ -11,13 +11,16 @@
       },
       events: {
         'click .log-in': function () {
-          this.trigger('auth:log:in')
+          this.trigger('auth:log:in');
         },
         'click .sign-up': function () {
-          this.trigger('auth:sign:up')
+          this.trigger('auth:sign:up');
         },
         'click .log-out': function () {
-          this.trigger('auth:log:out')
+          this.trigger('auth:log:out');
+        },
+        'click .edit-user': function () {
+          this.trigger('auth:edit:user');
         }
       }
     });

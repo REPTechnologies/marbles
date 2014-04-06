@@ -1,9 +1,9 @@
 {?email}
   <div class="authenticated row">
-    <div class="col-xs-7">
-      <span class="user btn-link">{email}</span>
+    <div class="col-xs-8">
+      <span class="edit-user btn-link">{email}</span>
     </div>
-    <div class="col-xs-5 text-right">
+    <div class="col-xs-4 text-right">
       <span class="log-out btn-link">Log Out</span>
     </div>
   </div>
