@@ -13,7 +13,7 @@
 
     var API = {
       setCurrentUser: function (currentUser) {
-        return new Entities.User(currentUser);
+        return new Entities.User(currentUser || {});
       }
     };
 

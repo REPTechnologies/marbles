@@ -8,10 +8,18 @@
   window.M = Marbles; // Add M shortcut to Global scope
 
   // Shortcuts and Aliases
-  M.respond = M.reqres;
+  window.M.respond = window.M.reqres;
 
   Marbles.on('initialize:before', function (options) {
-    this.currentUser = Marbles.request("set:current:user", options.currentUser);
+    this.currentUser = Marbles.request('set:current:user', options.currentUser);
+  });
+
+  Marbles.respond.setHandler('get:current:user', function () {
+    return Marbles.currentUser;
+  });
+
+  Marbles.respond.setHandler('destroy:current:user', function () {
+    Marbles.currentUser.clear();
   });
 
   Marbles.addRegions({
