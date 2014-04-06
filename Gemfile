@@ -52,6 +52,14 @@ gem "enumerize", "~> 0.8"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+# Or RABL as alternative for generating JSON
+gem 'rabl'
+# And OJ for parsing JSON
+gem 'oj'
+
+# Use gon for bootstrapping JSON data
+gem 'gon'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
