@@ -22,6 +22,9 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'compass-rails', '~> 1.1'
 
+# Form Builder that generates boostrap compatibile html
+gem 'bootstrap_form', '~> 2.1'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 

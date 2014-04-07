@@ -13,9 +13,9 @@
 </head>
 <body>
   <div id="page" class="<%= params[:controller].gsub('/', ' ') %>">
-    <%= render "layouts/application/error_messages" %>
     <div id="header-region" class="fixed"></div>
     <div id="fake-header">get in the mix</div>
+    <%= render "layouts/application/error_messages" %>
     <div id="main-region" class="container"></div>
     <div id="fake-footer">get in the mix</div>
     <div id="footer-region"></div>

@@ -39,6 +39,11 @@ body {
   padding: $padding-size;
 }
 
+#messages {
+  padding: $padding-size;
+  padding-bottom: 0;
+}
+
 .fixed {
   @include border-box;
   position: fixed;
@@ -65,4 +70,16 @@ body {
 
 .padding-top {
   padding-top: $padding-size;
+}
+
+.alert-notice {
+  @extend .alert-info;
+}
+
+.alert-error {
+  @extend .alert-danger;
+}
+
+.alert-alert {
+  @extend .alert-warning;
 }
