@@ -1,0 +1,28 @@
+{
+  "records": [
+    {
+      "sprig_id": 1,
+      "email": "dev1@email.com",
+      "password": "password",
+      "password_confirmation": "password"
+    },
+    {
+      "sprig_id": 2,
+      "email": "dev2@email.com",
+      "password": "password",
+      "password_confirmation": "password"
+    },
+    {
+      "sprig_id": 3,
+      "email": "dev3@email.com",
+      "password": "password",
+      "password_confirmation": "password"
+    },
+    {
+      "sprig_id": 4,
+      "email": "dev4@email.com",
+      "password": "password",
+      "password_confirmation": "password"
+    }
+  ]
+}
