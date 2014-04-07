@@ -10,6 +10,7 @@
         type: 'DELETE'
       }).always(function () {
         Marbles.request('destroy:current:user');
+        window.location = Routes.new_user_session_path();
       });
     }
 
