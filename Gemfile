@@ -49,12 +49,6 @@ gem "acts-as-taggable-on", "~> 3.0.2"
 # User enumerize as enumeration library
 gem "enumerize", "~> 0.8"
 
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-# gem 'turbolinks'
-
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
-
 # Or RABL as alternative for generating JSON
 gem 'rabl'
 # And OJ for parsing JSON
