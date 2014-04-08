@@ -1,34 +1,34 @@
 require "spec_helper"
 
-describe EventsController do
+describe V1::EventsController do
   describe "routing" do
 
     it "routes to #index" do
-      get("/api/events").should route_to("events#index")
+      get("/api/v1/events").should route_to("v1/events#index")
     end
 
     it "routes to #new" do
-      get("/api/events/new").should route_to("events#new")
+      get("/api/v1/events/new").should route_to("v1/events#new")
     end
 
     it "routes to #show" do
-      get("/api/events/1").should route_to("events#show", :id => "1")
+      get("/api/v1/events/1").should route_to("v1/events#show", :id => "1")
     end
 
     it "routes to #edit" do
-      get("/api/events/1/edit").should route_to("events#edit", :id => "1")
+      get("/api/v1/events/1/edit").should route_to("v1/events#edit", :id => "1")
     end
 
     it "routes to #create" do
-      post("/api/events").should route_to("events#create")
+      post("/api/v1/events").should route_to("v1/events#create")
     end
 
     it "routes to #update" do
-      put("/api/events/1").should route_to("events#update", :id => "1")
+      put("/api/v1/events/1").should route_to("v1/events#update", :id => "1")
     end
 
     it "routes to #destroy" do
-      delete("/api/events/1").should route_to("events#destroy", :id => "1")
+      delete("/api/v1/events/1").should route_to("v1/events#destroy", :id => "1")
     end
 
   end

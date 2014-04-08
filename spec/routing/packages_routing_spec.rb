@@ -1,34 +1,34 @@
 require "spec_helper"
 
-describe PackagesController do
+describe V1::PackagesController do
   describe "routing" do
 
     it "routes to #index" do
-      get("/api/packages").should route_to("packages#index")
+      get("/api/v1/packages").should route_to("v1/packages#index")
     end
 
     it "routes to #new" do
-      get("/api/packages/new").should route_to("packages#new")
+      get("/api/v1/packages/new").should route_to("v1/packages#new")
     end
 
     it "routes to #show" do
-      get("/api/packages/1").should route_to("packages#show", :id => "1")
+      get("/api/v1/packages/1").should route_to("v1/packages#show", :id => "1")
     end
 
     it "routes to #edit" do
-      get("/api/packages/1/edit").should route_to("packages#edit", :id => "1")
+      get("/api/v1/packages/1/edit").should route_to("v1/packages#edit", :id => "1")
     end
 
     it "routes to #create" do
-      post("/api/packages").should route_to("packages#create")
+      post("/api/v1/packages").should route_to("v1/packages#create")
     end
 
     it "routes to #update" do
-      put("/api/packages/1").should route_to("packages#update", :id => "1")
+      put("/api/v1/packages/1").should route_to("v1/packages#update", :id => "1")
     end
 
     it "routes to #destroy" do
-      delete("/api/packages/1").should route_to("packages#destroy", :id => "1")
+      delete("/api/v1/packages/1").should route_to("v1/packages#destroy", :id => "1")
     end
 
   end

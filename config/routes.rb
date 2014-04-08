@@ -3,13 +3,11 @@ Marbles::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   scope 'api' do
-    resources :users
-
-    resources :packages
-
-    resources :organizations
-
-    resources :events
+    api_version(:module => "V1", :path => {:value => "v1"}) do
+      resources :packages
+      resources :organizations
+      resources :events
+    end
   end
 
   devise_for :users, path_names: {sign_in: "log_in", sign_out: "log_out"}

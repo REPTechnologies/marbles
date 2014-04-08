@@ -1,34 +1,34 @@
 require "spec_helper"
 
-describe OrganizationsController do
+describe V1::OrganizationsController do
   describe "routing" do
 
     it "routes to #index" do
-      get("/api/organizations").should route_to("organizations#index")
+      get("/api/v1/organizations").should route_to("v1/organizations#index")
     end
 
     it "routes to #new" do
-      get("/api/organizations/new").should route_to("organizations#new")
+      get("/api/v1/organizations/new").should route_to("v1/organizations#new")
     end
 
     it "routes to #show" do
-      get("/api/organizations/1").should route_to("organizations#show", :id => "1")
+      get("/api/v1/organizations/1").should route_to("v1/organizations#show", :id => "1")
     end
 
     it "routes to #edit" do
-      get("/api/organizations/1/edit").should route_to("organizations#edit", :id => "1")
+      get("/api/v1/organizations/1/edit").should route_to("v1/organizations#edit", :id => "1")
     end
 
     it "routes to #create" do
-      post("/api/organizations").should route_to("organizations#create")
+      post("/api/v1/organizations").should route_to("v1/organizations#create")
     end
 
     it "routes to #update" do
-      put("/api/organizations/1").should route_to("organizations#update", :id => "1")
+      put("/api/v1/organizations/1").should route_to("v1/organizations#update", :id => "1")
     end
 
     it "routes to #destroy" do
-      delete("/api/organizations/1").should route_to("organizations#destroy", :id => "1")
+      delete("/api/v1/organizations/1").should route_to("v1/organizations#destroy", :id => "1")
     end
 
   end

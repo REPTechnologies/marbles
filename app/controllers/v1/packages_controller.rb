@@ -1,4 +1,5 @@
-class PackagesController < ApplicationController
+class V1::PackagesController < ApplicationController
+  respond_to :json
   before_action :set_package, only: [:show, :edit, :update, :destroy]
 
   # GET /packages
@@ -28,10 +29,8 @@ class PackagesController < ApplicationController
 
     respond_to do |format|
       if @package.save
-        format.html { redirect_to @package, notice: 'Package was successfully created.' }
         format.json { render action: 'show', status: :created, location: @package }
       else
-        format.html { render action: 'new' }
         format.json { render json: @package.errors, status: :unprocessable_entity }
       end
     end
@@ -42,10 +41,8 @@ class PackagesController < ApplicationController
   def update
     respond_to do |format|
       if @package.update(package_params)
-        format.html { redirect_to @package, notice: 'Package was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
         format.json { render json: @package.errors, status: :unprocessable_entity }
       end
     end
@@ -56,7 +53,6 @@ class PackagesController < ApplicationController
   def destroy
     @package.destroy
     respond_to do |format|
-      format.html { redirect_to packages_url }
       format.json { head :no_content }
     end
   end
