@@ -72,6 +72,7 @@ end
 group :development do
   # Spring rails preloader
   gem 'spring', '~> 1.1'
+  gem 'spring-commands-rspec', '~> 1.0'
 end
 
 group :test, :development do
