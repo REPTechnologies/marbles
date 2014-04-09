@@ -18,13 +18,14 @@
       $fakeFooter.height($footerRegion.height());
     }
 
-    function windowResize() {
+    function resizeFooter() {
       setFooterPosition();
       setFakeFooterHeight();
     }
 
-    windowResize();
-    $window.resize(windowResize);
+    window.resizeFooter = resizeFooter;
+    resizeFooter();
+    $window.resize(resizeFooter);
   });
 
 }());

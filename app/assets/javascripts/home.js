@@ -34,6 +34,8 @@
     Marbles.start({
       currentUser: gon.current_user
     });
+
+    resizeFooter();
   });
 
 }());
