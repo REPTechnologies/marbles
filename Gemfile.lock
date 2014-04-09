@@ -76,8 +76,6 @@ GEM
     diff-lcs (1.2.5)
     docile (1.1.3)
     ejs (1.1.1)
-    enumerize (0.8.0)
-      activesupport (>= 3.2)
     erubis (2.7.0)
     execjs (2.0.2)
     factory_girl (4.4.0)
@@ -258,7 +256,6 @@ DEPENDENCIES
   compass-rails (~> 1.1)
   database_cleaner
   devise (~> 3.2)
-  enumerize (~> 0.8)
   factory_girl_rails
   faker
   gon (~> 5.0)

@@ -43,9 +43,6 @@ gem 'js-routes', '~> 0.9'
 # Use Acts-as-taggable-on as tagging library
 gem "acts-as-taggable-on", "~> 3.1"
 
-# User enumerize as enumeration library
-gem "enumerize", "~> 0.8"
-
 # Use RABL as for generating JSON
 gem 'rabl', '~> 0.9'
 

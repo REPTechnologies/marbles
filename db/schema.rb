@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140406191924) do
+ActiveRecord::Schema.define(version: 20140409003234) do
 
   create_table "answers", force: true do |t|
     t.integer  "slider"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20140406191924) do
     t.integer  "organization_id"
     t.integer  "primary_focus_id"
     t.integer  "secondary_focus_id"
-    t.integer  "type",               default: 0
+    t.integer  "type"
     t.datetime "held_at"
     t.string   "location"
     t.integer  "seats"

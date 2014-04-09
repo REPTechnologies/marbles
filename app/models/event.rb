@@ -1,7 +1,5 @@
-require File.expand_path('../eventtype', __FILE__)
-
 class Event < ActiveRecord::Base
-  include EventType
+  enum type: { presentation: 1, networking: 2, socializing: 3, discussion: 4, other: 5}
 
   belongs_to :organization, :inverse_of => :events
   belongs_to :primary_focus, :class_name => "Focus", :foreign_key => "primary_focus_id"
