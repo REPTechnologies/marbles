@@ -1,0 +1,14 @@
+//= depend_on_asset "hero-webfont.woff"
+//= depend_on_asset "hero-webfont.ttf"
+//= depend_on_asset "hero-webfont.svg"
+//= depend_on_asset "hero-webfont.eot"
+//= depend_on_asset "hero_light-webfont.woff"
+//= depend_on_asset "hero_light-webfont.ttf"
+//= depend_on_asset "hero_light-webfont.svg"
+//= depend_on_asset "hero_light-webfont.eot"
+
+$hero-files: font-files(font-path('hero-webfont.woff'), font-path('hero-webfont.ttf'), font-path('hero-webfont.svg#hero'));
+$hero-light-files: font-files(font-path('hero_light-webfont.woff'), font-path('hero_light-webfont.ttf'), font-path('hero_light-webfont.svg#herolight'));
+
+@include font-face("hero", $hero-files, font-path('hero-webfont.eot'), normal, normal);
+@include font-face("hero", $hero-light-files, font-path('hero_light-webfont.eot'), lighter, normal);
