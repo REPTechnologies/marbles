@@ -24,16 +24,14 @@ class V1::EventsController < ApplicationController
 
   # POST /events
   # POST /events.json
-  def create
-    @event = Event.new(event_params)
-
-    respond_to do |format|
-      if @event.save
-        format.json { render action: 'show', status: :created, location: @event }
-      else
-        format.json { render json: @event.errors, status: :unprocessable_entity }
-      end
-    end
+  def create  
+    result = CreateEvent.perform(event_parameters)
+    
+    if result.success?
+      format.json { render action: 'show', status: :created, location: @event }
+    else
+      format.json { render json: @event.errors, status: :unprocessable_entity }
+    end  
   end
 
   # PATCH/PUT /events/1
