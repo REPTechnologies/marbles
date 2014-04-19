@@ -1,7 +1,7 @@
 #header-region {
   height: $header-height * 2;
   background-color: $white-color;
-  z-index: 5;
+  z-index: 100;
   @include single-box-shadow;
 }
 

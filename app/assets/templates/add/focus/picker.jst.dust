@@ -1,0 +1,28 @@
+<div class="row">
+  <div id="primary-drop" class="focus-drop col-sm-4 col-sm-offset-2">
+    <span class="btn btn-default btn-block btn-lg disabled">Drop the required primary focus here.</span>
+  </div>
+  <div id="secondary-drop" class="focus-drop col-sm-4">
+    <span class="btn btn-default btn-block btn-lg disabled">Drop an optional secondary focus here.</span>
+  </div>
+</div>
+<div class="row focus-pool">
+  <div class="focus col-sm-4">
+    <span class="btn btn-default btn-block">Focus 1</span>
+  </div>
+  <div class="focus col-sm-4">
+    <span class="btn btn-default btn-block">Focus 2</span>
+  </div>
+  <div class="focus col-sm-4">
+    <span class="btn btn-default btn-block">Focus 3</span>
+  </div>
+  <div class="focus col-sm-4">
+    <span class="btn btn-default btn-block">Focus 4</span>
+  </div>
+  <div class="focus col-sm-4">
+    <span class="btn btn-default btn-block">Focus 5</span>
+  </div>
+  <div class="focus col-sm-4">
+    <span class="btn btn-default btn-block">Focus 6</span>
+  </div>
+</div>

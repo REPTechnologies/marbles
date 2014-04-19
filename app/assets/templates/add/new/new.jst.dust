@@ -18,9 +18,7 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <section class="card">
-      <h3>Event Focus Picker</h3>
-    </section>
+    <section class="card" id="focus-region"/>
   </div>
 </div>
 <div class="row">

@@ -1,0 +1,52 @@
+.focus {
+  z-index: 2;
+}
+
+.focus-drop {
+  z-index: 1;
+  
+  .btn {
+    cursor: default;
+    border-style: dashed;
+    
+    &:hover {
+      background-color: white;
+      border-color: #cccccc;
+    }
+    
+    &:focus {
+      outline-style: none;
+      outline-width: 0;
+    }
+    
+    &.disabled {
+      opacity: 1;
+    }
+  }
+  
+  &.can-drop .btn {
+    @include single-box-shadow($brand-info);
+  }
+  
+  &.will-drop .btn {
+    @include single-box-shadow($brand-success);
+  }
+}
+
+.focus, .focus-drop {
+  padding: $padding-size;
+  
+  .btn {
+    vertical-align: middle;
+    height: 68px;
+    white-space: normal;
+  }
+}
+
+#primary-focus, #secondary-focus {
+  position: absolute !important;
+}
+
+#focus-region {
+  cursor: default;
+}

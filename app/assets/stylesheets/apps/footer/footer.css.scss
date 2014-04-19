@@ -5,7 +5,7 @@
   width: 100%;
   background-color: $dark-gray-color;
   color: $white-text-color;
-  z-index: 5;
+  z-index: 100;
   @include single-box-shadow;
   
   h4 {

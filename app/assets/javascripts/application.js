@@ -1,4 +1,9 @@
 //= require jquery
+//= require jquery.ui.position
+//= require jquery.ui.draggable
+//= require jquery.ui.draggable
+//= require jquery.ui.droppable
+//= require jquery.ui.sortable
 //= require args
 //= require js-routes
 //= require footer_position

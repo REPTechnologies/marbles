@@ -3,9 +3,12 @@
 (function () {
   "use strict";
 
-  Marbles.module("AddApp.New", function (New, Marbles, Backbone, Marionette, $, _) {
+  Marbles.module('AddApp.New', function (New, Marbles, Backbone, Marionette, $, _) {
     New.Layout = Marionette.Layout.extend({
-      template: "add/new/new"
+      template: 'add/new/new',
+      regions: {
+        focusRegion: '#focus-region'
+      }
     });
   });
 

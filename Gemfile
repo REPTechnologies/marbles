@@ -33,6 +33,7 @@ gem 'versionist', '~> 1.3'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '~> 3.1'
+gem 'jquery-ui-rails', '~> 4.2'
 
 # Use backbone, marionette and dust as the JavaScript framework
 gem 'marionette_dust', '~> 0.1'
