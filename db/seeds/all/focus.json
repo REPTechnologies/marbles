@@ -1,0 +1,43 @@
+{
+  "options": {
+    "find_existing_by": ["id"]
+  },
+  "records": [
+    {
+      "sprig_id": 1,
+      "id": 1,
+      "name": "Sense of Purpose & Meaning",
+      "color": "#993399"
+    },
+    {
+      "sprig_id": 2,
+      "id": 2,
+      "name": "Creativity & Excitement",
+      "color": "#0099ff"
+    },
+    {
+      "sprig_id": 3,
+      "id": 3,
+      "name": "Relationships & Social Connection",
+      "color": "#009966"
+    },
+    {
+      "sprig_id": 4,
+      "id": 4,
+      "name": "Career & Academic Ability",
+      "color": "#ffff00"
+    },
+    {
+      "sprig_id": 5,
+      "id": 5,
+      "name": "Stress & Emotional Wellbeing",
+      "color": "#ff9933"
+    },
+    {
+      "sprig_id": 6,
+      "id": 6,
+      "name": "Nutrition, Sleep & Exercise",
+      "color": "#ff3333"
+    }
+  ]
+}
