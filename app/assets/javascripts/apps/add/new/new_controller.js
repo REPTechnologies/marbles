@@ -5,8 +5,10 @@
 
   Marbles.module('AddApp.New', function (New, Marbles, Backbone, Marionette, $, _) {
 
-    function getFocusPicker() {
-      return new New.Focus.Picker();
+    function getFocusPicker(foci) {
+      return new New.Focus.Picker({
+        collection: Marbles.request('get:focus:list')
+      });
     }
 
     function addViewsToLayout() {

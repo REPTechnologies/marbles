@@ -10,16 +10,25 @@
   // Shortcuts and Aliases
   window.M.respond = window.M.reqres;
 
+  //local variables
+  var currentUser = {};
+  var foci = [];
+
   Marbles.on('initialize:before', function (options) {
-    this.currentUser = Marbles.request('set:current:user', options.currentUser);
+    currentUser = Marbles.request('set:current:user', options.currentUser);
+    foci = Marbles.request('set:focus:list', options.foci);
   });
 
   Marbles.respond.setHandler('get:current:user', function () {
-    return Marbles.currentUser;
+    return currentUser;
   });
 
   Marbles.respond.setHandler('destroy:current:user', function () {
-    Marbles.currentUser.clear();
+    currentUser.clear();
+  });
+
+  Marbles.respond.setHandler('get:focus:list', function () {
+    return foci;
   });
 
   Marbles.addRegions({

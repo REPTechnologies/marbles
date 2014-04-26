@@ -32,7 +32,8 @@
 
     // Start the application
     Marbles.start({
-      currentUser: gon.current_user
+      currentUser: gon.current_user,
+      foci: gon.foci
     });
 
     resizeFooter();

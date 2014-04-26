@@ -6,23 +6,4 @@
     <span class="btn btn-default btn-block btn-lg disabled">Drop an optional secondary focus here.</span>
   </div>
 </div>
-<div class="row focus-pool">
-  <div class="focus col-sm-4">
-    <span class="btn btn-default btn-block">Focus 1</span>
-  </div>
-  <div class="focus col-sm-4">
-    <span class="btn btn-default btn-block">Focus 2</span>
-  </div>
-  <div class="focus col-sm-4">
-    <span class="btn btn-default btn-block">Focus 3</span>
-  </div>
-  <div class="focus col-sm-4">
-    <span class="btn btn-default btn-block">Focus 4</span>
-  </div>
-  <div class="focus col-sm-4">
-    <span class="btn btn-default btn-block">Focus 5</span>
-  </div>
-  <div class="focus col-sm-4">
-    <span class="btn btn-default btn-block">Focus 6</span>
-  </div>
-</div>
+<div class="row focus-pool"></div>

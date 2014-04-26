@@ -61,8 +61,15 @@
       });
     }
 
-    Focus.Picker = Marionette.ItemView.extend({
+    Focus.View = Marionette.ItemView.extend({
+      template: 'add/focus/view',
+      className: 'focus col-sm-4'
+    });
+
+    Focus.Picker = Marionette.CompositeView.extend({
       template: 'add/focus/picker',
+      itemView: Focus.View,
+      itemViewContainer: '.focus-pool',
       onRender: initDragAndDrop
     });
   });
