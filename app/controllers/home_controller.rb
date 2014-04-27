@@ -7,5 +7,7 @@ class HomeController < ApplicationController
     
     @foci = Focus.all
     gon.rabl template: "app/views/foci/index.json.rabl", as: "foci"
+    
+    gon.event_types = Event.types.map { |k,v| {:id => v, :name => k, :title => k.titleize} }
   end
 end
