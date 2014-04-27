@@ -24,8 +24,10 @@
 <div class="row">
   <div class="col-xs-12">
     <section class="card">
-      <h3>Event Type Picker</h3>
-      <h3>Event Scope Picker</h3>
+      <div class="form-group">
+        <div class="row" id="event-type-region"></div>
+      </div>
+      <div class="row" id="event-scope-region"></div>
     </section>
   </div>
 </div>

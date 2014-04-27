@@ -11,8 +11,18 @@
       });
     }
 
+    function getTypePicker() {
+      return new New.Type.Picker();
+    }
+
+    function getScopePicker() {
+      return new New.Scope.Picker();
+    }
+
     function addViewsToLayout() {
       this.focusRegion.show(getFocusPicker());
+      this.eventTypeRegion.show(getTypePicker());
+      this.eventScopeRegion.show(getScopePicker());
     }
 
     New.Controller = {

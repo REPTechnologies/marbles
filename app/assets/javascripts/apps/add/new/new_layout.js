@@ -7,7 +7,9 @@
     New.Layout = Marionette.Layout.extend({
       template: 'add/new/new',
       regions: {
-        focusRegion: '#focus-region'
+        focusRegion: '#focus-region',
+        eventTypeRegion: '#event-type-region',
+        eventScopeRegion: '#event-scope-region'
       }
     });
   });

@@ -1,0 +1,22 @@
+<div class="col-sm-3">
+  <h5>What is it? <small>(1 max)</small></h5>
+</div>
+<div class="col-sm-9">
+  <div class="type-pool btn-group btn-group-justified">
+    <div class="type btn btn-default">
+      Presentation
+    </div>
+    <div class="type btn btn-default">
+      Networking
+    </div>
+    <div class="type btn btn-default">
+      Socializing
+    </div>
+    <div class="type btn btn-default">
+      Discussion
+    </div>
+    <div class="type btn btn-default">
+      Other
+    </div>
+  </div>
+</div>

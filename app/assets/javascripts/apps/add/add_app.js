@@ -10,12 +10,6 @@
       }
     });
 
-    /*var API = {
-      showNew: function () {
-        AddApp.New.Controller.showNew();
-      }
-    };*/
-    
     Marbles.vent.on('add:new', function () {
       M.fn.nav('add');
       AddApp.New.Controller.showNew();
