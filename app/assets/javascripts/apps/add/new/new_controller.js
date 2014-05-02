@@ -23,11 +23,16 @@
       return new New.Info.View();
     }
 
+    function getDetailsView() {
+      return new New.Details.View();
+    }
+
     function addViewsToLayout() {
       this.focusRegion.show(getFocusPicker());
       this.eventTypeRegion.show(getTypePicker());
       this.eventScopeRegion.show(getScopePicker());
       this.eventInfoRegion.show(getInfoView());
+      this.eventDetailsRegion.show(getDetailsView());
     }
 
     New.Controller = {

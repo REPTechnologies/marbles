@@ -10,7 +10,8 @@
         focusRegion: '#focus-region',
         eventTypeRegion: '#event-type-region',
         eventScopeRegion: '#event-scope-region',
-        eventInfoRegion: '#event-info-region'
+        eventInfoRegion: '#event-info-region',
+        eventDetailsRegion: '#event-details-region'
       }
     });
   });

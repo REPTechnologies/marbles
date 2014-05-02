@@ -1,0 +1,21 @@
+<div class="col-sm-6">
+  <div class="form-group">
+    <label for="event-seats">Number of seats available</label>
+    <input type="number" class="form-control" id="event-seats" name="seats" placeholder="##" required min="1"/>
+  </div>
+</div>
+<div class="col-sm-6">
+  <div class="form-group">
+    <label for="event-cost">Cost for attendees</label>
+    <div class="input-group">
+      <span class="input-group-addon">$</span>
+      <input type="number" class="form-control" id="event-cost" name="held_at" placeholder="#.##" min="0" step="0.01"/>
+    </div>
+  </div>
+</div>
+<div class="col-sm-12">
+  <div class="form-group">
+    <label for="event-description">Description</label>
+    <textarea class="form-control" id="event-description" name="description" placeholder="description" required rows="4" maxlength="500"/>
+  </div>
+</div>
