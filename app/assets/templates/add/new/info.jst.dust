@@ -4,8 +4,15 @@
     <input type="text" class="form-control" id="event-title" name="title" placeholder="title" required/>
   </div>
   <div class="form-group">
-    <label for="event-date">Date</label>
-    <input type="date" class="form-control" id="event-date" name="held_at" required/>
+    <label for="event-date">Date and Time</label>
+    <div class="input-group">
+      <span class="input-group-addon">
+        <span class="glyphicon glyphicon-calendar"></span>
+        &nbsp;
+        <span class="glyphicon glyphicon-time"></span>
+      </span>
+      <input type="datetime-local" class="form-control" id="event-date" name="held_at" required/>
+    </div>
   </div>
 </div>
 <div class="col-sm-6">
@@ -17,11 +24,20 @@
   </div>
   <div class="form-group">
     <label for="event-location">Location</label>
-    <input type="text" class="form-control" id="event-location" name="location" placeholder="address" required/>
+    <div class="input-group">
+      <span class="input-group-addon">
+        <span class="glyphicon glyphicon-map-marker"></span>
+      </span>
+      <input type="text" class="form-control" id="event-location" name="location" placeholder="address" required/>
+    </div>
   </div>
 </div>
 <div class="col-sm-12">
   <label for="event-tags">Tags</label>
-  <select class="form-control" id="event-tags" name="tag">
-  </select>
+  <div class="input-group">
+    <span class="input-group-addon">
+      <span class="glyphicon glyphicon-tags"></span>
+    </span>
+    <select class="form-control" id="event-tags" name="tag"></select>
+  </div>
 </div>
