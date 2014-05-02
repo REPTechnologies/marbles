@@ -19,10 +19,15 @@
       return new New.Scope.Picker();
     }
 
+    function getInfoView() {
+      return new New.Info.View();
+    }
+
     function addViewsToLayout() {
       this.focusRegion.show(getFocusPicker());
       this.eventTypeRegion.show(getTypePicker());
       this.eventScopeRegion.show(getScopePicker());
+      this.eventInfoRegion.show(getInfoView());
     }
 
     New.Controller = {

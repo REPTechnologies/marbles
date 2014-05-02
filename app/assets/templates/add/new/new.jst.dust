@@ -34,7 +34,7 @@
 <div class="row">
   <div class="col-xs-12">
     <section class="card">
-      <h3>Event Info</h3>
+      <div class="row" id="event-info-region"></div>
     </section>
   </div>
 </div>
