@@ -6,6 +6,7 @@
 //= require jquery.ui.sortable
 //= require args
 //= require js-routes
+//= require select2
 //= require footer_position
 //= require bootstrap
 //= require marionette_dust

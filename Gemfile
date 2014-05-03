@@ -35,6 +35,9 @@ gem 'versionist', '~> 1.3'
 gem 'jquery-rails', '~> 3.1'
 gem 'jquery-ui-rails', '~> 4.2'
 
+# Select2 as the tag UI
+gem 'select2-rails', '~> 3.5'
+
 # Use backbone, marionette and dust as the JavaScript framework
 gem 'marionette_dust', '~> 0.1'
 

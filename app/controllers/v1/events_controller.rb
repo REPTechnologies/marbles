@@ -25,7 +25,7 @@ class V1::EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create  
-    result = CreateEvent.perform(event_parameters)
+    result = CreateEvent.perform(event_params)
     
     if result.success?
       format.json { render action: 'show', status: :created, location: @event }

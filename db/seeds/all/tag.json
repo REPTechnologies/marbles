@@ -1,0 +1,99 @@
+{
+  "options": {
+    "find_existing_by": ["name"]
+  },
+  "records": [
+    {
+      "sprig_id": 1,
+      "name": "purpose"
+    },
+    {
+      "sprig_id": 2,
+      "name": "creativity"
+    },
+    {
+      "sprig_id": 3,
+      "name": "relationships"
+    },
+    {
+      "sprig_id": 4,
+      "name": "career"
+    },
+    {
+      "sprig_id": 5,
+      "name": "stress"
+    },
+    {
+      "sprig_id": 6,
+      "name": "nutrition"
+    },
+    {
+      "sprig_id": 7,
+      "name": "meaning"
+    },
+    {
+      "sprig_id": 8,
+      "name": "excitement"
+    },
+    {
+      "sprig_id": 9,
+      "name": "social"
+    },
+    {
+      "sprig_id": 10,
+      "name": "connect"
+    },
+    {
+      "sprig_id": 11,
+      "name": "academics"
+    },
+    {
+      "sprig_id": 12,
+      "name": "emotion"
+    },
+    {
+      "sprig_id": 13,
+      "name": "emotional"
+    },
+    {
+      "sprig_id": 14,
+      "name": "sleep"
+    },
+    {
+      "sprig_id": 15,
+      "name": "exercise"
+    },
+    {
+      "sprig_id": 16,
+      "name": "presentation"
+    },
+    {
+      "sprig_id": 17,
+      "name": "networking"
+    },
+    {
+      "sprig_id": 18,
+      "name": "socializing"
+    },
+    {
+      "sprig_id": 19,
+      "name": "discuss"
+    },
+    {
+      "sprig_id": 20,
+      "name": "discussion"
+    },
+    {
+      "sprig_id": 21,
+      "name": "group"
+    },
+    {
+      "sprig_id": 22,
+      "name": "teamwork"
+    },
+    {
+      "sprig_id": 23,
+      "name": "support"
+    }
+  ]
+}

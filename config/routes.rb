@@ -3,10 +3,11 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   scope 'api' do
-    api_version(:module => "V1", :path => {:value => "v1"}) do
+    api_version(:module => "V1", :path => {:value => "v1"}, defaults: { format: :json }) do
       resources :packages
       resources :organizations
       resources :events
+      get '/tags', to: 'tags#index'
     end
   end
 

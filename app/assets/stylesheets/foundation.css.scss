@@ -83,3 +83,7 @@ body {
 .alert-alert {
   @extend .alert-warning;
 }
+
+.select2-results {
+  max-height: 250px;
+}

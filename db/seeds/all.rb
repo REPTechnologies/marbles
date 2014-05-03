@@ -11,4 +11,9 @@ focus = {
   :source => all_path('focus.json')
 }
 
-sprig [focus]
+tag = {
+  :class => ActsAsTaggableOn::Tag,
+  :source => all_path('tag.json')
+}
+
+sprig [focus, tag]
