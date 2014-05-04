@@ -8,15 +8,15 @@ describe HomeController do
   describe "routing" do
 
     it "routes to #index" do
-      get("/").should route_to("home#index")
+      expect(get "/").to route_to("home#index")
     end
 
     it "routes wildcards to #index" do
-      get("/welcome").should route_path("welcome")
-      get("/find").should route_path("find")
-      get("/add").should route_path("add")
-      get("/trends").should route_path("trends")
-      get("/anything").should route_path("anything")
+      expect(get "/welcome").to route_path("welcome")
+      expect(get "/find").to route_path("find")
+      expect(get "/add").to route_path("add")
+      expect(get "/trends").to route_path("trends")
+      expect(get "/anything").to route_path("anything")
     end
 
   end
