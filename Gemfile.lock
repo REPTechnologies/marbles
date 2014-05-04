@@ -31,6 +31,7 @@ GEM
       actionpack (>= 3, < 5)
       activerecord (>= 3, < 5)
       activesupport (>= 3, < 5)
+    addressable (2.3.6)
     arel (5.0.0)
     bcrypt (3.1.7)
     better_errors (1.1.0)
@@ -119,6 +120,8 @@ GEM
       sprockets-rails
     json (1.8.1)
     kgio (2.9.2)
+    launchy (2.4.2)
+      addressable (~> 2.3)
     listen (2.7.1)
       celluloid (>= 0.15.2)
       celluloid-io (>= 0.15.0)
@@ -276,6 +279,7 @@ DEPENDENCIES
   jquery-rails (~> 3.1)
   jquery-ui-rails (~> 4.2)
   js-routes (~> 0.9)
+  launchy
   marionette_dust (~> 0.1)
   oj (~> 2.7)
   rabl (~> 0.9)
