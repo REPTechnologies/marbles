@@ -93,4 +93,5 @@ group :test, :development do
   gem "guard-rspec"
   gem "faker"
   gem "railroady"
+  gem "fuubar"
 end
