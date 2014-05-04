@@ -40,6 +40,10 @@ RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   # config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
+  # Include FactoryGirl Methods
+  config.include FactoryGirl::Syntax::Methods
+
+  # Enforce using the newer expect sytax
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end

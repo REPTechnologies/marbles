@@ -5,9 +5,6 @@ FactoryGirl.define do
     version 1
     name "MyString"
     description "MyString"
-    organizationName ""
-    questions ""
     isValid false
-    creationDateTime "2014-03-22 12:34:38"
   end
 end
