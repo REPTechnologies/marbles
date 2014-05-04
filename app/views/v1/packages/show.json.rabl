@@ -1,0 +1,3 @@
+object @package
+
+attributes :id
