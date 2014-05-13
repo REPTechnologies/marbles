@@ -16,7 +16,7 @@
       <span class="input-group-addon">
         <span class="glyphicon glyphicon-usd"></span>
       </span>
-      <input type="number" class="form-control" id="event-cost" name="held_at" placeholder="#.##" min="0" step="0.01"/>
+      <input type="number" class="form-control" id="event-cost" name="cost" placeholder="#.##" min="0" step="0.01"/>
     </div>
   </div>
 </div>

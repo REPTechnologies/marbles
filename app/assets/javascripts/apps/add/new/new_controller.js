@@ -1,5 +1,5 @@
 /*jslint indent: 2, nomen: true*/
-/*global Marbles */
+/*global Marbles, M */
 (function () {
   "use strict";
 
@@ -27,17 +27,45 @@
       return new New.Details.View();
     }
 
-    function addViewsToLayout() {
-      this.focusRegion.show(getFocusPicker());
-      this.eventTypeRegion.show(getTypePicker());
-      this.eventScopeRegion.show(getScopePicker());
-      this.eventInfoRegion.show(getInfoView());
-      this.eventDetailsRegion.show(getDetailsView());
+    function addViewsToLayout(layout) {
+      layout.focusRegion.show(getFocusPicker());
+      layout.eventTypeRegion.show(getTypePicker());
+      layout.eventScopeRegion.show(getScopePicker());
+      layout.eventInfoRegion.show(getInfoView());
+      layout.eventDetailsRegion.show(getDetailsView());
+    }
+
+    function saveSuccess(model, response, options) {
+      
+    }
+
+    function saveFailure(model, response, options) {
+      
+    }
+
+    function listenToTriggers(layout) {
+      layout.on('event:submit', function () {
+        //TODO detect new org
+        
+        var promise = layout.model.save();
+        if (promise) {
+          promise.done(saveSuccess);
+          promise.fail(saveFailure);
+        } else {
+          //TODO validations failed
+        }
+      });
+    }
+
+    function onShow(layout) {
+      addViewsToLayout(layout);
+      listenToTriggers(layout);
+      M.fn.bindModel(layout);
     }
 
     New.Controller = {
       showNew: function () {
-        Marbles.mainRegion.show(M.fn.getLayout(New, addViewsToLayout));
+        Marbles.mainRegion.show(M.fn.getLayout(New, onShow, new Marbles.Entities.Event()));
       }
     };
   });

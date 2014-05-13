@@ -38,6 +38,6 @@
     <span class="input-group-addon">
       <span class="glyphicon glyphicon-tags"></span>
     </span>
-    <input class="form-control" type="hidden" id="event-tags" name="tag"/>
+    <input class="form-control" type="hidden" id="event-tags" name="tags"/>
   </div>
 </div>

@@ -53,3 +53,8 @@
     </section>
   </div>
 </div>
+<div class="row">
+  <div class="col-xs-12 text-center">
+    <button id="submit" type="button" class="btn btn-lg btn-primary">Submit</button>
+  </div>
+</div>

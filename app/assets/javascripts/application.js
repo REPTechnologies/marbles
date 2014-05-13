@@ -10,6 +10,8 @@
 //= require footer_position
 //= require bootstrap
 //= require marionette_dust
+//= require Backbone.ModelBinder
+//= require_tree ./config
 //= require app
 //= require_tree ./apps
 //= require_tree ./entities

@@ -1,5 +1,5 @@
 /*jslint indent: 2, nomen: true*/
-/*global $, Marbles, JST, Backbone, M, Args */
+/*global $, Marbles, JST, Backbone, M, Args, gon, resizeFooter */
 (function () {
   "use strict";
 
@@ -17,15 +17,24 @@
     // Define common utility functions
     M.fn = {
       getLayout: function () {
-        var args = Args([
+        var args = new Args([
           {SubModule: Args.OBJECT | Args.Required},
-          {show: Args.FUNCTION | Args.Optional, _default: $.noop}
-        ], arguments);
-
-        var layout = new args.SubModule.Layout();
-        layout.on('show', args.show);
+          {show: Args.FUNCTION | Args.Optional, _default: $.noop},
+          {model: Args.OBJECT | Args.Optional}
+        ], arguments),
+          layout = new args.SubModule.Layout({
+            model: args.model || undefined
+          });
+        
+        layout.on('show', function () {
+          args.show.call(this, this);
+        });
 
         return layout;
+      },
+      bindModel: function (view, bindings, options) {
+        view.binder = view.binder || new Backbone.ModelBinder();
+        view.binder.bind(view.model, view.el, bindings, options);
       },
       nav: Backbone.history.navigate.bind(Backbone.history)
     };

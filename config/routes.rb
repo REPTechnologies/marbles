@@ -4,9 +4,9 @@ Rails.application.routes.draw do
 
   scope 'api' do
     api_version(:module => "V1", :path => {:value => "v1"}, defaults: { format: :json }) do
-      resources :packages
-      resources :organizations
-      resources :events
+      resources :packages, :except => [:new, :edit]
+      resources :organizations, :except => [:new, :edit]
+      resources :events, :except => [:new, :edit]
       get '/tags', to: 'tags#index'
     end
   end

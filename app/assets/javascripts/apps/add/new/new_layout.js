@@ -12,6 +12,11 @@
         eventScopeRegion: '#event-scope-region',
         eventInfoRegion: '#event-info-region',
         eventDetailsRegion: '#event-details-region'
+      },
+      events: {
+        'click #submit': function () {
+          this.trigger('event:submit');
+        }
       }
     });
   });
