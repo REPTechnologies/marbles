@@ -13,18 +13,9 @@ class V1::EventsController < ApplicationController
   def show
   end
 
-  # GET /events/new
-  def new
-    @event = Event.new
-  end
-
-  # GET /events/1/edit
-  def edit
-  end
-
   # POST /events
   # POST /events.json
-  def create  
+  def create
     result = CreateEvent.perform(event_params)
     
     if result.success?

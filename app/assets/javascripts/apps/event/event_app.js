@@ -5,14 +5,19 @@
 
   Marbles.module("EventApp", function (EventApp, Marbles, Backbone, Marionette, $, _) {
     EventApp.Router = Marionette.AppRouter.extend({
-      appRoutes: {}
+      appRoutes: {
+        'event/:id': 'showEvent'
+      }
     });
 
-    var API = {};
+    Marbles.vent.on('event:show', function (model) {
+      M.fn.nav('event/' + model.id);
+      EventApp.Show.Controller.showEvent(model.id, model);
+    });
 
     Marbles.addInitializer(function () {
       new EventApp.Router({
-        controller: API
+        controller: EventApp.Show.Controller
       });
     });
   });

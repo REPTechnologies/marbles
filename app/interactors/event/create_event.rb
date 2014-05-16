@@ -1,9 +1,8 @@
 class CreateEvent
   include Interactor
 
-  def perform
+  def perform(event_params)
     @event = Event.new(event_params)
-    @event.save      
+    @event.save if @event.valid?
   end
-  
 end

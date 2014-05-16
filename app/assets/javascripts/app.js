@@ -1,5 +1,5 @@
 /*jslint indent: 2, nomen: true*/
-/*global Marionette, Backbone */
+/*global Marionette, Backbone, Args */
 (function () {
   "use strict";
 
@@ -60,6 +60,31 @@
         pushState: true
       });
     }
+  });
+
+  function displayAlert() {
+    var args = new Args([
+      {value: Args.STRING | Args.Required},
+      {key: Args.STRING | Args.Optional, _default: 'error'}
+    ], arguments);
+
+    dust.render('alert', args, function (err, out) {
+      $('#messages').append(out);
+    });
+  }
+
+  Marbles.commands.setHandler('error:invalid', function (errors) {
+    if ($.isArray(errors)) {
+      $.each(errors, function (i, error) {
+        displayAlert(error);
+      });
+    } else {
+      displayAlert(errors);
+    }
+  });
+
+  Marbles.commands.setHandler('error:notfound', function () {
+    console.warn('TODO: not implemented');
   });
 
 }());

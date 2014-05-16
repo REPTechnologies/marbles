@@ -36,23 +36,24 @@
     }
 
     function saveSuccess(model, response, options) {
-      
+      Marbles.vent.trigger('event:show', model);
     }
 
     function saveFailure(model, response, options) {
-      
+      console.warn('TODO: error handling');
     }
 
     function listenToTriggers(layout) {
       layout.on('event:submit', function () {
-        //TODO detect new org
+        console.warn('TODO: detect new org');
         
-        var promise = layout.model.save();
-        if (promise) {
-          promise.done(saveSuccess);
-          promise.fail(saveFailure);
-        } else {
-          //TODO validations failed
+        var valid = layout.model.save({}, {
+          success: saveSuccess,
+          error: saveFailure
+        });
+
+        if (!valid) {
+          Marbles.commands.execute('error:invalid', layout.model.validationError);
         }
       });
     }
