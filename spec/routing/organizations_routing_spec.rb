@@ -7,16 +7,8 @@ describe V1::OrganizationsController do
       expect(get "/api/v1/organizations").to route_to("v1/organizations#index", :format => :json)
     end
 
-    it "routes to #new" do
-      expect(get "/api/v1/organizations/new").to route_to("v1/organizations#new", :format => :json)
-    end
-
     it "routes to #show" do
       expect(get "/api/v1/organizations/1").to route_to("v1/organizations#show", :id => "1", :format => :json)
-    end
-
-    it "routes to #edit" do
-      expect(get "/api/v1/organizations/1/edit").to route_to("v1/organizations#edit", :id => "1", :format => :json)
     end
 
     it "routes to #create" do

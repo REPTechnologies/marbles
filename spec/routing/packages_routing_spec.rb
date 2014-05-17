@@ -7,16 +7,8 @@ describe V1::PackagesController do
       expect(get "/api/v1/packages").to route_to("v1/packages#index", :format => :json)
     end
 
-    it "routes to #new" do
-      expect(get "/api/v1/packages/new").to route_to("v1/packages#new", :format => :json)
-    end
-
     it "routes to #show" do
       expect(get "/api/v1/packages/1").to route_to("v1/packages#show", :id => "1", :format => :json)
-    end
-
-    it "routes to #edit" do
-      expect(get "/api/v1/packages/1/edit").to route_to("v1/packages#edit", :id => "1", :format => :json)
     end
 
     it "routes to #create" do

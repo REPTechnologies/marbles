@@ -7,16 +7,8 @@ describe V1::EventsController do
       expect(get "/api/v1/events").to route_to("v1/events#index", :format => :json)
     end
 
-    it "routes to #new" do
-      expect(get "/api/v1/events/new").to route_to("v1/events#new", :format => :json)
-    end
-
     it "routes to #show" do
       expect(get "/api/v1/events/1").to route_to("v1/events#show", :id => "1", :format => :json)
-    end
-
-    it "routes to #edit" do
-      expect(get "/api/v1/events/1/edit").to route_to("v1/events#edit", :id => "1", :format => :json)
     end
 
     it "routes to #create" do
