@@ -1,6 +1,6 @@
 class V1::EventsController < ApplicationController
   respond_to :json
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :set_event, only: [:show, :update, :destroy]
 
   # GET /events
   # GET /events.json
@@ -16,13 +16,15 @@ class V1::EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
-    result = CreateEvent.perform(event_params)
-    
-    if result.success?
-      format.json { render action: 'show', status: :created, location: @event }
-    else
-      format.json { render json: @event.errors, status: :unprocessable_entity }
-    end  
+    result = Event::CreateEvent.perform(event_params)
+
+    respond_to do |format|
+      if result.success?
+        format.json { render action: 'show', status: :created, location: result.event }
+      else
+        format.json { render json: result.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   # PATCH/PUT /events/1
@@ -54,6 +56,6 @@ class V1::EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:title, :organization_id)
+      params.require(:event).permit(:cost, :description, :held_at, :location, :seats, :tag_list, :title, :organization_id, :primary_focus_id, :secondary_focus_id, :type)
     end
 end

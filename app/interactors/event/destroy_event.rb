@@ -1,4 +1,4 @@
-class DestroyEvent
+class Event::DestroyEvent
   include Interactor
 
   def perform

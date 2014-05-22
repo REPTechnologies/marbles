@@ -1,7 +1,7 @@
-class UpdateEvent
-  include Interactor
+  class Event::UpdateEvent
+    include Interactor
 
-  def perform
-    # TODO
+    def perform
+      # TODO
+    end
   end
-end

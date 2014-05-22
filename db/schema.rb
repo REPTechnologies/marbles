@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140420172140) do
+ActiveRecord::Schema.define(version: 20140522023402) do
 
   create_table "answers", force: true do |t|
     t.integer  "slider"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20140420172140) do
     t.decimal  "cost"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "description"
   end
 
   add_index "events", ["organization_id"], name: "index_events_on_organization_id"

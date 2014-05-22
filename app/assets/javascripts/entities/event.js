@@ -1,14 +1,15 @@
 /*jslint indent: 2, nomen: true*/
-/*global Marbles */
+/*global Marbles, Routes */
 (function () {
   "use strict";
 
   Marbles.module("Entities", function (Entities, Marbles, Backbone, Marionette, $, _) {
 
-    Entities.Event = Backbone.Model.extend({
+    Entities.Event = Entities.Model.extend({
+      jsonNamespace: 'event',
       urlRoot: Routes.v1_events_path(),
       validate: function (attributes, options) {
-        return 'not implemented';
+        return;
       }
     });
 
