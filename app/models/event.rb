@@ -9,4 +9,6 @@ class Event < ActiveRecord::Base
   acts_as_taggable
   
   validates :title, :held_at, :location, :description, :primary_focus, :type, presence: true
+  validates :cost, numericality: true, allow_nil: true
+  validates :seats, numericality: { only_integer: true }, allow_nil: true
 end
