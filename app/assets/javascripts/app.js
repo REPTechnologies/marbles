@@ -83,8 +83,13 @@
     }
   });
 
-  Marbles.commands.setHandler('error:notfound', function () {
+  Marbles.commands.setHandler('error:notfound', function (errors) {
     console.warn('TODO: not implemented');
+  });
+
+  Marbles.commands.setHandler('error:unexpected', function (errors) {
+    displayAlert('Sorry, something went wrong. Please try again or contact help@reptech.io for assistance.');
+    console.warn('TODO: send errors to server and/or newrelic');
   });
 
 }());

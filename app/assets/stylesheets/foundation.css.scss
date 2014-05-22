@@ -39,6 +39,11 @@ body {
   padding: $padding-size;
 }
 
+#messages-region {
+  top: 100px;
+  z-index: 90;
+}
+
 #messages {
   padding: $padding-size;
   padding-bottom: 0;

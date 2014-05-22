@@ -22,7 +22,7 @@ class V1::EventsController < ApplicationController
       if result.success?
         format.json { render action: 'show', status: :created, location: result.event }
       else
-        format.json { render json: result.errors, status: :unprocessable_entity }
+        format.json { render json: { :errors => result.errors.full_messages }, status: :unprocessable_entity }
       end
     end
   end

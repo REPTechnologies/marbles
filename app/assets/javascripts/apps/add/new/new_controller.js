@@ -40,7 +40,7 @@
     }
 
     function saveFailure(model, response, options) {
-      console.warn('TODO: error handling');
+      M.fn.errorResponse(response);
     }
 
     function listenToTriggers(layout) {
