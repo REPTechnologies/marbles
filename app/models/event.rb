@@ -8,7 +8,7 @@ class Event < ActiveRecord::Base
   has_and_belongs_to_many :attendees, :class_name => "User", :join_table => "attendees_events"
   acts_as_taggable
   
-  validates :title, :held_at, :location, :description, :primary_focus, :type, presence: true
+  validates :title, :held_at, :location, :description, :type, presence: true
   validates :cost, numericality: true, allow_nil: true
   validates :seats, numericality: { only_integer: true }, allow_nil: true
 end
