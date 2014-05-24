@@ -1,0 +1,32 @@
+{
+  "options": {
+    "find_existing_by": ["id"]
+  },
+  "records": [
+    {
+      "sprig_id": 1,
+      "id": 1,
+      "title": "1st Years"
+    },
+    {
+      "sprig_id": 2,
+      "id": 2,
+      "title": "2nd Years"
+    },
+    {
+      "sprig_id": 3,
+      "id": 3,
+      "title": "3rd Years"
+    },
+    {
+      "sprig_id": 4,
+      "id": 4,
+      "title": "4th Years"
+    },
+    {
+      "sprig_id": 5,
+      "id": 5,
+      "title": "5th Years +"
+    }
+  ]
+}
