@@ -1,4 +1,6 @@
 <div class="row">
+  <input type="hidden" name="primary_focus_id"/>
+  <input type="hidden" name="secondary_focus_id"/>
   <div class="col-sm-4 col-sm-offset-2 text-center">
     <h4>Primary Focus</h4>
   </div>

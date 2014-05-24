@@ -12,15 +12,21 @@
     function scrubDraggable($draggable) {
       return $draggable
         .removeClass('ui-draggable ui-sortable-helper')
-        .removeAttr('style');
+        .removeAttr('style')
+        .removeAttr('id');
+    }
+
+    function getFocusPool(picker) {
+      return picker.$el.find('.focus-pool');
     }
 
     function dropFocusFn(picker) {
-      var $focusPool = picker.$el.find('.focus-pool');
+      var $focusPool = getFocusPool(picker);
 
       return function dropFocus(e, ui) {
         var $drop = $(this),
           focusId = $drop.prop('id').replace('drop', 'focus'),
+          focusName = focusId.replace('-', '_') + '_id',
           $newFocus = scrubDraggable(ui.draggable.clone()).draggable({
             connectToSortable: '.focus-pool',
             containment: '#focus-region',
@@ -31,15 +37,22 @@
             revert: 'invalid'
           });
 
-        scrubDraggable($('#' + focusId).remove().removeAttr('id')).appendTo($focusPool);
+        scrubDraggable($('#' + focusId).remove()).appendTo($focusPool);
         $focusPool.sortable('refresh');
 
         $newFocus.appendTo($drop.parent()).prop('id', focusId);
         $newFocus.position({of: ui.draggable});
         $newFocus.position({of: $drop, using: animateDrop});
+        $('[name="' + focusName + '"]').val($newFocus.find('.btn').data('id')).change();
 
         ui.draggable.remove();
       };
+    }
+
+    function unselectFocus(e, ui) {
+      var focusId = ui.item.prop('id'),
+        focusName = focusId.replace('-', '_') + '_id';
+      $('[name="' + focusName + '"]').val('').change();
     }
 
     function initDragAndDrop(picker) {
@@ -49,7 +62,8 @@
         scroll: false,
         cursor: 'move',
         items: '> .focus',
-        revert: true
+        revert: true,
+        receive: unselectFocus
       });
 
       picker.$el.find('.focus-drop').droppable({

@@ -1,1 +1,1 @@
-<span class="btn btn-default btn-block">{name}</span>
+<span class="btn btn-default btn-block" data-id="{id}" data-color="{color}">{name}</span>
