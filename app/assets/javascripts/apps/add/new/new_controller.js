@@ -5,14 +5,16 @@
 
   Marbles.module('AddApp.New', function (New, Marbles, Backbone, Marionette, $, _) {
 
-    function getFocusPicker(foci) {
+    function getFocusPicker() {
       return new New.Focus.Picker({
         collection: Marbles.request('get:focus:list')
       });
     }
 
     function getTypePicker() {
-      return new New.Type.Picker();
+      return new New.Type.Picker({
+        collection: Marbles.request('get:event:type:list')
+      });
     }
 
     function getScopePicker() {

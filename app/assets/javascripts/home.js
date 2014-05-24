@@ -57,7 +57,8 @@
     // Start the application
     Marbles.start({
       currentUser: gon.current_user,
-      foci: gon.foci
+      foci: gon.foci,
+      eventTypes: gon.event_types
     });
 
     resizeFooter();

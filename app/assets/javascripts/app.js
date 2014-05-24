@@ -13,10 +13,12 @@
   //local variables
   var currentUser = {};
   var foci = [];
+  var eventTypes = [];
 
   Marbles.on('initialize:before', function (options) {
     currentUser = Marbles.request('set:current:user', options.currentUser);
     foci = Marbles.request('set:focus:list', options.foci);
+    eventTypes = Marbles.request('set:event:type:list', options.eventTypes);
   });
 
   Marbles.respond.setHandler('get:current:user', function () {
@@ -29,6 +31,10 @@
 
   Marbles.respond.setHandler('get:focus:list', function () {
     return foci;
+  });
+
+  Marbles.respond.setHandler('get:event:type:list', function () {
+    return eventTypes;
   });
 
   Marbles.addRegions({
