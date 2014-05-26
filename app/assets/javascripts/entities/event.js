@@ -13,11 +13,7 @@
         key: 'scopes',
         relatedModel: 'Scope',
         collectionType: 'ScopeCollection',
-        reverseRelation: {
-          key: 'events',
-          keySource: 'event_ids',
-          includeInJson: 'id'
-        }
+        includeInJSON: 'id'
       }],
       validate: function (attributes, options) {
         return;

@@ -17,10 +17,17 @@
       });
     }
 
-    function getScopePicker() {
-      return new New.Scope.Picker({
+    function getScopePicker(event) {
+      var picker = new New.Scope.Picker({
         collection: Marbles.request('get:scope:list')
       });
+      picker.on('itemview:scope:add', function (scope) {
+        event.get('scopes').add(scope.model);
+      });
+      picker.on('itemview:scope:remove', function (scope) {
+        event.get('scopes').remove(scope.model);
+      });
+      return picker;
     }
 
     function getInfoView() {
@@ -34,7 +41,7 @@
     function addViewsToLayout(layout) {
       layout.focusRegion.show(getFocusPicker());
       layout.eventTypeRegion.show(getTypePicker());
-      layout.eventScopeRegion.show(getScopePicker());
+      layout.eventScopeRegion.show(getScopePicker(layout.model));
       layout.eventInfoRegion.show(getInfoView());
       layout.eventDetailsRegion.show(getDetailsView());
     }

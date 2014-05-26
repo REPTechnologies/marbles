@@ -7,7 +7,7 @@
 
     function toggleScope() {
       this.$el.toggleClass('btn-primary');
-      //$('[name="scope"]').val(this.model.get('id')).change();
+      this.trigger('scope:' + (this.$el.hasClass('btn-primary') ? 'add' : 'remove'));
     }
 
     Scope.View = Marionette.ItemView.extend({
