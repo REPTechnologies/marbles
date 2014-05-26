@@ -58,6 +58,7 @@
     Marbles.start({
       currentUser: gon.current_user,
       foci: gon.foci,
+      scopes: gon.scopes,
       eventTypes: gon.event_types
     });
 

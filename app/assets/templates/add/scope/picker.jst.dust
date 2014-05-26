@@ -1,0 +1,7 @@
+<div class="col-sm-3">
+  <h5>Who is it for?</h5>
+</div>
+<div class="col-sm-9">
+  <input type="hidden" name="scope"/>
+  <div class="scope-pool btn-group btn-group-justified"></div>
+</div>

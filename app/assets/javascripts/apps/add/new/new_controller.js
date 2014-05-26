@@ -18,7 +18,9 @@
     }
 
     function getScopePicker() {
-      return new New.Scope.Picker();
+      return new New.Scope.Picker({
+        collection: Marbles.request('get:scope:list')
+      });
     }
 
     function getInfoView() {
