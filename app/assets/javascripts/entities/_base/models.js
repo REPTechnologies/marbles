@@ -5,18 +5,21 @@
 
   Marbles.module('Entities', function (Entities, Marbles, Backbone, Marionette, $, _) {
 
-    Entities.Model = Backbone.Model.extend({
+    Backbone.Relational.store.addModelScope(Entities);
+
+    Entities.Model = Backbone.RelationalModel.extend({
       toJSON: function (options) {
-        var json = {};
-        if (this.jsonNamespace) {
-          json[this.jsonNamespace] = _.clone(this.attributes);
+        var data = Backbone.RelationalModel.prototype.toJSON.apply(this, arguments), //super
+          json = {};
+        if (this.paramRoot) {
+          json[this.paramRoot] = data;
         } else {
-          json = _.clone(this.attributes);
+          json = data;
         }
         return json;
       },
       parse: function (resp, options) {
-        return this.jsonNamespace ? resp[this.jsonNamespace] || resp : resp;
+        return this.paramRoot ? resp[this.paramRoot] || resp : resp;
       }
     });
 

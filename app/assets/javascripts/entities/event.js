@@ -6,14 +6,27 @@
   Marbles.module("Entities", function (Entities, Marbles, Backbone, Marionette, $, _) {
 
     Entities.Event = Entities.Model.extend({
-      jsonNamespace: 'event',
+      paramRoot: 'event',
       urlRoot: Routes.v1_events_path(),
+      relations: [{
+        type: Backbone.HasMany,
+        key: 'scopes',
+        relatedModel: 'Scope',
+        collectionType: 'ScopeCollection',
+        reverseRelation: {
+          key: 'events',
+          keySource: 'event_ids',
+          includeInJson: 'id'
+        }
+      }],
       validate: function (attributes, options) {
         return;
       }
     });
 
-    Entities.EventsCollection = Backbone.Collection.extend({});
+    Entities.EventCollection = Backbone.Collection.extend({
+      model: Entities.Event
+    });
 
   });
 

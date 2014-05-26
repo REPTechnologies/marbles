@@ -5,7 +5,7 @@
 
   Marbles.module('Entities', function (Entities, Marbles, Backbone, Marionette, $, _) {
 
-    Entities.Scope = Backbone.Model.extend({});
+    Entities.Scope = Entities.Model.extend({});
 
     Entities.ScopeCollection = Backbone.Collection.extend({
       model: Entities.Scope
