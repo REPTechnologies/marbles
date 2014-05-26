@@ -41,6 +41,9 @@ gem 'select2-rails', '~> 3.5'
 # Use backbone, marionette and dust as the JavaScript framework
 gem 'marionette_dust', '~> 0.1'
 
+# Use backbone relational to specify relations between backbone models
+gem 'backbone-relational-rails', '~> 0.8'
+
 # Use js-routes to make route helpers available in JavaScript
 gem 'js-routes', '~> 0.9'
 
@@ -79,6 +82,10 @@ group :development do
   gem 'spring-commands-rspec', '~> 1.0'
 end
 
+group :test do
+  gem "simplecov"
+end
+
 group :test, :development do
   gem "rspec-rails"
   gem "capybara"
@@ -88,7 +95,6 @@ group :test, :development do
   gem "binding_of_caller"
   gem "terminal-notifier-guard"
   gem "factory_girl_rails"
-  gem "simplecov"
   gem "database_cleaner"
   gem "guard", ">= 2.1.0"
   gem "guard-rspec"

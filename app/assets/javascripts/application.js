@@ -10,6 +10,7 @@
 //= require footer_position
 //= require bootstrap
 //= require marionette_dust
+//= require backbone-relational
 //= require Backbone.ModelBinder
 //= require_tree ./config
 //= require app
