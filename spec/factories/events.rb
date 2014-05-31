@@ -2,11 +2,13 @@
 
 FactoryGirl.define do
   factory :event do
-    title "MyString"
-    held_at "2014-10-31T20:00"
+    title "Event Title"
+    held_at "20:00"
+    held_on "2014-10-31"
     location Faker::Address.street_address
     description Faker::Lorem.paragraph
-    primary_focus_id 1
+    primary_focus
+    secondary_focus
     type "presentation"
   end
 end

@@ -8,7 +8,11 @@ class Event < ActiveRecord::Base
   has_and_belongs_to_many :attendees, :class_name => "User", :join_table => "attendees_events"
   acts_as_taggable
   
-  validates :title, :held_at, :location, :description, :type, presence: true
+  validates :title, :held_at, :held_on, :location, :description, :type, :primary_focus, presence: true
   validates :cost, numericality: true, allow_nil: true
   validates :seats, numericality: { only_integer: true }, allow_nil: true
+  validates :type, inclusion: {
+    in: Event.types.keys,
+    message: "is not a valid event type"
+  }
 end

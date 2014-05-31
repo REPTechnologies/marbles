@@ -13,7 +13,8 @@
         key: 'scopes',
         relatedModel: 'Scope',
         collectionType: 'ScopeCollection',
-        includeInJSON: 'id'
+        includeInJSON: 'id',
+        keySource: 'scope_ids'
       }],
       validate: function (attributes, options) {
         return;
