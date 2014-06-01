@@ -9,6 +9,6 @@ FactoryGirl.define do
     description Faker::Lorem.paragraph
     primary_focus
     secondary_focus
-    type "presentation"
+    event_type "presentation"
   end
 end

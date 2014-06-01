@@ -12,6 +12,7 @@
 //= require marionette_dust
 //= require backbone-relational
 //= require Backbone.ModelBinder
+//= require underscore.string
 //= require_tree ./config
 //= require app
 //= require_tree ./apps

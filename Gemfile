@@ -44,6 +44,9 @@ gem 'marionette_dust', '~> 0.1'
 # Use backbone relational to specify relations between backbone models
 gem 'backbone-relational-rails', '~> 0.8'
 
+# Use additional Underscore extensions
+gem 'underscore-string-rails', '~> 0.0'
+
 # Use js-routes to make route helpers available in JavaScript
 gem 'js-routes', '~> 0.9'
 

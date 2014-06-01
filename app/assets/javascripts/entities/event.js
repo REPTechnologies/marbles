@@ -1,5 +1,5 @@
 /*jslint indent: 2, nomen: true*/
-/*global Marbles, Routes */
+/*global Marbles, Routes, M, gon */
 (function () {
   "use strict";
 
@@ -16,8 +16,20 @@
         includeInJSON: 'id',
         keySource: 'scope_ids'
       }],
-      validate: function (attributes, options) {
-        return;
+      validate: function eventValidatorFn(attrs, options) {
+        var errors = [];
+
+        M.validates.presence(errors, attrs, 'title', 'location', 'description', 'primary_focus_id',
+          {key: 'held_at', alias: 'Time'}, {key: 'held_on', alias: 'Date'},  {key: 'event_type', alias: 'What is it?'});
+
+        M.validates.numericality(errors, attrs, 'cost', {key: 'seats', only_integer: true});
+
+        M.validates.inclusion(errors, attrs, {key: 'event_type', alias: 'What is it?', 'in': _.pluck(gon.event_types, 'name'),
+          message: 'is not a valid event type'});
+
+        if (errors.length > 0) {
+          return errors;
+        }
       }
     });
 

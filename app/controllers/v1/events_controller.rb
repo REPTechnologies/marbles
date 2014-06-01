@@ -20,7 +20,8 @@ class V1::EventsController < ApplicationController
 
     respond_to do |format|
       if result.success?
-        format.json { render action: 'show', status: :created, location: result.event }
+        @event = result.event
+        format.json { render action: 'show', status: :created }
       else
         format.json { render json: { :errors => result.errors.full_messages }, status: :unprocessable_entity }
       end
@@ -56,6 +57,6 @@ class V1::EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:cost, :description, :held_at, :location, :seats, :tag_list, :title, :organization_id, :primary_focus_id, :secondary_focus_id, :type)
+      params.require(:event).permit(:cost, :description, :held_at, :held_on, :location, :seats, :tag_list, :title, :organization_id, :primary_focus_id, :secondary_focus_id, :type, :scope_ids)
     end
 end

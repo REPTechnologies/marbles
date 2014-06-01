@@ -12,7 +12,7 @@
     function selectType() {
       unselectTypes(this);
       this.$el.addClass('btn-primary');
-      $('[name="type"]').val(this.model.get('name')).change();
+      $('[name="event_type"]').val(this.model.get('name')).change();
     }
 
     Type.View = Marionette.ItemView.extend({
