@@ -6,6 +6,7 @@
 //= require jquery.ui.sortable
 //= require args
 //= require moment
+//= require tinycolor-min
 //= require js-routes
 //= require select2
 //= require footer_position

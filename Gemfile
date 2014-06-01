@@ -47,6 +47,9 @@ gem 'backbone-relational-rails', '~> 0.8'
 # Use additional Underscore extensions
 gem 'underscore-string-rails', '~> 0.0'
 
+# Use tinycolor library for manipulating colors in JS
+gem 'tiny-color-rails', '~> 0.0'
+
 # Use js-routes to make route helpers available in JavaScript
 gem 'js-routes', '~> 0.9'
 

@@ -89,6 +89,16 @@ body {
   @extend .alert-warning;
 }
 
+.btn-focus {
+  color: white;
+  opacity: 0.85;
+
+  &:hover {
+    color: white;
+    opacity: 1;
+  }
+}
+
 .select2-results {
   max-height: 250px;
 }

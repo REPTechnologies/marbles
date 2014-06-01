@@ -1,5 +1,5 @@
 /*jslint indent: 2, nomen: true*/
-/*global Marbles */
+/*global Marbles, tinycolor */
 (function () {
   "use strict";
 
@@ -11,6 +11,11 @@
       templateHelpers: {
         time: function () {
           return new Date(this.event.held_at).toLocaleTimeString();
+        },
+        join_style: function () {
+          var baseColor = tinycolor.darken(this.event.primary_focus.color, 5).toHexString();
+          var shadeColor = tinycolor.darken(baseColor, 5).toHexString();
+          return 'background-color: ' + baseColor + '; border-color: ' + shadeColor + ';';
         }
       }
     });
