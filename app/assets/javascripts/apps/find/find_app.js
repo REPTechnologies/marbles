@@ -10,21 +10,14 @@
       }
     });
 
-    var API = {
-      showList: function () {
-        M.fn.nav('find');
-        FindApp.List.Controller.showList();
-      }
-    };
-    
     Marbles.vent.on('find:list', function () {
       M.fn.nav('find');
-      API.showList();
+      FindApp.List.Controller.showList();
     });
 
     Marbles.addInitializer(function () {
       new FindApp.Router({
-        controller: API
+        controller: FindApp.List.Controller
       });
     });
   });

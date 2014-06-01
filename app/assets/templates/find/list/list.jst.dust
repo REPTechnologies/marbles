@@ -1,1 +1,23 @@
-<h2>Find Page</h2>
+<div class="row">
+  <div class="col-xs-9">
+    <div id="event-list-region"></div>
+  </div>
+  <div class="col-xs-3">
+    <h3>Explore</h3>
+    <ul>
+      <li><a href="#">Recommended for You</a></li>
+      <li><a href="#">Recently Added</a></li>
+      <li><a href="#">Favorites</a></li>
+      <li><a href="#">Filter by Tag</a></li>
+    </ul>
+    <br/>
+    <div>
+      <p class="lead">
+        Visit Trends to find out more about how you fit into the marbles.mx community.
+      </p>
+      <p class="text-center">
+        <a href="#">Trends</a>
+      </p>
+    </div>
+  </div>
+</div>

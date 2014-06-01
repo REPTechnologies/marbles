@@ -5,6 +5,7 @@
 //= require jquery.ui.droppable
 //= require jquery.ui.sortable
 //= require args
+//= require moment
 //= require js-routes
 //= require select2
 //= require footer_position

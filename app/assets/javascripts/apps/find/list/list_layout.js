@@ -5,7 +5,10 @@
 
   Marbles.module("FindApp.List", function (List, Marbles, Backbone, Marionette, $, _) {
     List.Layout = Marionette.Layout.extend({
-      template: "find/list/list"
+      template: 'find/list/list',
+      regions: {
+        eventListRegion: '#event-list-region'
+      }
     });
   });
 

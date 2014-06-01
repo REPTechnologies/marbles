@@ -1,0 +1,33 @@
+{#event}
+<div class="card">
+  <div class="row">
+    <div class="col-xs-10">
+      <p class="lead">{title}</p>
+    </div>
+    <div class="col-xs-2 text-right">
+      <button class="btn">Join</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <p>{description}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      {held_on} {time}
+    </div>
+    <div class="col-sm-6">
+      {location}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      Tags:{~s}
+      {#tags}
+        <a href="#">{text}</a>{@sep},{~s}{/sep}
+      {/tags}
+    </div>
+  </div>
+</div>
+{/event}

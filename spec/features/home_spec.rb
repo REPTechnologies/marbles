@@ -9,7 +9,7 @@ describe "Home" do
 
     it "displays the find page", :js => true do
       visit "/find"
-      expect(page).to have_content("Find Page")
+      expect(page).to have_content("Explore")
     end
 
     it "displays the add page", :js => true do

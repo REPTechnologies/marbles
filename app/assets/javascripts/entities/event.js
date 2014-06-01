@@ -34,7 +34,14 @@
     });
 
     Entities.EventCollection = Backbone.Collection.extend({
-      model: Entities.Event
+      model: Entities.Event,
+      url: Routes.v1_events_path(),
+    });
+    
+    Marbles.respond.setHandler('get:event:list', function () {
+      var events = new Entities.EventCollection();
+      events.fetch();
+      return events;
     });
 
   });

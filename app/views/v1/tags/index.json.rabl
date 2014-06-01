@@ -1,7 +1,3 @@
-object false
+collection @tags
 
-child @tags => :results do
-  extends "v1/tags/show"
-end
-
-node(:more) {|n| @more }
+extends "v1/tags/show"

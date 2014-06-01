@@ -72,7 +72,9 @@
     function onShow(layout) {
       addViewsToLayout(layout);
       listenToTriggers(layout);
-      M.fn.bindModel(layout);
+      M.fn.bindModel(layout, {
+        held_at: {converter: M.convert.time}
+      });
     }
 
     New.Controller = {
