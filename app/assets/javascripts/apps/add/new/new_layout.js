@@ -11,7 +11,8 @@
         eventTypeRegion: '#event-type-region',
         eventScopeRegion: '#event-scope-region',
         eventInfoRegion: '#event-info-region',
-        eventDetailsRegion: '#event-details-region'
+        eventDetailsRegion: '#event-details-region',
+        eventPictureRegion: '#event-picture-region'
       },
       events: {
         'click #submit': function () {

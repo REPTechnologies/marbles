@@ -38,12 +38,17 @@
       return new New.Details.View();
     }
 
+    function getPicturePicker() {
+      return new New.Picture.Picker();
+    }
+
     function addViewsToLayout(layout) {
       layout.focusRegion.show(getFocusPicker());
       layout.eventTypeRegion.show(getTypePicker());
       layout.eventScopeRegion.show(getScopePicker(layout.model));
       layout.eventInfoRegion.show(getInfoView());
       layout.eventDetailsRegion.show(getDetailsView());
+      layout.eventPictureRegion.show(getPicturePicker());
     }
 
     function saveSuccess(model, response, options) {
