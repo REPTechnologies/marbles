@@ -14,6 +14,10 @@ gem 'sprig', '~> 0.1'
 # Use devise as authentication engine
 gem 'devise', '~> 3.2'
 
+# User carrier wave for file uploads
+gem 'carrierwave', '~> 0.10'
+gem 'rmagick', '~> 2.13'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 

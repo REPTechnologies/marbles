@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       resources :packages, :except => [:new, :edit]
       resources :organizations, :except => [:new, :edit]
       resources :events, :except => [:new, :edit]
+      resources :pictures, :except => [:new, :edit]
       get '/tags', to: 'tags#index'
     end
   end
