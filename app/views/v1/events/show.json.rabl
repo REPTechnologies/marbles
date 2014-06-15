@@ -10,6 +10,9 @@ end
 child :secondary_focus => :secondary_focus do
   extends "foci/show"
 end
-child :tags do
+child :tags => :tags do
   extends "v1/tags/index"
+end
+child :picture => :picture do
+  extends "v1/pictures/show"
 end

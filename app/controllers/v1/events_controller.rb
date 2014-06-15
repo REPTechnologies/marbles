@@ -5,7 +5,7 @@ class V1::EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    @events = eager_event.all
   end
 
   # GET /events/1
@@ -52,7 +52,11 @@ class V1::EventsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_event
-      @event = Event.find(params[:id])
+      @event = eager_event.find(params[:id])
+    end
+
+    def eager_event
+      Event.includes(:primary_focus, :secondary_focus, :tags, :organization, :picture)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
