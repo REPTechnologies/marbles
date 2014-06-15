@@ -8,7 +8,7 @@
   timezoneOffset = (isOffsetNegative ? '-' : '+') + _.string.pad(Math.abs(timezoneOffset), 2, '0');
 
   function parseTime(time) {
-    moment('2000-01-01T' + time + ':00.000' + timezoneOffset).toISOString();
+    return moment('2000-01-01T' + time + ':00.000' + timezoneOffset).toISOString();
   }
 
   function formatTime(time) {
