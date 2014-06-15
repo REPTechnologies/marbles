@@ -16,20 +16,24 @@
       }
     }
 
+    function setProgressPercent(picker, percent) {
+      picker.ui.progressBar
+        .attr('aria-valuenow', percent)
+        .animate({'width': percent + '%'});
+      picker.ui.progressSpan.text(percent + '% Complete');
+    }
+
     function uploadProgressFn(picker) {
       return function uploadProgress(e, data) {
         picker.ui.progress.removeClass('hidden');
-        var progress = parseInt(data.loaded / data.total * 100, 10);
-        picker.ui.progressBar
-          .attr('aria-valuenow', progress)
-          .css('width', progress + '%');
-        picker.ui.progressSpan.text(progress + '% Complete');
+        setProgressPercent(picker, parseInt(data.loaded / data.total * 100, 10));
       };
     }
 
     function uploadDoneFn(picker) {
       return function uploadDone(e, data) {
         picker.ui.progress.addClass('hidden');
+        setProgressPercent(picker, 0);
         picker.ui.thumbnail.attr('src', data.result.thumb_url);
         picker.ui.thumbnailLink
           .attr('href', data.result.url)
@@ -57,8 +61,8 @@
       });
     }
 
-    function destroyFileUpload() {
-      this.ui.fileInput.fileupload('destroy');
+    function clickUpload() {
+      this.ui.fileInput.click();
     }
 
     Picture.View = Marionette.ItemView.extend({
@@ -69,14 +73,17 @@
       template: 'add/picture/picker',
       className: 'col-xs-12',
       onRender: initFileUpload,
-      //onClose: destroyFileUpload,
       ui: {
         fileInput: '#picture-upload',
+        uploadButton: '#picture-upload-btn',
         progress: '.progress',
         progressBar: '.progress-bar',
         progressSpan: '.progress-bar span',
         thumbnailLink: '#thumbnail-link',
         thumbnail: '.img-thumbnail'
+      },
+      events: {
+        'click @ui.uploadButton': clickUpload
       }
     });
   });
