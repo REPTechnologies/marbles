@@ -1,28 +1,28 @@
 {#event}
-<div class="card">
+<div class="card" {?picture}style="background: white url({picture.thumb_url}) no-repeat right center; background-size: contain;"{/picture}>
   <div class="row">
-    <div class="col-xs-9 col-sm-10">
+    <div class="col-xs-8">
       <h2>
         {title}
         <br/><small>{primary_focus.name}</small>
         {?secondary_focus}<br/><small> {secondary_focus.name}</small>{/secondary_focus}
       </h2>
     </div>
-    <div class="col-xs-3 col-sm-2 text-right">
+    <div class="col-xs-4 text-right">
       <button class="btn btn-focus btn-lg" style="{join_style}">Join</button>
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-xs-8">
       <p>{description}</p>
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-4">
       <span class="glyphicon glyphicon-calendar"></span> {held_on}<br/>
       <span class="glyphicon glyphicon-time"></span> {time}
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-4">
       <span class="glyphicon glyphicon-map-marker"></span> {location}<br/>
       <span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;
       {#tags}<a href="#">{text}</a>{@sep},{~s}{/sep}{/tags}
