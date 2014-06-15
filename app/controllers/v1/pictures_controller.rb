@@ -16,7 +16,6 @@ class V1::PicturesController < ApplicationController
   # POST /pictures
   # POST /pictures.json
   def create
-    puts picture_params
     result = Picture::CreatePicture.perform(picture_params)
 
     respond_to do |format|
