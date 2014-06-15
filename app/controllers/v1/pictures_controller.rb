@@ -16,6 +16,7 @@ class V1::PicturesController < ApplicationController
   # POST /pictures
   # POST /pictures.json
   def create
+    puts picture_params
     result = Picture::CreatePicture.perform(picture_params)
 
     respond_to do |format|
@@ -57,6 +58,6 @@ class V1::PicturesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def picture_params
-      params.require(:picture).permit(:image)
+      { :image => params.require(:picture) }
     end
 end
