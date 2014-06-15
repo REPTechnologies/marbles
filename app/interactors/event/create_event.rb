@@ -3,6 +3,7 @@ class Event::CreateEvent
 
   def setup
     context[:tag_list] = context[:tag_list].split(',') unless context[:tag_list].nil?
+    context[:picture] = Picture.find(context.delete :picture_id) unless context[:picture_id].nil?
   end
 
   def perform
