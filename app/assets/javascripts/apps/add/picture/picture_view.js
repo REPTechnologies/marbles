@@ -1,5 +1,5 @@
 /*jslint indent: 2, nomen: true*/
-/*global Marbles, dust */
+/*global Marbles, dust, Routes */
 (function () {
   "use strict";
 
@@ -16,26 +16,47 @@
       }
     }
 
-    function uploadProgress(e, data) {
-      var progress = parseInt(data.loaded / data.total * 100, 10);
+    function uploadProgressFn(picker) {
+      return function uploadProgress(e, data) {
+        picker.ui.progress.removeClass('hidden');
+        var progress = parseInt(data.loaded / data.total * 100, 10);
+        picker.ui.progressBar
+          .attr('aria-valuenow', progress)
+          .css('width', progress + '%');
+        picker.ui.progressSpan.text(progress + '% Complete');
+      };
     }
 
-    function uploadDone(e, data) {
-      
+    function uploadDoneFn(picker) {
+      return function uploadDone(e, data) {
+        console.dir(data);
+        setTimeout(function hideProgress() {
+          picker.ui.progress.addClass('hidden');
+        }, 500);
+      };
+    }
+
+    function uploadFailFn(picker) {
+      return function uploadFail(e, data) {
+        picker.ui.progress.addClass('hidden');
+        picker.ui.fileInput.removeClass('hidden');
+        Marbles.commands.execute('error:unexpected');
+      };
     }
 
     function initFileUpload(picker) {
-      picker.$el.find('#picture-upload').fileupload({
-        url: 'foo/url.json',
+      picker.ui.fileInput.fileupload({
+        url: Routes.v1_pictures_path({format: 'json'}),
         dataType: 'json',
         add: addFile,
-        progress: uploadProgress,
-        done: uploadDone
+        progress: uploadProgressFn(picker),
+        done: uploadDoneFn(picker),
+        fail: uploadFailFn(picker)
       });
     }
 
     function destroyFileUpload() {
-      this.$el.find('#picture-upload').fileupload('destroy');
+      this.ui.fileInput.fileupload('destroy');
     }
 
     Picture.View = Marionette.ItemView.extend({
@@ -46,7 +67,13 @@
       template: 'add/picture/picker',
       className: 'col-xs-12',
       onRender: initFileUpload,
-      onClose: destroyFileUpload
+      onClose: destroyFileUpload,
+      ui: {
+        fileInput: '#picture-upload',
+        progress: '.progress',
+        progressBar: '.progress-bar',
+        progressSpan: '.progress-bar span'
+      }
     });
   });
 
