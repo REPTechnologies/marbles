@@ -41,7 +41,7 @@
         command += 'unexpected';
         break;
       }
-      Marbles.execute(command, response.responseJSON.errors);
+      Marbles.execute(command, response.status !== 500 ? response.responseJSON.errors : response);
     }
   };
 
