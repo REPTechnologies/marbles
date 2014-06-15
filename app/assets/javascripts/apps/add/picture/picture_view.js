@@ -42,7 +42,7 @@
       return function uploadFail(e, data) {
         picker.ui.progress.addClass('hidden');
         picker.ui.fileInput.removeClass('hidden');
-        Marbles.commands.execute('error:unexpected');
+        M.fn.errorResponse(data.jqXHR);
       };
     }
 
