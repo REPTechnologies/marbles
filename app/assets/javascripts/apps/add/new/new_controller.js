@@ -38,8 +38,12 @@
       return new New.Details.View();
     }
 
-    function getPicturePicker() {
-      return new New.Picture.Picker();
+    function getPicturePicker(event) {
+      var picker = new New.Picture.Picker();
+      picker.on('picture:add', function (id) {
+        event.set('picture_id', id);
+      });
+      return picker;
     }
 
     function addViewsToLayout(layout) {
@@ -48,7 +52,7 @@
       layout.eventScopeRegion.show(getScopePicker(layout.model));
       layout.eventInfoRegion.show(getInfoView());
       layout.eventDetailsRegion.show(getDetailsView());
-      layout.eventPictureRegion.show(getPicturePicker());
+      layout.eventPictureRegion.show(getPicturePicker(layout.model));
     }
 
     function saveSuccess(model, response, options) {

@@ -29,10 +29,12 @@
 
     function uploadDoneFn(picker) {
       return function uploadDone(e, data) {
-        console.dir(data);
-        setTimeout(function hideProgress() {
-          picker.ui.progress.addClass('hidden');
-        }, 500);
+        picker.ui.progress.addClass('hidden');
+        picker.ui.thumbnail.attr('src', data.result.thumb_url);
+        picker.ui.thumbnailLink
+          .attr('href', data.result.url)
+          .removeClass('hidden');
+        picker.trigger('picture:add', data.result.id);
       };
     }
 
@@ -67,12 +69,14 @@
       template: 'add/picture/picker',
       className: 'col-xs-12',
       onRender: initFileUpload,
-      onClose: destroyFileUpload,
+      //onClose: destroyFileUpload,
       ui: {
         fileInput: '#picture-upload',
         progress: '.progress',
         progressBar: '.progress-bar',
-        progressSpan: '.progress-bar span'
+        progressSpan: '.progress-bar span',
+        thumbnailLink: '#thumbnail-link',
+        thumbnail: '.img-thumbnail'
       }
     });
   });

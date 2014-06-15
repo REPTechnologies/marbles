@@ -26,3 +26,6 @@
 
 # Ignore Railroady graphs
 /doc/*.svg
+
+# Ignore Uploads
+/public/uploads
