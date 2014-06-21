@@ -100,6 +100,7 @@ end
 group :test, :development do
   gem "rspec-rails"
   gem "capybara"
+  gem "capybara-webkit"
   gem "selenium-webdriver"
   gem "launchy"
   gem "better_errors"

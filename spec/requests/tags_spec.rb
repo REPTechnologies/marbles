@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "Tags" do
   describe "GET /api/v1/tags" do
-    it "responds with 40o if term parameter is missing" do
+    it "responds with 400 if term parameter is missing" do
       get v1_tags_path
       expect(response.status).to be(400)
     end

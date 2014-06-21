@@ -15,8 +15,4 @@ class V1::TagsController < ApplicationController
       params.require(:term)
     end
 
-    def tag_params
-      params.permit(:term, :page)
-    end
-
 end
