@@ -1,6 +1,10 @@
 require 'feature_helper'
 
 describe "Add Page", :js => true  do
+  def event_json
+    page.evaluate_script('Marbles.mainRegion.currentView.model.toJSON()')['event'].symbolize_keys
+  end
+
   before :each do
     visit "/add"
   end
@@ -18,19 +22,45 @@ describe "Add Page", :js => true  do
 
   describe "Focus Picker" do
     it "selects a primary focus" do
-      primary_drop = find_by_id('primary-drop')
-      primary_input = find_by_id('primary_focus_id', :visible => false)
-      focus = find('.focus-pool').all('.focus').first
-      focus.drag_to(primary_drop)
-      expect(primary_input.value).to eq('1')
+      find('.focus-pool').all('.focus').first.drag_to find_by_id('primary-drop')
+      expect(find_by_id('primary_focus_id', :visible => false).value).to eq('1')
     end
-    
+
     it "selects a secondary focus" do
-      secondary_drop = find_by_id('secondary-drop')
-      secondary_input = find_by_id('secondary_focus_id', :visible => false)
-      focus = find('.focus-pool').all('.focus').last
-      focus.drag_to(secondary_drop)
-      expect(secondary_input.value).to eq('6')
+      find('.focus-pool').all('.focus').last.drag_to find_by_id('secondary-drop')
+      expect(find_by_id('secondary_focus_id', :visible => false).value).to eq('6')
+    end
+  end
+
+  describe "Event Type Picker" do
+    it "selects an event type" do
+      find('.type-pool').find('.type', :text => 'Presentation').click
+      expect(find_by_id('event_type', :visible => false).value).to eq('presentation')
+    end
+
+    it "selects only one event type" do
+      find('.type-pool').find('.type', :text => 'Presentation').click
+      expect(find_by_id('event_type', :visible => false).value).to eq('presentation')
+      find('.type-pool').find('.type', :text => 'Other').click
+      expect(find_by_id('event_type', :visible => false).value).to eq('other')
+    end
+  end
+
+  describe "Event Scopes Picker" do
+    it "selects an event scope" do
+      find('.scope-pool').find('.scope', :text => '1st Years').click
+      scope_ids = event_json[:scope_ids]
+      expect(scope_ids).to have(1).items
+      expect(scope_ids).to include(1)
+    end
+
+    it "selects multiple event scopes" do
+      find('.scope-pool').find('.scope', :text => '1st Years').click
+      find('.scope-pool').find('.scope', :text => '2nd Years').click
+      scope_ids = event_json[:scope_ids]
+      expect(scope_ids).to have(2).items
+      expect(scope_ids).to include(1)
+      expect(scope_ids).to include(2)
     end
   end
 end
