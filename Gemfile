@@ -58,6 +58,9 @@ gem 'tiny-color-rails', '~> 0.0'
 # Use js-routes to make route helpers available in JavaScript
 gem 'js-routes', '~> 0.9'
 
+# Use modernizr for feature detection
+gem 'modernizr-rails', '~> 2.7'
+
 # Use Acts-as-taggable-on as tagging library
 gem "acts-as-taggable-on", "~> 3.1"
 
@@ -100,8 +103,7 @@ end
 group :test, :development do
   gem "rspec-rails"
   gem "capybara"
-  gem "capybara-webkit"
-  gem "selenium-webdriver"
+  gem "poltergeist"
   gem "launchy"
   gem "better_errors"
   gem "binding_of_caller"

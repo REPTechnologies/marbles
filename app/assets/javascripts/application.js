@@ -1,3 +1,4 @@
+//= require modernizr
 //= require jquery
 //= require jquery.ui.position
 //= require jquery.ui.draggable
@@ -10,7 +11,6 @@
 //= require tinycolor-min
 //= require js-routes
 //= require select2
-//= require footer_position
 //= require bootstrap
 //= require marionette_dust
 //= require backbone-relational
@@ -18,7 +18,8 @@
 //= require underscore.string
 //= require_tree ./config
 //= require app
+//= require_tree ./common
 //= require_tree ./apps
 //= require_tree ./entities
 //= require_tree ../templates
-//= require_tree .
+//= require home

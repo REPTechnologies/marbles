@@ -1,5 +1,5 @@
 //= require jquery
 //= require args
 //= require js-routes
-//= require footer_position
+//= require ./common/footer_position
 //= require bootstrap
