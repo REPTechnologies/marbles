@@ -1,4 +1,4 @@
 require 'spec_helper'
 require 'capybara/rails'
 
-Capybara.javascript_driver = :selenium
+Capybara.javascript_driver = :webkit
