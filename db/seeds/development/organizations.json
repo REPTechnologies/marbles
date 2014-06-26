@@ -1,0 +1,17 @@
+{
+  "options": {
+    "find_existing_by": ["id"]
+  },
+  "records": [
+    {
+      "sprig_id": 1,
+      "id": 1,
+      "name": "Organization One"
+    },
+    {
+      "sprig_id": 2,
+      "id": 2,
+      "name": "Organization Two"
+    }
+  ]
+}

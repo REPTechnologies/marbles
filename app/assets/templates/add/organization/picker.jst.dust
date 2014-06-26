@@ -1,5 +1,6 @@
-<label for="event-organization">Organizer/Sponsor</label>
+<label for="event-organization">Organizer/Sponsor</label>&nbsp;
 {?organizations}
+  <a href="#" id="new-organization-link">New Organization</a>
   <select class="form-control" id="event-organization" name="organization_id">
     {#organizations}
       <option value="{id}">{name}</option>
