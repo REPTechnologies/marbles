@@ -29,12 +29,7 @@
   </div>
 </div>
 <div class="col-sm-6">
-  <div class="form-group">
-    <label for="event-organization">Organizer/Sponsor</label>
-    <select class="form-control" id="event-organization" name="organization_id">
-      <option value="">New Organization</option>
-    </select>
-  </div>
+  <div id="event-organization-region" class="form-group"></div>
   <div class="form-group">
     <label for="event-location">Location</label>
     <div class="input-group">

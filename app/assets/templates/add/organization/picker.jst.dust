@@ -1,0 +1,10 @@
+<label for="event-organization">Organizer/Sponsor</label>
+{?organizations}
+  <select class="form-control" id="event-organization" name="organization_id">
+    {#organizations}
+      <option value="{id}">{name}</option>
+    {/organizations}
+  </select>
+{:else}
+  <input type="text" class="form-control" id="event-organization" name="organization.name" placeholder="organization name">
+{/organizations}
