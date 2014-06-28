@@ -79,6 +79,21 @@ describe "Add Page", :type => :feature, :js => true  do
       expect(page).to have_selector('.toggleOrganizationLink')
       expect(page).to have_selector('[name="organization_id"]')
     end
+
+    it "has a link to toggle between new and existing organization" do
+      login('test1@email.com')
+      expect(page).to have_no_selector('[name="organizationName"]')
+      expect(page).to have_selector('.toggleOrganizationLink')
+      expect(page).to have_selector('[name="organization_id"]')
+      click_button('Add New Organization')
+      expect(page).to have_selector('[name="organizationName"]')
+      expect(page).to have_selector('.toggleOrganizationLink')
+      expect(page).to have_no_selector('[name="organization_id"]')
+      click_button('Use Existing Organization')
+      expect(page).to have_no_selector('[name="organizationName"]')
+      expect(page).to have_selector('.toggleOrganizationLink')
+      expect(page).to have_selector('[name="organization_id"]')
+    end
   end
 
   describe "Event Model Binding" do
