@@ -18,15 +18,6 @@
       var authView = new Show.View({
         model: currentUser
       });
-      authView.on('auth:log:in', function () {
-        window.location = Routes.new_user_session_path();
-      });
-      authView.on('auth:sign:up', function () {
-        window.location = Routes.new_user_registration_path();
-      });
-      authView.on('auth:edit:user', function () {
-        window.location = Routes.edit_user_registration_path();
-      });
       authView.on('auth:log:out', logOut);
       return authView;
     }

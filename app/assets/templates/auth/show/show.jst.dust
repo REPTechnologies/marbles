@@ -1,7 +1,7 @@
 {?email}
   <div class="authenticated row">
     <div class="col-xs-8">
-      <span class="edit-user btn-link">{email}</span>
+      <a href="{edit_user_registration_path}" class="edit-user btn-link">{email}</a>
     </div>
     <div class="col-xs-4 text-right">
       <span class="log-out btn-link">Log Out</span>
@@ -10,10 +10,10 @@
 {:else}
   <div class="not-authenticated row">
     <div class="col-xs-6">
-      <span class="log-in btn-link">Log In</span>
+      <a href="{new_user_session_path}" class="log-in">Log In</a>
     </div>
     <div class="col-xs-6 text-right">
-      <span class="sign-up btn-link">Sign Up</span>
+      <a href="{new_user_registration_path}" class="sign-up">Sign Up</a>
     </div>
   </div>
 {/email}

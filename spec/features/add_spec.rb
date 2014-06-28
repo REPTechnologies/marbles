@@ -66,6 +66,21 @@ describe "Add Page", :type => :feature, :js => true  do
     end
   end
 
+  describe "Organization Picker" do
+    it "shows text input if user is not logged in" do
+      expect(page).to have_selector('[name="organizationName"]')
+      expect(page).to have_no_selector('.toggleOrganizationLink')
+      expect(page).to have_no_selector('[name="organization_id"]')
+    end
+
+    it "shows select input if user has organizations" do
+      login('test1@email.com')
+      expect(page).to have_no_selector('[name="organizationName"]')
+      expect(page).to have_selector('.toggleOrganizationLink')
+      expect(page).to have_selector('[name="organization_id"]')
+    end
+  end
+
   describe "Event Model Binding" do
     it "binds all inputs" do
       find('.focus-pool').all('.focus').first.drag_to find_by_id('primary-drop')

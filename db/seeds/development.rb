@@ -2,4 +2,4 @@
 
 include Sprig::Helpers
 
-sprig [Organization, User]
+sprig [User, Organization]

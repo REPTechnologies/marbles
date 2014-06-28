@@ -1,27 +1,17 @@
 /*jslint indent: 2, nomen: true*/
-/*global Marbles */
+/*global Marbles, Routes */
 (function () {
   "use strict";
 
   Marbles.module('AuthApp.Show', function (Show, Marbles, Backbone, Marionette, $, _) {
     Show.View = Marionette.ItemView.extend({
       template: 'auth/show/show',
+      templateHelpers: M.fn.removeArguments(Routes),
       modelEvents: {
         change: 'render'
       },
-      events: {
-        'click .log-in': function () {
-          this.trigger('auth:log:in');
-        },
-        'click .sign-up': function () {
-          this.trigger('auth:sign:up');
-        },
-        'click .log-out': function () {
-          this.trigger('auth:log:out');
-        },
-        'click .edit-user': function () {
-          this.trigger('auth:edit:user');
-        }
+      triggers: {
+        'click .log-out': 'auth:log:out'
       }
     });
   });

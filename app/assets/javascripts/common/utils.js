@@ -49,6 +49,20 @@
         break;
       }
       Marbles.execute(command, response.status !== 500 ? response.responseJSON.errors : response);
+    },
+    removeArguments: function(api) {
+      var obj = {};
+      _.each(Object.keys(api), function(key) {
+        var value = api[key];
+        if (_.isFunction(value)) {
+          obj[key] = function () {
+            return value.call(api);
+          };
+        } else {
+          obj[key] = value;
+        }
+      });
+      return obj;
     }
   };
 

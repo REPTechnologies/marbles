@@ -7,15 +7,13 @@
       "sprig_id": 1,
       "email": "dev1@email.com",
       "password": "password",
-      "password_confirmation": "password",
-      "organization_ids": [1]
+      "password_confirmation": "password"
     },
     {
       "sprig_id": 2,
       "email": "dev2@email.com",
       "password": "password",
-      "password_confirmation": "password",
-      "organization_ids": [1,2]
+      "password_confirmation": "password"
     },
     {
       "sprig_id": 3,
