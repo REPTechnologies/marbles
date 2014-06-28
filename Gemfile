@@ -101,7 +101,8 @@ group :test do
 end
 
 group :test, :development do
-  gem "rspec-rails"
+  gem "rspec-rails", "= 2.99"
+  gem 'rspec-collection_matchers'
   gem "capybara"
   gem "poltergeist"
   gem "launchy"
