@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.0'
+gem 'rails', '4.1.2'
 
 # Use interactors for layer between controllers and models
 # See http://eng.joingrouper.com/blog/2014/03/03/rails-the-missing-parts-interactors
@@ -23,7 +23,7 @@ gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0'
-gem 'bootstrap-sass', '~> 3.1'
+gem 'bootstrap-sass', '~> 3.2'
 gem 'compass-rails', '~> 1.1'
 
 # Form Builder that generates boostrap compatibile html
@@ -110,7 +110,7 @@ group :test, :development do
   gem "terminal-notifier-guard"
   gem "factory_girl_rails"
   gem "database_cleaner"
-  gem "guard", ">= 2.1.0"
+  gem "guard"
   gem "guard-rspec"
   gem "faker"
   gem "railroady"
