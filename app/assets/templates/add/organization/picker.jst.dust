@@ -1,12 +1,13 @@
 <label for="event-organization">Organizer/Sponsor</label>&nbsp;
 {?organizations}
-  <a href="#" id="new-organization-link">New Organization</a>
-  <select class="form-control" id="event-organization" name="organization_id">
+  <button type="button" class="btn btn-link btn-xs organizationInput toggleOrganizationLink">Add New Organization</button>
+  <select class="form-control organizationInput" id="event-organization" name="organization_id">
     {#organizations}
       <option value="{id}">{name}</option>
     {/organizations}
   </select>
-  <input type="text" class="form-control hidden" id="event-organization" name="organizationName" placeholder="organization name">
+  <button type="button" class="btn btn-link btn-xs organizationInput toggleOrganizationLink hidden">Use Existing Organization</button>
+  <input type="text" class="form-control organizationInput hidden" id="event-organization" name="organizationName" placeholder="organization name" disabled>
 {:else}
   <input type="text" class="form-control" id="event-organization" name="organizationName" placeholder="organization name">
 {/organizations}
