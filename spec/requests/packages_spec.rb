@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe "Packages", :type => :request do
   describe "GET /api/v1/packages" do

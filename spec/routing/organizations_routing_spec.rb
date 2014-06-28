@@ -1,4 +1,4 @@
-require "spec_helper"
+require "rails_helper"
 
 describe V1::OrganizationsController, :type => :routing do
   describe "routing" do

@@ -1,4 +1,4 @@
-require "spec_helper"
+require "rails_helper"
 
 def route_path(path)
   route_to("home#index", :path => path)

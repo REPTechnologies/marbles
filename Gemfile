@@ -62,7 +62,7 @@ gem 'js-routes', '~> 0.9'
 gem 'modernizr-rails', '~> 2.7'
 
 # Use Acts-as-taggable-on as tagging library
-gem "acts-as-taggable-on", "~> 3.1"
+gem 'acts-as-taggable-on', '~> 3.1'
 
 # Use RABL as for generating JSON
 gem 'rabl', '~> 0.9'
@@ -97,23 +97,24 @@ group :development do
 end
 
 group :test do
-  gem "simplecov"
+  gem 'simplecov'
 end
 
 group :test, :development do
-  gem "rspec-rails", "= 2.99"
+  gem 'rspec-rails', '~> 3.0'
   gem 'rspec-collection_matchers'
-  gem "capybara"
-  gem "poltergeist"
-  gem "launchy"
-  gem "better_errors"
-  gem "binding_of_caller"
-  gem "terminal-notifier-guard"
-  gem "factory_girl_rails"
-  gem "database_cleaner"
-  gem "guard"
-  gem "guard-rspec"
-  gem "faker"
-  gem "railroady"
-  gem "fuubar"
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'launchy'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'terminal-notifier-guard'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'faker'
+  gem 'railroady'
+  gem 'rspec-legacy_formatters'
+  gem 'fuubar'
 end
