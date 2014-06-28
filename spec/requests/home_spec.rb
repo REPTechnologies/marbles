@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "Home" do
+describe "Home", :type => :request do
   describe "GET /" do
     it "displays the welcome page by default" do
       get root_path

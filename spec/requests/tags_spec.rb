@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Tags" do
+describe "Tags", :type => :request do
   describe "GET /api/v1/tags" do
     it "responds with 400 if term parameter is missing" do
       get v1_tags_path

@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe V1::EventsController do
+describe V1::EventsController, :type => :routing do
   describe "routing" do
 
     it "routes to #index" do

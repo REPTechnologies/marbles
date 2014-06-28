@@ -61,8 +61,4 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
-
-  #rspec-rails 3 will no longer automatically infer an example group's spec type
-  #from the file location. You can explicitly opt-in to this feature using this
-  config.infer_spec_type_from_file_location!
 end

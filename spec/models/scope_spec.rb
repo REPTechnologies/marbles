@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Scope do
+describe Scope, :type => :model do
   it "has a valid factory" do
     expect(build(:scope)).to be_valid
   end

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Focus do
+describe Focus, :type => :model do
   it "has a valid factory" do
     expect(build(:focus)).to be_valid
   end

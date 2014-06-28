@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe V1::PackagesController do
+describe V1::PackagesController, :type => :routing do
   describe "routing" do
 
     it "routes to #index" do

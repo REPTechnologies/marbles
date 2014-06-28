@@ -1,6 +1,6 @@
 require 'feature_helper'
 
-describe "Add Page", :js => true  do
+describe "Add Page", :type => :feature, :js => true  do
   def event_json
     find('body').click #blur
     sleep 0.5

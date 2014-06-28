@@ -1,6 +1,6 @@
 require 'feature_helper'
 
-describe "Marbles", :js => true do
+describe "Marbles", :type => :feature, :js => true do
   describe "Marionette Routing" do
     it "displays the welcome page by default" do
       visit root_path

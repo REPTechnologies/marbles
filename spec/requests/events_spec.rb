@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Events" do
+describe "Events", :type => :request do
   describe "GET /api/v1/events" do
     it "responds with the events json" do
       get v1_events_path

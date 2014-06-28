@@ -4,7 +4,7 @@ def route_path(path)
   route_to("home#index", :path => path)
 end
 
-describe HomeController do
+describe HomeController, :type => :routing do
   describe "routing" do
 
     it "routes to #index" do

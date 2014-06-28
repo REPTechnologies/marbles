@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Answer do
+describe Answer, :type => :model do
   it "has a valid factory" do
     expect(build(:answer)).to be_valid
   end
