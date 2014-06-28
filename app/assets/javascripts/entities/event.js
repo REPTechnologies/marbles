@@ -15,6 +15,13 @@
         collectionType: 'ScopeCollection',
         includeInJSON: 'id',
         keySource: 'scope_ids'
+      },
+      {
+        type: Backbone.HasOne,
+        key: 'organization',
+        relatedModel: 'Organization',
+        keySource: 'organization_id',
+        keyDestination: 'organization_attributes'
       }],
       validate: function eventValidatorFn(attrs, options) {
         var errors = [];

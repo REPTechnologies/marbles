@@ -83,6 +83,13 @@
       listenToTriggers(layout);
       M.fn.bindModel(layout, {
         held_at: {converter: M.convert.time}
+      }, {deleteBindings: ['organizationName']});
+      var organizationBinder = new Backbone.ModelBinder();
+      if (!layout.model.get('organization')) {
+        layout.model.set('organization', new Marbles.Entities.Organization());
+      }
+      organizationBinder.bind(layout.model.get('organization'), layout.$el.find('#event-organization-region'), {
+        name: '[name="organizationName"]'
       });
     }
 

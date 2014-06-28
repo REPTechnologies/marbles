@@ -1,9 +1,9 @@
 object @event
 
 attributes :id, :title, :type, :location, :seats, :cost, :created_at, :updated_at, :description, :held_at, :held_on
-#child :organization do
-#  extends "v1/organizations/show"
-#end
+child :organization do
+  attributes :id, :name
+end
 child :primary_focus => :primary_focus do
   extends "foci/show"
 end

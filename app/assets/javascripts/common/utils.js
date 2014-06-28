@@ -23,8 +23,15 @@
     },
     bindModel: function bindModelFn(view, bindings, options) {
       view.binder = view.binder || new Backbone.ModelBinder();
-      var defaultBindings = Backbone.ModelBinder.createDefaultBindings(view.el, 'name');
+      var defaultBindings = Backbone.ModelBinder.createDefaultBindings(view.el, 'name'),
+        deleteBindings = options.deleteBindings;
+      delete options.deleteBindings;
       bindings = $.extend(true, {}, defaultBindings, bindings);
+      if (_.isArray(deleteBindings)) {
+        _.each(deleteBindings, function deleteEachBinding(key) {
+          delete bindings[key];
+        });
+      }
       view.binder.bind(view.model, view.el, bindings, options);
     },
     nav: Backbone.history.navigate.bind(Backbone.history),

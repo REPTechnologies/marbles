@@ -16,7 +16,7 @@ class V1::EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
-    result = Event::CreateEvent.perform(event_params)
+    result = Event::CreateEvent.perform(event_context)
 
     respond_to do |format|
       if result.success?
@@ -59,8 +59,12 @@ class V1::EventsController < ApplicationController
       Event.includes(:primary_focus, :secondary_focus, :tags, :organization, :picture)
     end
 
+    def event_context
+      {:event_params => event_params, :user => current_user}
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:cost, :description, :held_at, :held_on, :location, :seats, :tag_list, :title, :organization_id, :primary_focus_id, :secondary_focus_id, :event_type, :scope_ids, :picture_id)
+      params.require(:event).permit(:cost, :description, :held_at, :held_on, :location, :seats, :tag_list, :title, :organization_id, :primary_focus_id, :secondary_focus_id, :event_type, :scope_ids, :picture_id, {:organization_attributes => [:name]})
     end
 end

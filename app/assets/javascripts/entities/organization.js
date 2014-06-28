@@ -5,7 +5,7 @@
 
   Marbles.module("Entities", function (Entities, Marbles, Backbone, Marionette, $, _) {
 
-    Entities.Organization = Backbone.Model.extend({});
+    Entities.Organization = Entities.Model.extend({});
 
     Entities.OrganizationsCollection = Backbone.Collection.extend({});
 

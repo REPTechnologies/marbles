@@ -7,5 +7,5 @@
     {/organizations}
   </select>
 {:else}
-  <input type="text" class="form-control" id="event-organization" name="organization.name" placeholder="organization name">
+  <input type="text" class="form-control" id="event-organization" name="organizationName" placeholder="organization name">
 {/organizations}
