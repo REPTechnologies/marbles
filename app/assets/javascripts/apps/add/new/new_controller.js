@@ -65,8 +65,6 @@
 
     function listenToTriggers(layout) {
       layout.on('event:submit', function () {
-        console.warn('TODO: detect new org');
-        
         var valid = layout.model.save({}, {
           success: saveSuccess,
           error: saveFailure
@@ -78,19 +76,23 @@
       });
     }
 
-    function onShow(layout) {
-      addViewsToLayout(layout);
-      listenToTriggers(layout);
+    function bindModels(layout) {
       M.fn.bindModel(layout, {
         held_at: {converter: M.convert.time}
       }, {deleteBindings: ['organizationName']});
-      var organizationBinder = new Backbone.ModelBinder();
+      layout.organizationBinder = new Backbone.ModelBinder();
       if (!layout.model.get('organization')) {
         layout.model.set('organization', new Marbles.Entities.Organization());
       }
-      organizationBinder.bind(layout.model.get('organization'), layout.$el.find('#event-organization-region'), {
+      layout.organizationBinder.bind(layout.model.get('organization'), layout.$el.find('#event-organization-region'), {
         name: '[name="organizationName"]'
       });
+    }
+
+    function onShow(layout) {
+      addViewsToLayout(layout);
+      bindModels(layout);
+      listenToTriggers(layout);
     }
 
     New.Controller = {

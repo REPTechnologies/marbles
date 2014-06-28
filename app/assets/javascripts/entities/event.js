@@ -15,8 +15,7 @@
         collectionType: 'ScopeCollection',
         includeInJSON: 'id',
         keySource: 'scope_ids'
-      },
-      {
+      }, {
         type: Backbone.HasOne,
         key: 'organization',
         relatedModel: 'Organization',
