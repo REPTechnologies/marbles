@@ -1,4 +1,4 @@
-class V1::OrganizationsController < ApplicationController
+class V1::OrganizationsController < ApiController
   respond_to :json
   before_action :set_organization, only: [:show, :edit, :update, :destroy]
 

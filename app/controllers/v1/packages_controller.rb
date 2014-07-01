@@ -1,4 +1,4 @@
-class V1::PackagesController < ApplicationController
+class V1::PackagesController < ApiController
   respond_to :json
   before_action :set_package, only: [:show, :edit, :update, :destroy]
 

@@ -1,4 +1,4 @@
-class V1::EventsController < ApplicationController
+class V1::EventsController < ApiController
   respond_to :json
   before_action :set_event, only: [:show, :update, :destroy]
 

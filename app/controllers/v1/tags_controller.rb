@@ -1,6 +1,6 @@
 class V1::TagsController < ApplicationController
   respond_to :json
-  
+
   LIMIT = 8
 
   def index
@@ -8,11 +8,9 @@ class V1::TagsController < ApplicationController
     @tags = ActsAsTaggableOn::Tag.where("lower(name) LIKE ?", "%#{term.downcase}%").limit(LIMIT).order(:name)
     render :results
   end
-    
+
   private
-  
     def term
       params.require(:term)
     end
-
 end
