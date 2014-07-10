@@ -12,10 +12,15 @@
 //= require js-routes
 //= require select2
 //= require bootstrap
-//= require marionette_dust
+//= require underscore
+//= require underscore.string
+//= require backbone
+//= require marionette_dust/backbone.marionette
+//= require marionette_dust/dust-full-2.2.2
+//= require marionette_dust/dust-helpers-1.1.1
+//= require marionette_dust/marionette_renderer
 //= require backbone-relational
 //= require Backbone.ModelBinder
-//= require underscore.string
 //= require_tree ./config
 //= require app
 //= require_tree ./common
