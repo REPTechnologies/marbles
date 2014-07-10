@@ -1,7 +1,5 @@
-/*jslint indent: 2, nomen: true*/
-/*global Marbles */
 (function () {
-  "use strict";
+  'use strict';
   
   Marbles.module('AuthApp.Show', function (Show, Marbles, Backbone, Marionette, $, _) {
 
@@ -26,7 +24,6 @@
       showAuth: function (layout) {
         var currentUser = Marbles.request('get:current:user');
         layout.authRegion.show(getAuthView(currentUser));
-        layout.authXSRegion.show(getAuthView(currentUser));
       }
     };
   });

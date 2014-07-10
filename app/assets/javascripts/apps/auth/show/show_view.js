@@ -1,7 +1,5 @@
-/*jslint indent: 2, nomen: true*/
-/*global Marbles, Routes */
 (function () {
-  "use strict";
+  'use strict';
 
   Marbles.module('AuthApp.Show', function (Show, Marbles, Backbone, Marionette, $, _) {
     Show.View = Marionette.ItemView.extend({
