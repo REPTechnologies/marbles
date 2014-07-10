@@ -10,5 +10,7 @@
   "maxdepth": 3,
   "maxcomplexity": 10,
   "undef": true,
-  "predef": [ "window", "Marbles", "M", "Routes", "gon" ]
+  "jquery": true,
+  "devel": true,
+  "predef": [ "window", "Marbles", "M", "Routes", "gon", "Marionette", "Backbone", "Args", "dust" ]
 }

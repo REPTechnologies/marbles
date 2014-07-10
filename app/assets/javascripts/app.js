@@ -1,7 +1,5 @@
-/*jslint indent: 2, nomen: true*/
-/*global Marionette, Backbone, Args */
 (function () {
-  "use strict";
+  'use strict';
 
   var Marbles = new Marionette.Application();
   window.Marbles = Marbles; // Add Marbles to Global scope

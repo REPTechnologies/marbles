@@ -6,7 +6,7 @@
       template: 'header/show/show',
       tagName: 'header',
       regions: {
-        authRegion: '#auth-region'
+        authRegion: Marbles.Region.extend({el: '#auth-region'})
       },
       events: {
         'click #header-find': function () {
