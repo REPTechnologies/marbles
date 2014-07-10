@@ -82,8 +82,8 @@
 
     Focus.Picker = Marionette.CompositeView.extend({
       template: 'add/focus/picker',
-      itemView: Focus.View,
-      itemViewContainer: '.focus-pool',
+      childView: Focus.View,
+      childViewContainer: '.focus-pool',
       onRender: initDragAndDrop
     });
   });

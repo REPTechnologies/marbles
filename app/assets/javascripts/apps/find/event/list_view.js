@@ -7,8 +7,8 @@
 
     Event.List = Marionette.CompositeView.extend({
       template: 'find/event/list',
-      itemView: Marbles.EventApp.Card.View,
-      itemViewContainer: '.event-list'
+      childView: Marbles.EventApp.Card.View,
+      childViewContainer: '.event-list'
     });
 
   });

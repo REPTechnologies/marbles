@@ -21,8 +21,8 @@
 
     Scope.Picker = Marionette.CompositeView.extend({
       template: 'add/scope/picker',
-      itemView: Scope.View,
-      itemViewContainer: '.scope-pool'
+      childView: Scope.View,
+      childViewContainer: '.scope-pool'
     });
   });
 

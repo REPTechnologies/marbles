@@ -4,7 +4,7 @@
   "use strict";
 
   Marbles.module("FindApp.List", function (List, Marbles, Backbone, Marionette, $, _) {
-    List.Layout = Marionette.Layout.extend({
+    List.Layout = Marionette.LayoutView.extend({
       template: 'find/list/list',
       regions: {
         eventListRegion: '#event-list-region'

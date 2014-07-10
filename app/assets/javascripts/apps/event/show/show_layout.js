@@ -4,7 +4,7 @@
   "use strict";
 
   Marbles.module('EventApp.Show', function (Show, Marbles, Backbone, Marionette, $, _) {
-    Show.Layout = Marionette.Layout.extend({
+    Show.Layout = Marionette.LayoutView.extend({
       template: 'event/show/show',
       regions: {
       }

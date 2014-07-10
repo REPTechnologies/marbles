@@ -4,7 +4,7 @@
   "use strict";
 
   Marbles.module('AddApp.New', function (New, Marbles, Backbone, Marionette, $, _) {
-    New.Layout = Marionette.Layout.extend({
+    New.Layout = Marionette.LayoutView.extend({
       template: 'add/new/new',
       regions: {
         focusRegion: '#focus-region',

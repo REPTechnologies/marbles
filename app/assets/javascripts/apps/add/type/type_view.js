@@ -26,8 +26,8 @@
 
     Type.Picker = Marionette.CompositeView.extend({
       template: 'add/type/picker',
-      itemView: Type.View,
-      itemViewContainer: '.type-pool'
+      childView: Type.View,
+      childViewContainer: '.type-pool'
     });
   });
 

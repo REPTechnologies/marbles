@@ -21,10 +21,10 @@
       var picker = new New.Scope.Picker({
         collection: Marbles.request('get:scope:list')
       });
-      picker.on('itemview:scope:add', function (scope) {
+      picker.on('childview:scope:add', function (scope) {
         event.get('scopes').add(scope.model);
       });
-      picker.on('itemview:scope:remove', function (scope) {
+      picker.on('childview:scope:remove', function (scope) {
         event.get('scopes').remove(scope.model);
       });
       return picker;

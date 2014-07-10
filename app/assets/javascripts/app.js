@@ -16,7 +16,7 @@
   var scopes = [];
   var eventTypes = [];
 
-  Marbles.on('initialize:before', function (options) {
+  Marbles.on('before:start', function (options) {
     currentUser = Marbles.request('set:current:user', options.currentUser);
     foci = Marbles.request('set:focus:list', options.foci);
     scopes = Marbles.request('set:scope:list', options.scopes);
@@ -65,7 +65,7 @@
     return Backbone.history.fragment;
   };
 
-  Marbles.on('initialize:after', function () {
+  Marbles.on('start', function () {
     //Things to do after app initialize
     if (Backbone.history) {
       Backbone.history.start({

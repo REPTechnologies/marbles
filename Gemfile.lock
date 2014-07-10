@@ -157,6 +157,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    marionette-rails (2.0.0)
+      railties (>= 3.1)
     marionette_dust (0.1.0)
       ejs
       execjs (>= 1.2.9)
@@ -331,6 +333,7 @@ DEPENDENCIES
   jquery-ui-rails (~> 4.2)
   js-routes (~> 0.9)
   launchy
+  marionette-rails (~> 2.0)
   marionette_dust (~> 0.1)
   modernizr-rails (~> 2.7)
   oj (~> 2.7)

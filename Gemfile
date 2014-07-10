@@ -45,6 +45,7 @@ gem 'select2-rails', '~> 3.5'
 
 # Use backbone, marionette and dust as the JavaScript framework
 gem 'backbone-on-rails', '~> 1.1'
+gem 'marionette-rails', '~> 2.0'
 gem 'marionette_dust', '~> 0.1'
 
 # Use backbone relational to specify relations between backbone models

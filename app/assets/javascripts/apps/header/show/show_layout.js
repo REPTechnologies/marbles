@@ -4,7 +4,7 @@
   "use strict";
 
   Marbles.module('HeaderApp.Show', function (Show, Marbles, Backbone, Marionette, $, _) {
-    Show.Layout = Marionette.Layout.extend({
+    Show.Layout = Marionette.LayoutView.extend({
       template: 'header/show/show',
       tagName: 'header',
       regions: {

@@ -50,7 +50,7 @@
       view.eventOrganizationRegion.show(getOrganizationPicker(Marbles.request('get:current:user')));
     }
 
-    Info.View = Marionette.Layout.extend({
+    Info.View = Marionette.LayoutView.extend({
       template: 'add/new/info',
       onRender: onRender,
       regions: {
