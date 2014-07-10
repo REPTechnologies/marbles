@@ -16,15 +16,10 @@
       <input id="user_remember_me" name="user[remember_me]" type="checkbox" value="1"> Remember me
     </label>
   </div>
-  <button class="btn btn-primary" name="commit" type="button" value="Log In">Log In</button>
+  
 {/body}
 {<footer}
-  <div class="row padding-top">
-    <div class="col-xs-3">
-      <button class="sign-up btn btn-link btn-xs">Sign up</button>
-    </div>
-    <div class="col-xs-6">
-      <button class="new-password btn btn-link btn-xs">Forgot your password?</button>
-    </div>
-  </div>
+  <button class="sign-up btn btn-link btn-xs">Sign up</button>
+  <button class="new-password btn btn-link btn-xs">Forgot your password?</button>
+  <button class="btn btn-primary" name="commit" type="button" value="Log In">Log In</button>
 {/footer}
