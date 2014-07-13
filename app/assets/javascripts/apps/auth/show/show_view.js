@@ -3,12 +3,12 @@
 
   Marbles.module('AuthApp.Show', function (Show, Marbles, Backbone, Marionette, $, _) {
 
-    function loggedIn() {
-      return $.ajax
+    function loggedIn(user) {
+      Marbles.request('set:current:user', user);
     }
 
-    function loginFailure(data) {
-      
+    function loginFailure(response) {
+      M.fn.errorResponse(response);
     }
 
     function initLogInModal(view, $logInModal) {
