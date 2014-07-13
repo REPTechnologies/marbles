@@ -22,5 +22,5 @@
 {<footer}
   <button class="sign-up btn btn-link btn-xs">Sign up</button>
   <button class="new-password btn btn-link btn-xs">Forgot your password?</button>
-  <button class="btn btn-primary" name="commit" type="button" value="Log In">Log In</button>
+  <button id="log-in-button" class="btn btn-primary" name="commit" type="button" value="Log In">Log In</button>
 {/footer}
