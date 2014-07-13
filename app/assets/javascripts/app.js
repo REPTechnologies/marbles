@@ -83,7 +83,7 @@
     });
   }
 
-  Marbles.commands.setHandler('error:invalid', function (errors) {
+  function displayErrors(errors) {
     if ($.isArray(errors)) {
       $.each(errors, function (i, error) {
         displayAlert(error);
@@ -91,9 +91,13 @@
     } else {
       displayAlert(errors);
     }
-  });
+  }
+
+  Marbles.commands.setHandler('error:invalid', displayErrors);
+  Marbles.commands.setHandler('error:unauthorized', displayErrors);
 
   Marbles.commands.setHandler('error:notfound', function (errors) {
+    displayErrors(errors);
     console.warn('TODO: not implemented');
   });
 

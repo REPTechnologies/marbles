@@ -44,6 +44,9 @@
       case 404:
         command += 'notfound';
         break;
+      case 401:
+        command += 'unauthorized';
+        break;
       default:
         command += 'unexpected';
         break;
