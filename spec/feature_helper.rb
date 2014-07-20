@@ -11,6 +11,6 @@ def login(email, password='password')
   within('#log-in-modal') do
     fill_in('Email', :with => email)
     fill_in('Password', :with => password)
-    click_button('Log In')
+    find_button('Log In').trigger('click')
   end
 end
