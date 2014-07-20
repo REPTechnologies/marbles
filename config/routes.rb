@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     end
   end
 
-  devise_for :users, :path_names => {sign_in: "log_in", sign_out: "log_out"}, :controllers => {sessions: 'sessions'}
+  devise_for :users, :path_names => {sign_in: "log_in", sign_out: "log_out"}, :controllers => {sessions: 'sessions', registrations: 'registrations'}
 
   # You can have the root of your site routed with "root"
   root 'home#index'

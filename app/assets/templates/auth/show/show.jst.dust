@@ -13,7 +13,7 @@
       <button class="log-in btn btn-link btn-xs" data-toggle="modal" data-target="#log-in-modal">Log In</button>
     </div>
     <div class="col-xs-6 text-right">
-      <button class="sign-up btn btn-link btn-xs">Sign Up</a>
+      <button class="sign-up btn btn-link btn-xs" data-toggle="modal" data-target="#sign-up-modal">Sign Up</a>
     </div>
   </div>
 {/email}
@@ -25,3 +25,4 @@
 </div>
 
 {>"modals/auth/login"/}
+{>"modals/auth/signup"/}
