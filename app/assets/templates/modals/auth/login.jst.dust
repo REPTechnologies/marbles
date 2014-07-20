@@ -20,7 +20,6 @@
   
 {/body}
 {<footer}
-  <button class="sign-up btn btn-link btn-xs">Sign up</button>
-  <button class="new-password btn btn-link btn-xs">Forgot your password?</button>
+  <a href="{new_user_password_path}" class="btn btn-link btn-xs">Forgot your password?</a>
   <button id="log-in-button" class="btn btn-primary" name="commit" type="button" value="Log In">Log In</button>
 {/footer}

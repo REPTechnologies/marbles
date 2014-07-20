@@ -17,6 +17,5 @@
 </div>
 {/body}
 {<footer}
-<button class="log-in btn btn-link btn-xs">Log In</button>
 <button id="sign-up-button" class="btn btn-primary" name="commit" type="button" value="Sign Up">Sign Up</button>
 {/footer}
