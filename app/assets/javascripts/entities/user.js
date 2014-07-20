@@ -1,9 +1,7 @@
-/*jslint indent: 2, nomen: true*/
-/*global Marbles */
 (function () {
-  "use strict";
+  'use strict';
 
-  Marbles.module("Entities", function (Entities, Marbles, Backbone, Marionette, $, _) {
+  Marbles.module('Entities', function (Entities, Marbles, Backbone, Marionette, $, _) {
 
     Entities.User = Backbone.Model.extend({});
 
@@ -11,14 +9,12 @@
       model: Entities.User
     });
 
-    var API = {
-      setCurrentUser: function (currentUser) {
-        return new Entities.User(currentUser || {});
-      }
-    };
+    function setCurrentUser(currentUser) {
+      return new Entities.User(currentUser || {});
+    }
 
     Marbles.respond.setHandler('set:current:user', function (currentUser) {
-      return API.setCurrentUser(currentUser);
+      return setCurrentUser(currentUser);
     });
 
   });

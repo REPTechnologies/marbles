@@ -51,7 +51,11 @@
         command += 'unexpected';
         break;
       }
-      Marbles.execute(command, response.status !== 500 ? response.responseJSON.errors : response);
+      if (response.responseJSON) {
+        Marbles.execute(command, response.status !== 500 ? response.responseJSON.errors : response);
+      } else {
+        console.error(response.responseText);
+      }
     },
     removeArguments: function(api) {
       var obj = {};

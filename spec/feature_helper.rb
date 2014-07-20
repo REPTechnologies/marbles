@@ -6,9 +6,13 @@ Capybara.javascript_driver = :poltergeist
 
 def login(email, password='password')
   path = current_path
-  find_link('Log In').trigger('click')
-  fill_in('Email', :with => email)
-  fill_in('Password', :with => password)
-  click_button('Log In')
+  within('#auth-region') do
+    find_button('Log In').trigger('click')
+  end
+  within('#log-in-modal') do
+    fill_in('Email', :with => email)
+    fill_in('Password', :with => password)
+    click_button('Log In')
+  end
   visit path
 end

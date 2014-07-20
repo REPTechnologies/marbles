@@ -29,6 +29,11 @@
     currentUser.clear();
   });
 
+  Marbles.respond.setHandler('update:current:user', function (user) {
+    currentUser.set(user);
+    return currentUser;
+  });
+
   Marbles.respond.setHandler('get:focus:list', function () {
     return foci;
   });

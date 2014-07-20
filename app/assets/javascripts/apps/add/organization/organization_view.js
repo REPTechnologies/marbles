@@ -13,6 +13,9 @@
 
     Organization.Picker = Marionette.ItemView.extend({
       template: 'add/organization/picker',
+      modelEvents: {
+        change: 'render'
+      },
       ui: {
         toggleOrg: '.toggleOrganizationLink',
         orgInput: '.organizationInput'

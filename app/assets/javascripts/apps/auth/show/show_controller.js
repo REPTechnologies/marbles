@@ -12,16 +12,11 @@
       });
     }
 
-    function logIn() {
-      
-    }
-
     function getAuthView(currentUser) {
       var authView = new Show.View({
         model: currentUser
       });
       authView.on('auth:log:out', logOut);
-      authView.on('auth:log:in', logIn);
       return authView;
     }
 
