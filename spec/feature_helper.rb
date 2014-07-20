@@ -5,7 +5,6 @@ require 'capybara/poltergeist'
 Capybara.javascript_driver = :poltergeist
 
 def login(email, password='password')
-  path = current_path
   within('#auth-region') do
     find_button('Log In').trigger('click')
   end
@@ -14,5 +13,4 @@ def login(email, password='password')
     fill_in('Password', :with => password)
     click_button('Log In')
   end
-  visit path
 end
