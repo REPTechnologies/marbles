@@ -1,10 +1,46 @@
 {#event}
+<div class="card" {?picture}style="background: white url({picture.thumb_url}) no-repeat right center; background-size: contain;"{/picture}>
   <div class="row">
-    <div class="col-xs-12">
-      <section class="card">
-        Title {title}</br>
-        Id {id}
-      </section>
+    <div class="col-xs-8">
+      <h2>
+        {title}
+        <br/><small>{primary_focus.name}</small>
+        {?secondary_focus}<br/><small> {secondary_focus.name}</small>{/secondary_focus}
+      </h2>
+    </div>
+    <div class="col-xs-4 text-right">
+      <button class="btn btn-focus btn-lg" style="{join_style}"><strong>Join</strong></button>
     </div>
   </div>
+  <div class="row">
+    <div class="col-xs-8">
+      <p>{description}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-calendar"></span> {held_on}
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-map-marker"></span> {location}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-time"></span> {time}
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;
+      {#tags}<a href="#">{text}</a>{@sep},{~s}{/sep}{/tags}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-user"></span> {seats} Seats<br/>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-usd"></span> {?cost}{dollar_cost}{:else}Free{/cost}
+    </div>
+  </div>
+</div>
 {/event}

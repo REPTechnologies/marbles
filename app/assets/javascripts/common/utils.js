@@ -1,7 +1,5 @@
-/*jslint indent: 2, nomen: true*/
-/*global _, $, Marbles, Backbone, M, Args */
 (function () {
-  "use strict";
+  'use strict';
 
   // Define common utility functions
   M.fn = {
@@ -57,7 +55,7 @@
         console.error(response.responseText);
       }
     },
-    removeArguments: function(api) {
+    removeArguments: function removeArgumentsFn(api) {
       var obj = {};
       _.each(Object.keys(api), function(key) {
         var value = api[key];
@@ -70,6 +68,20 @@
         }
       });
       return obj;
+    },
+    formatCurrency: function formatCurrencyFn(amount, places) {
+      amount = (_.isFinite(amount) ? amount : 0) + '';
+      amount = amount.split('.').slice(0, 2);
+      var hasDigits = amount.length > 1;
+      places = _.isFinite(places) ? places : 2;
+
+      if (places > 0) {
+        amount[1] = _.string.rpad(hasDigits ? amount[1].substring(places, 0) : '', places, '0');
+      } else if (hasDigits) {
+        amount.pop();
+      }
+
+      return amount.join('.');
     }
   };
 

@@ -12,5 +12,5 @@
   "undef": true,
   "jquery": true,
   "devel": true,
-  "predef": [ "window", "Marbles", "M", "Routes", "gon", "Marionette", "Backbone", "Args", "dust" ]
+  "predef": [ "window", "Marbles", "M", "Routes", "gon", "Marionette", "Backbone", "Args", "dust", "tinycolor", "moment", "_", "$", "jQuery"]
 }

@@ -1,7 +1,5 @@
-/*jslint indent: 2, nomen: true*/
-/*global Marbles */
 (function () {
-  "use strict";
+  'use strict';
 
   Marbles.module('EventApp.Show', function (Show, Marbles, Backbone, Marionette, $, _) {
 
@@ -15,7 +13,7 @@
       var deferred = $.Deferred();
       if (!event) {
         event = new Marbles.Entities.Event({id: id});
-        deferred = event.fetch({
+        event.fetch({
           success: function (event, response, options) {
             deferred.resolve(event);
           }

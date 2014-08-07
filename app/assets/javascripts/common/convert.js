@@ -1,7 +1,5 @@
-/*jslint indent: 2, nomen: true*/
-/*global _, $, Marbles, JST, Backbone, M, Args, gon, resizeFooter */
 (function () {
-  "use strict";
+  'use strict';
 
   var timezoneOffset = new Date().getTimezoneOffset() / 60,
     isOffsetNegative = timezoneOffset < 0;

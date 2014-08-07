@@ -1,14 +1,26 @@
-/*jslint indent: 2, nomen: true*/
-/*global Marbles */
 (function () {
-  "use strict";
+  'use strict';
 
-  Marbles.module("EventApp", function (EventApp, Marbles, Backbone, Marionette, $, _) {
+  Marbles.module('EventApp', function (EventApp, Marbles, Backbone, Marionette, $, _) {
     EventApp.Router = Marionette.AppRouter.extend({
       appRoutes: {
         'event/:id': 'showEvent'
       }
     });
+
+    EventApp.TemplateHelpers = {
+      time: function () {
+        return new Date(this.event.held_at).toLocaleTimeString();
+      },
+      join_style: function () {
+        var baseColor = tinycolor.darken(this.event.primary_focus.color, 5).toHexString();
+        var shadeColor = tinycolor.darken(baseColor, 5).toHexString();
+        return 'background-color: ' + baseColor + '; border-color: ' + shadeColor + ';';
+      },
+      dollar_cost: function () {
+        return M.fn.formatCurrency(this.event.cost || 0);
+      }
+    };
 
     Marbles.vent.on('event:show', function (model) {
       M.fn.nav('event/' + model.id);
@@ -16,7 +28,7 @@
     });
 
     Marbles.addInitializer(function () {
-      new EventApp.Router({
+      EventApp.router = new EventApp.Router({
         controller: EventApp.Show.Controller
       });
     });
