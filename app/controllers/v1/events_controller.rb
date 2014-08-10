@@ -65,6 +65,6 @@ class V1::EventsController < ApiController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:cost, :description, :held_at, :held_on, :location, :seats, :tag_list, :title, :organization_id, :primary_focus_id, :secondary_focus_id, :event_type, :scope_ids, :picture_id, {:organization_attributes => [:name]})
+      params.require(:event).permit(:cost, :description, :held_at, :held_on, :location, :seats, :tag_list, :title, :primary_focus_id, :secondary_focus_id, :event_type, :scope_ids, :picture_id, {:organization_attributes => [:name, :id]})
     end
 end

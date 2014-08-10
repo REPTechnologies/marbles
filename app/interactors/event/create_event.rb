@@ -4,7 +4,8 @@ class Event::CreateEvent
   def setup
     event_params[:tag_list] = event_params[:tag_list].split(',') unless event_params[:tag_list].nil?
     event_params[:picture] = Picture.find(event_params.delete :picture_id) unless event_params[:picture_id].nil?
-    event_params.delete :organization_attributes unless event_params[:organization_id].nil?
+    event_params[:organization_id] = event_params[:organization_attributes][:id] unless no_organization_id
+    event_params.delete(:organization_attributes) unless no_organization_id
     event_params[:organization_attributes][:owner_id] = current_user_id unless event_params[:organization_attributes].nil?
     event_params[:organization_attributes][:user_ids] = [current_user_id] unless event_params[:organization_attributes].nil?
   end
@@ -23,5 +24,9 @@ class Event::CreateEvent
   
     def current_user_id
       context[:user].id
+    end
+
+    def no_organization_id
+      event_params[:organization_attributes].nil? or event_params[:organization_attributes][:id].nil?
     end
 end

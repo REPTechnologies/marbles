@@ -1,7 +1,7 @@
 <label for="event-organization">Organizer/Sponsor</label>
 {?organizations}
   <button type="button" class="btn btn-link btn-xs organizationInput toggleOrganizationLink">Add New Organization</button>
-  <select class="form-control organizationInput" id="event-organization" name="organization_id">
+  <select class="form-control organizationInput" id="event-organization" name="organizationId">
     {#organizations}
       <option value="{id}">{name}</option>
     {/organizations}

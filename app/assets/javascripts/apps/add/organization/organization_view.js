@@ -7,7 +7,7 @@
 
     function toggleOrganizationInput() {
       this.ui.orgInput.toggleClass('hidden');
-      this.ui.orgInput.filter('select.hidden, input.hidden').prop('disabled', true);
+      this.ui.orgInput.filter('select.hidden, input.hidden').prop('disabled', true).val('').change();
       this.ui.orgInput.filter('select, input').not('.hidden').prop('disabled', false);
     }
 

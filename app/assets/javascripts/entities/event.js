@@ -1,9 +1,7 @@
-/*jslint indent: 2, nomen: true*/
-/*global Marbles, Routes, M, gon */
 (function () {
-  "use strict";
+  'use strict';
 
-  Marbles.module("Entities", function (Entities, Marbles, Backbone, Marionette, $, _) {
+  Marbles.module('Entities', function (Entities, Marbles, Backbone, Marionette, $, _) {
 
     Entities.Event = Entities.Model.extend({
       paramRoot: 'event',
