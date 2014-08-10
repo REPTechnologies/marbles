@@ -19,6 +19,9 @@
       },
       dollar_cost: function () {
         return M.fn.formatCurrency(this.event.cost || 0);
+      },
+      organization_path: function () {
+        return '/organization/' + this.event.organization_attributes.id;
       }
     };
 

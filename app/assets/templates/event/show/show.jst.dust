@@ -12,6 +12,13 @@
       <button class="btn btn-focus btn-lg" style="{join_style}"><strong>Join</strong></button>
     </div>
   </div>
+  {#organization_attributes}
+  <div class="row">
+    <div class="col-xs-8">
+      <span class="glyphicon glyphicon-star-empty"></span> <a href="{organization_path}">{name}</a>
+    </div>
+  </div>
+  {/organization_attributes}
   <div class="row">
     <div class="col-xs-8">
       <p>{description}</p>
