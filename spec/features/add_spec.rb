@@ -70,29 +70,29 @@ describe "Add Page", :type => :feature, :js => true  do
     it "shows text input if user is not logged in" do
       expect(page).to have_selector('[name="organizationName"]')
       expect(page).to have_no_selector('.toggleOrganizationLink')
-      expect(page).to have_no_selector('[name="organization_id"]')
+      expect(page).to have_no_selector('[name="organizationId"]')
     end
 
     it "shows select input if user has organizations" do
       login('test1@email.com')
       expect(page).to have_no_selector('[name="organizationName"]')
       expect(page).to have_selector('.toggleOrganizationLink')
-      expect(page).to have_selector('[name="organization_id"]')
+      expect(page).to have_selector('[name="organizationId"]')
     end
 
     it "has a link to toggle between new and existing organization" do
       login('test1@email.com')
       expect(page).to have_no_selector('[name="organizationName"]')
       expect(page).to have_selector('.toggleOrganizationLink')
-      expect(page).to have_selector('[name="organization_id"]')
+      expect(page).to have_selector('[name="organizationId"]')
       click_button('Add New Organization')
       expect(page).to have_selector('[name="organizationName"]')
       expect(page).to have_selector('.toggleOrganizationLink')
-      expect(page).to have_no_selector('[name="organization_id"]')
+      expect(page).to have_no_selector('[name="organizationId"]')
       click_button('Use Existing Organization')
       expect(page).to have_no_selector('[name="organizationName"]')
       expect(page).to have_selector('.toggleOrganizationLink')
-      expect(page).to have_selector('[name="organization_id"]')
+      expect(page).to have_selector('[name="organizationId"]')
     end
   end
 

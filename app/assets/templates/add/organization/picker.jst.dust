@@ -9,5 +9,6 @@
   <button type="button" class="btn btn-link btn-xs organizationInput toggleOrganizationLink hidden">Use Existing Organization</button>
   <input type="text" class="form-control organizationInput hidden" id="event-organization" name="organizationName" placeholder="organization name" disabled>
 {:else}
+  <select class="form-control organizationInput hidden" id="event-organization" name="organizationId" disabled></select>
   <input type="text" class="form-control" id="event-organization" name="organizationName" placeholder="organization name">
 {/organizations}

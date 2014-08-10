@@ -1,7 +1,5 @@
-/*jslint indent: 2, nomen: true*/
-/*global Marbles, M */
 (function () {
-  "use strict";
+  'use strict';
 
   Marbles.module('AddApp.New', function (New, Marbles, Backbone, Marionette, $, _) {
 
