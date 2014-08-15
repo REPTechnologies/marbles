@@ -1,15 +1,17 @@
-/*jslint indent: 2, nomen: true*/
-/*global Marbles */
 (function () {
-  "use strict";
+  'use strict';
 
-  Marbles.module("Entities", function (Entities, Marbles, Backbone, Marionette, $, _) {
+  Marbles.module('Entities', function (Entities, Marbles, Backbone, Marionette, $, _) {
 
-    Entities.Organization = Entities.Model.extend({});
+    Entities.Organization = Backbone.RelationalModel.extend({
+      paramRoot: 'organization',
+      urlRoot: Routes.v1_organizations_path()
+    });
 
-    Entities.OrganizationsCollection = Backbone.Collection.extend({});
-
-    var API = {};
+    Entities.OrganizationsCollection = Backbone.Collection.extend({
+      model: Entities.Organization,
+      url: Routes.v1_organizations_path()
+    });
 
   });
 

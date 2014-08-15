@@ -5,7 +5,7 @@
     Show.Layout = Marionette.LayoutView.extend({
       template: 'event/show/show',
       className: 'event',
-      templateHelpers: Marbles.EventApp.TemplateHelpers,
+      templateHelpers: function () {return Marbles.EventApp.TemplateHelpers;},
       regions: {
       }
     });

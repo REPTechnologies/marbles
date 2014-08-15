@@ -3,7 +3,7 @@
 
   Marbles.module('Entities', function (Entities, Marbles, Backbone, Marionette, $, _) {
 
-    Entities.Event = Entities.Model.extend({
+    Entities.Event = Backbone.RelationalModel.extend({
       paramRoot: 'event',
       urlRoot: Routes.v1_events_path(),
       relations: [{
@@ -18,7 +18,14 @@
         key: 'organization',
         relatedModel: 'Organization',
         keySource: 'organization_id',
-        keyDestination: 'organization_attributes'
+        keyDestination: 'organization_attributes',
+        reverseRelation: {
+          key: 'events',
+          relatedModel: 'Event',
+          collectionType: 'EventCollection',
+          keySource: 'event_ids',
+          includeInJSON: false
+        }
       }],
       validate: function eventValidatorFn(attrs, options) {
         var errors = [];
@@ -39,7 +46,7 @@
 
     Entities.EventCollection = Backbone.Collection.extend({
       model: Entities.Event,
-      url: Routes.v1_events_path(),
+      url: Routes.v1_events_path()
     });
     
     Marbles.respond.setHandler('get:event:list', function () {

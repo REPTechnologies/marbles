@@ -1,18 +1,16 @@
-/*jslint indent: 2, nomen: true*/
-/*global Marbles */
 (function () {
-  "use strict";
+  'use strict';
 
-  Marbles.module("OrganizationApp", function (OrganizationApp, Marbles, Backbone, Marionette, $, _) {
+  Marbles.module('OrganizationApp', function (OrganizationApp, Marbles, Backbone, Marionette, $, _) {
     OrganizationApp.Router = Marionette.AppRouter.extend({
-      appRoutes: {}
+      appRoutes: {
+        'organization/:id': 'showOrganization'
+      }
     });
 
-    var API = {};
-
     Marbles.addInitializer(function () {
-      new OrganizationApp.Router({
-        controller: API
+      OrganizationApp.router = new OrganizationApp.Router({
+        controller: OrganizationApp.Show.Controller
       });
     });
   });

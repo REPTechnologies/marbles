@@ -10,18 +10,15 @@
 
     EventApp.TemplateHelpers = {
       time: function () {
-        return new Date(this.event.held_at).toLocaleTimeString();
+        return new Date(this.held_at).toLocaleTimeString();
       },
       join_style: function () {
-        var baseColor = tinycolor.darken(this.event.primary_focus.color, 5).toHexString();
+        var baseColor = tinycolor.darken(this.primary_focus.color, 5).toHexString();
         var shadeColor = tinycolor.darken(baseColor, 5).toHexString();
         return 'background-color: ' + baseColor + '; border-color: ' + shadeColor + ';';
       },
       dollar_cost: function () {
-        return M.fn.formatCurrency(this.event.cost || 0);
-      },
-      organization_path: function () {
-        return '/organization/' + this.event.organization_attributes.id;
+        return M.fn.formatCurrency(this.cost || 0);
       }
     };
 

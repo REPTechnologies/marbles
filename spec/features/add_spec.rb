@@ -4,7 +4,7 @@ describe "Add Page", :type => :feature, :js => true  do
   def event_json
     find('body').click #blur
     sleep 0.5
-    page.evaluate_script('Marbles.mainRegion.currentView.model.toJSON()')['event'].symbolize_keys
+    page.evaluate_script('Marbles.mainRegion.currentView.model.toJSON()').symbolize_keys
   end
 
   before :each do
