@@ -11,7 +11,8 @@
 
     Show.Controller = {
       showOrganization: function (id, organization) {
-        M.fn.getModel(Marbles.Entities.Organization, id, organization).done(function (organization) {
+        organization = organization || Marbles.request('get:organization', id);
+        Marbles.execute('when:fetched', organization, function () {
           Marbles.mainRegion.show(M.fn.getLayout(Show, onShow, organization));
         });
       }

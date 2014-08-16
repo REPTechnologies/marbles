@@ -11,7 +11,8 @@
 
     Show.Controller = {
       showEvent: function (id, event) {
-        M.fn.getModel(Marbles.Entities.Event, id, event).done(function (event) {
+        event = event || Marbles.request('get:event', id);
+        Marbles.execute('when:fetched', event, function () {
           Marbles.mainRegion.show(M.fn.getLayout(Show, onShow, event));
         });
       }

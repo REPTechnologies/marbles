@@ -8,9 +8,10 @@
       urlRoot: Routes.v1_organizations_path()
     });
 
-    Entities.OrganizationsCollection = Backbone.Collection.extend({
-      model: Entities.Organization,
-      url: Routes.v1_organizations_path()
+    Marbles.respond.setHandler('get:organization', function (id) {
+      var organization = Entities.Organization.findOrCreate({id: id});
+      organization.fetch();
+      return organization;
     });
 
   });

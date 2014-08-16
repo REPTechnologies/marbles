@@ -48,7 +48,13 @@
       model: Entities.Event,
       url: Routes.v1_events_path()
     });
-    
+
+    Marbles.respond.setHandler('get:event', function (id) {
+      var event = Entities.Event.findOrCreate({id: id});
+      event.fetch();
+      return event;
+    });
+
     Marbles.respond.setHandler('get:event:list', function () {
       var events = new Entities.EventCollection();
       events.fetch();
