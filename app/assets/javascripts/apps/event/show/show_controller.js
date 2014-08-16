@@ -9,14 +9,13 @@
       //M.fn.bindModel(layout);
     }
 
-    Show.Controller = {
+    Show.Controller = Marbles.Controller.extend({
       showEvent: function (id, event) {
         event = event || Marbles.request('get:event', id);
-        Marbles.execute('when:fetched', event, function () {
-          Marbles.mainRegion.show(M.fn.getLayout(Show, onShow, event));
-        });
+        Marbles.execute('when:fetched', event, _.bind(this.show, this, M.fn.getLayout(Show, onShow, event)));
       }
-    };
+    });
+
   });
 
 }());

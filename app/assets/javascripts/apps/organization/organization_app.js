@@ -15,7 +15,7 @@
 
     Marbles.addInitializer(function () {
       OrganizationApp.router = new OrganizationApp.Router({
-        controller: OrganizationApp.Show.Controller
+        controller: new OrganizationApp.Show.Controller()
       });
     });
   });

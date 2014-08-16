@@ -52,9 +52,21 @@
     footerRegion: '#footer-region'
   });
 
+  Marbles.respond.setHandler('default:region', function () {
+    return Marbles.mainRegion;
+  });
+
   Marbles.addInitializer(function () {
     Marbles.module('HeaderApp').start();
     Marbles.module('FooterApp').start();
+  });
+
+  Marbles.commands.setHandler('register:instance', function (instance, id) {
+    //Marbles.register(instance, id);
+  });
+
+  Marbles.commands.setHandler('unregister:instance', function (instance, id) {
+    //Marbles.unregister(instance, id);
   });
 
   //Navigate to specific route

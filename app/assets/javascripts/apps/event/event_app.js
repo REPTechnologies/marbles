@@ -29,7 +29,7 @@
 
     Marbles.addInitializer(function () {
       EventApp.router = new EventApp.Router({
-        controller: EventApp.Show.Controller
+        controller: new EventApp.Show.Controller()
       });
     });
   });
