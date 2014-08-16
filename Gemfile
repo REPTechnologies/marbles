@@ -63,6 +63,9 @@ gem 'js-routes', '~> 0.9'
 # Use modernizr for feature detection
 gem 'modernizr-rails', '~> 2.7'
 
+# Use spinjs for spinners
+gem 'spinjs-rails', '~> 1.3'
+
 # Use Acts-as-taggable-on as tagging library
 gem 'acts-as-taggable-on', '~> 3.1'
 

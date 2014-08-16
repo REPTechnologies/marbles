@@ -11,6 +11,7 @@
 //= require tinycolor-min
 //= require js-routes
 //= require select2
+//= require jquery.spin
 //= require bootstrap
 //= require underscore
 //= require underscore.string

@@ -15,9 +15,28 @@
         Marbles.execute('unregister:instance', this, this._instance_id);
         Marbles.Controller.__super__.close.apply(this, arguments);
       },
-      show: function showView(view) {
+      show: function showView(view, options) {
+        options = options || {};
+        _.defaults(options, {
+          loading: false,
+          region: this.region
+        });
+        this._setMainView(view);
+        this._manageView(view, options);
+      },
+      _manageView: function manageView(view, options) {
+        if (options.loading) {
+          Marbles.execute('show:loading', view, options);
+        } else {
+          options.region.show(view);
+        }
+      },
+      _setMainView: function setMainView(view) {
+        if (this._mainView) {
+          return;
+        }
+        this._mainView = view;
         this.listenTo(view, 'close', this.close);
-        this.region.show(view);
       }
     });
 

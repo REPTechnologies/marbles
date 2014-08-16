@@ -12,7 +12,7 @@
     Show.Controller = Marbles.Controller.extend({
       showOrganization: function (id, organization) {
         organization = organization || Marbles.request('get:organization', id);
-        Marbles.execute('when:fetched', organization, _.bind(this.show, this, M.fn.getLayout(Show, onShow, organization)));
+        Marbles.execute('when:fetched', organization, _.bind(this.show, this, M.fn.getLayout(Show, onShow, organization), {loading: true}));
       }
     });
 
