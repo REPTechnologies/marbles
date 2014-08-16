@@ -20,7 +20,11 @@
       options.data = JSON.stringify(data);
     }
 
-    return sync(method, model, options);
+    var promise = sync(method, model, options);
+    if (!model._fetch && method === 'read') {
+      model._fetch = promise;
+    }
+    return promise;
   };
 
 }());
