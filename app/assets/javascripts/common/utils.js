@@ -32,7 +32,13 @@
       }
       view.binder.bind(view.model, view.el, bindings, options);
     },
-    nav: Backbone.history.navigate.bind(Backbone.history),
+    nav: function nav (fragment, options) {
+      options = options || {};
+      if (options.trigger === undefined) {
+        options.trigger = true;
+      }
+      return Backbone.history.navigate.call(Backbone.history, fragment, options);
+    },
     errorResponse: function errorResponseFn(response) {
       var command = 'error:';
       switch (response.status) {
@@ -82,6 +88,20 @@
       }
 
       return amount.join('.');
+    },
+    getModel: function getModelFn(ModelType, id, model) {
+      var deferred = $.Deferred();
+      if (!model) {
+        model = ModelType.findOrCreate({id: id});
+        model.fetch({
+          success: function (model, response, options) {
+            deferred.resolve(model);
+          }
+        });
+      } else {
+        deferred.resolve(model);
+      }
+      return deferred.promise();
     }
   };
 

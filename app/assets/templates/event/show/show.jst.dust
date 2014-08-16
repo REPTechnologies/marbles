@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-xs-8">
       <h2>
-        {title}
+        <span class="title">{title}</span>
         <br/><small>{primary_focus.name}</small>
         {?secondary_focus}<br/><small> {secondary_focus.name}</small>{/secondary_focus}
       </h2>
@@ -11,13 +11,13 @@
       <button class="btn btn-focus btn-lg" style="{join_style}"><strong>Join</strong></button>
     </div>
   </div>
-  {#organization}
+  {#organization_attributes}
   <div class="row">
     <div class="col-xs-8">
-      <span class="glyphicon glyphicon-star-empty"></span> {name}
+      <span class="glyphicon glyphicon-star-empty"></span> <span class="organization-name btn-link">{name}</span>
     </div>
   </div>
-  {/organization}
+  {/organization_attributes}
   <div class="row">
     <div class="col-xs-8">
       <p>{description}</p>

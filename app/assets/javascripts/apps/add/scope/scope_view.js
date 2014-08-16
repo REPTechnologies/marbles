@@ -1,7 +1,5 @@
-/*jslint indent: 2, nomen: true*/
-/*global Marbles */
 (function () {
-  "use strict";
+  'use strict';
 
   Marbles.module('AddApp.New.Scope', function (Scope, Marbles, Backbone, Marionette, $, _) {
 
@@ -14,9 +12,8 @@
       template: 'add/scope/view',
       className: 'scope btn btn-default',
       events: {
-        'click': 'toggle'
-      },
-      toggle: toggleScope
+        'click': toggleScope
+      }
     });
 
     Scope.Picker = Marionette.CompositeView.extend({

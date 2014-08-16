@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-xs-8">
       <h2>
-        {title}
+        <span class="title btn-link">{title}</span>
         <br/><small>{primary_focus.name}</small>
         {?secondary_focus}<br/><small> {secondary_focus.name}</small>{/secondary_focus}
       </h2>

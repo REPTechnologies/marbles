@@ -1,7 +1,5 @@
-/*jslint indent: 2, nomen: true*/
-/*global Marbles */
 (function () {
-  "use strict";
+  'use strict';
 
   Marbles.module('AddApp.New.Type', function (Type, Marbles, Backbone, Marionette, $, _) {
 
@@ -19,9 +17,8 @@
       template: 'add/type/view',
       className: 'type btn btn-default',
       events: {
-        'click': 'select'
-      },
-      select: selectType
+        'click': selectType
+      }
     });
 
     Type.Picker = Marionette.CompositeView.extend({

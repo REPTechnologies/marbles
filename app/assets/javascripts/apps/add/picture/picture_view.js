@@ -1,7 +1,5 @@
-/*jslint indent: 2, nomen: true*/
-/*global Marbles, dust, Routes */
 (function () {
-  "use strict";
+  'use strict';
 
   Marbles.module('AddApp.New.Picture', function (Picture, Marbles, Backbone, Marionette, $, _) {
 

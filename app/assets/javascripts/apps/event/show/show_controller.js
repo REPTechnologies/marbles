@@ -9,24 +9,9 @@
       //M.fn.bindModel(layout);
     }
 
-    function getEvent(id, event) {
-      var deferred = $.Deferred();
-      if (!event) {
-        event = new Marbles.Entities.Event({id: id});
-        event.fetch({
-          success: function (event, response, options) {
-            deferred.resolve(event);
-          }
-        });
-      } else {
-        deferred.resolve(event);
-      }
-      return deferred.promise();
-    }
-
     Show.Controller = {
       showEvent: function (id, event) {
-        getEvent(id, event).done(function (event) {
+        M.fn.getModel(Marbles.Entities.Event, id, event).done(function (event) {
           Marbles.mainRegion.show(M.fn.getLayout(Show, onShow, event));
         });
       }

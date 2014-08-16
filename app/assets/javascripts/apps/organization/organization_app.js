@@ -8,6 +8,11 @@
       }
     });
 
+    Marbles.vent.on('organization:show', function () {
+      var args = new Args([{id: Args.INT | Args.Required}], arguments);
+      M.fn.nav('organization/' + args.id);
+    });
+
     Marbles.addInitializer(function () {
       OrganizationApp.router = new OrganizationApp.Router({
         controller: OrganizationApp.Show.Controller

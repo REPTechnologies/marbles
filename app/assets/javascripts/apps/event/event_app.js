@@ -22,9 +22,9 @@
       }
     };
 
-    Marbles.vent.on('event:show', function (model) {
-      M.fn.nav('event/' + model.id);
-      EventApp.Show.Controller.showEvent(model.id, model);
+    Marbles.vent.on('event:show', function () {
+      var args = new Args([{id: Args.INT | Args.Required}], arguments);
+      M.fn.nav('event/' + args.id);
     });
 
     Marbles.addInitializer(function () {

@@ -1,7 +1,5 @@
-/*jslint indent: 2, nomen: true*/
-/*global Marbles */
 (function () {
-  "use strict";
+  'use strict';
 
   Marbles.module('AddApp', function (AddApp, Marbles, Backbone, Marionette, $, _) {
     AddApp.Router = Marionette.AppRouter.extend({
@@ -12,11 +10,10 @@
 
     Marbles.vent.on('add:new', function () {
       M.fn.nav('add');
-      AddApp.New.Controller.showNew();
     });
 
     Marbles.addInitializer(function () {
-      new AddApp.Router({
+      AddApp.router = new AddApp.Router({
         controller: AddApp.New.Controller
       });
     });

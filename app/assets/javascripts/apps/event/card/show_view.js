@@ -6,7 +6,12 @@
     Card.View = Marionette.ItemView.extend({
       template: 'event/card/show',
       className: 'event',
-      templateHelpers: function () {return Marbles.EventApp.TemplateHelpers;}
+      templateHelpers: function () {return Marbles.EventApp.TemplateHelpers;},
+      events: {
+        'click .title': function () {
+          Marbles.vent.trigger('event:show', this.model);
+        }
+      }
     });
 
   });

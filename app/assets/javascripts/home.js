@@ -1,7 +1,5 @@
-/*jslint indent: 2, nomen: true*/
-/*global $, Marbles, JST, gon, resizeFooter */
 (function () {
-  "use strict";
+  'use strict';
 
   $(document).ajaxSend(function (e, xhr, options) {
     var token = $('meta[name="csrf-token"]').attr('content');

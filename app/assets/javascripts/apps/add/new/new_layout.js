@@ -1,7 +1,5 @@
-/*jslint indent: 2, nomen: true*/
-/*global Marbles */
 (function () {
-  "use strict";
+  'use strict';
 
   Marbles.module('AddApp.New', function (New, Marbles, Backbone, Marionette, $, _) {
     New.Layout = Marionette.LayoutView.extend({
@@ -14,10 +12,8 @@
         eventDetailsRegion: '#event-details-region',
         eventPictureRegion: '#event-picture-region'
       },
-      events: {
-        'click #submit': function () {
-          this.trigger('event:submit');
-        }
+      triggers: {
+        'click #submit': 'event:submit'
       }
     });
   });

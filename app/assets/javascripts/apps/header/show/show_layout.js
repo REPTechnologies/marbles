@@ -8,19 +8,11 @@
       regions: {
         authRegion: Marbles.Region.extend({el: '#auth-region'})
       },
-      events: {
-        'click #header-find': function () {
-          this.trigger('header:find');
-        },
-        'click #header-add': function () {
-          this.trigger('header:add');
-        },
-        'click #header-trends': function () {
-          this.trigger('header:trends');
-        },
-        'click .header-logo': function () {
-          this.trigger('header:logo');
-        }
+      triggers: {
+        'click #header-find': 'header:find',
+        'click #header-add': 'header:add',
+        'click #header-trends': 'header:trends',
+        'click .header-logo': 'header:logo'
       }
     });
   });

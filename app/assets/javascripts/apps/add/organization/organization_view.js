@@ -1,7 +1,5 @@
-/*jslint indent: 2, nomen: true*/
-/*global Marbles */
 (function () {
-  "use strict";
+  'use strict';
 
   Marbles.module('AddApp.New.Organization', function (Organization, Marbles, Backbone, Marionette, $, _) {
 
@@ -21,9 +19,8 @@
         orgInput: '.organizationInput'
       },
       events: {
-        'click @ui.toggleOrg': 'toggleOrg'
-      },
-      toggleOrg: toggleOrganizationInput
+        'click @ui.toggleOrg': toggleOrganizationInput
+      }
     });
   });
 

@@ -7,6 +7,11 @@
       className: 'event',
       templateHelpers: function () {return Marbles.EventApp.TemplateHelpers;},
       regions: {
+      },
+      events: {
+        'click .organization-name': function () {
+          Marbles.vent.trigger('organization:show', this.model.get('organization'));
+        }
       }
     });
   });
