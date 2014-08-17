@@ -19,6 +19,12 @@
       },
       dollar_cost: function () {
         return M.fn.formatCurrency(this.cost || 0);
+      },
+      articulate_event_type: function () {
+        return AvsAnSimple.query(this.event_type) + ' ' + _.str.capitalize(this.event_type);
+      },
+      scopes_sentence: function() {
+        return _.str.toSentenceSerial(_.pluck(this.scopes, 'title'));
       }
     };
 

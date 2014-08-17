@@ -3,7 +3,7 @@
 
   Marbles.module('Entities', function (Entities, Marbles, Backbone, Marionette, $, _) {
 
-    Entities.Organization = Backbone.RelationalModel.extend({
+    Entities.Organization = Marbles.RelationalModel.extend({
       paramRoot: 'organization',
       urlRoot: Routes.v1_organizations_path()
     });

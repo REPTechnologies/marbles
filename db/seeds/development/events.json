@@ -16,7 +16,8 @@
       "primary_focus_id": "<%= sprig_record(Focus, 3).id %>",
       "secondary_focus_id": "<%= sprig_record(Focus, 2).id %>",
       "organization_id": "<%= sprig_record(Organization, 1).id %>",
-      "tag_list": ["dance", "social", "connect", "excitement", "music", "bacon", "halloween"]
+      "tag_list": ["dance", "social", "connect", "excitement", "music", "bacon", "halloween"],
+      "scope_ids": ["<%= sprig_record(Scope, 1).id %>"]
     },
     {
       "sprig_id": 2,
@@ -30,7 +31,8 @@
       "primary_focus_id": "<%= sprig_record(Focus, 3).id %>",
       "secondary_focus_id": "<%= sprig_record(Focus, 2).id %>",
       "organization_id": "<%= sprig_record(Organization, 2).id %>",
-      "tag_list": ["dance", "social", "connect", "excitement", "music", "latin", "halloween"]
+      "tag_list": ["dance", "social", "connect", "excitement", "music", "latin", "halloween"],
+      "scope_ids": ["<%= sprig_record(Scope, 1).id %>"]
     },
     {
       "sprig_id": 3,
@@ -43,7 +45,8 @@
       "seats": 500,
       "primary_focus_id": "<%= sprig_record(Focus, 2).id %>",
       "organization_id": "<%= sprig_record(Organization, 1).id %>",
-      "tag_list": ["parade", "excitement", "bacon"]
+      "tag_list": ["parade", "excitement", "bacon"],
+      "scope_ids": ["<%= sprig_record(Scope, 1).id %>", "<%= sprig_record(Scope, 2).id %>", "<%= sprig_record(Scope, 3).id %>", "<%= sprig_record(Scope, 4).id %>"]
     },
     {
       "sprig_id": 4,
@@ -56,7 +59,8 @@
       "seats": 500,
       "primary_focus_id": "<%= sprig_record(Focus, 2).id %>",
       "organization_id": "<%= sprig_record(Organization, 2).id %>",
-      "tag_list": ["parade", "excitement", "latin"]
+      "tag_list": ["parade", "excitement", "latin"],
+      "scope_ids": ["<%= sprig_record(Scope, 1).id %>", "<%= sprig_record(Scope, 2).id %>", "<%= sprig_record(Scope, 3).id %>", "<%= sprig_record(Scope, 4).id %>"]
     },
     {
       "sprig_id": 5,
@@ -70,7 +74,8 @@
       "primary_focus_id": "<%= sprig_record(Focus, 6).id %>",
       "secondary_focus_id": "<%= sprig_record(Focus, 5).id %>",
       "organization_id": "<%= sprig_record(Organization, 1).id %>",
-      "tag_list": ["bacon", "discuss", "nutrition", "connect", "networking"]
+      "tag_list": ["bacon", "discuss", "nutrition", "connect", "networking"],
+      "scope_ids": ["<%= sprig_record(Scope, 2).id %>", "<%= sprig_record(Scope, 3).id %>", "<%= sprig_record(Scope, 4).id %>", "<%= sprig_record(Scope, 5).id %>"]
     },
     {
       "sprig_id": 6,
@@ -84,7 +89,8 @@
       "primary_focus_id": "<%= sprig_record(Focus, 1).id %>",
       "secondary_focus_id": "<%= sprig_record(Focus, 4).id %>",
       "organization_id": "<%= sprig_record(Organization, 1).id %>",
-      "tag_list": ["bacon", "social", "nutrition", "career", "networking", "purpose"]
+      "tag_list": ["bacon", "social", "nutrition", "career", "networking", "purpose"],
+      "scope_ids": ["<%= sprig_record(Scope, 3).id %>", "<%= sprig_record(Scope, 4).id %>", "<%= sprig_record(Scope, 5).id %>"]
     }
   ]
 }

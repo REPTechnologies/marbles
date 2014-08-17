@@ -12,6 +12,7 @@
 //= require js-routes
 //= require select2
 //= require jquery.spin
+//= require AvsAn-simple
 //= require bootstrap
 //= require underscore
 //= require underscore.string
@@ -19,7 +20,6 @@
 //= require backbone.marionette
 //= require marionette_dust/dust-full-2.2.2
 //= require marionette_dust/dust-helpers-1.1.1
-//= require marionette_dust/marionette_renderer
 //= require backbone-relational
 //= require Backbone.ModelBinder
 //= require_tree ./config

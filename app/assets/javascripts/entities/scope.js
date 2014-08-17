@@ -3,7 +3,7 @@
 
   Marbles.module('Entities', function (Entities, Marbles, Backbone, Marionette, $, _) {
 
-    Entities.Scope = Backbone.RelationalModel.extend({});
+    Entities.Scope = Marbles.RelationalModel.extend({});
 
     Entities.ScopeCollection = Backbone.Collection.extend({
       model: Entities.Scope

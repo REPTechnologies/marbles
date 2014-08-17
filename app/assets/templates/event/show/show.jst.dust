@@ -11,13 +11,18 @@
       <button class="btn btn-focus btn-lg" style="{join_style}"><strong>Join</strong></button>
     </div>
   </div>
-  {#organization_attributes}
   <div class="row">
     <div class="col-xs-8">
-      <span class="follow-org glyphicon glyphicon-star-empty"></span> <span class="organization-name btn-link">{name}</span>
+      <h4>This is {articulate_event_type} event{?scopes} for {scopes_sentence}{/scopes}.</h4>
     </div>
   </div>
-  {/organization_attributes}
+  {#organization}
+  <div class="row">
+    <div class="col-xs-8">
+      <h4><span class="follow-org glyphicon glyphicon-star-empty"></span> <span class="organization-name btn-link">{name}</span></h4>
+    </div>
+  </div>
+  {/organization}
   <div class="row">
     <div class="col-xs-8">
       <p>{description}</p>

@@ -3,7 +3,7 @@
 
   Marbles.module('Entities', function (Entities, Marbles, Backbone, Marionette, $, _) {
 
-    Entities.Event = Backbone.RelationalModel.extend({
+    Entities.Event = Marbles.RelationalModel.extend({
       paramRoot: 'event',
       urlRoot: Routes.v1_events_path(),
       relations: [{
