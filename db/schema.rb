@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140817155349) do
+ActiveRecord::Schema.define(version: 20140817173820) do
 
   create_table "answers", force: true do |t|
     t.integer  "slider"
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 20140817155349) do
     t.integer "scope_id", null: false
   end
 
-  create_table "focus", force: true do |t|
+  create_table "foci", force: true do |t|
     t.string   "name"
     t.string   "description"
     t.datetime "created_at"
@@ -128,8 +128,8 @@ ActiveRecord::Schema.define(version: 20140817155349) do
   add_index "questions", ["primary_focus_id"], name: "index_questions_on_primary_focus_id"
 
   create_table "questions_secondary_focus", id: false, force: true do |t|
-    t.integer "question_id",       null: false
-    t.integer "secondary_focu_id", null: false
+    t.integer "question_id",        null: false
+    t.integer "secondary_focus_id", null: false
   end
 
   create_table "scopes", force: true do |t|
