@@ -6,17 +6,17 @@
     {
       "sprig_id": 1,
       "name": "Bacon Organization",
-      "owner_id": 1,
-      "user_ids": [1],
+      "owner_id": "<%= sprig_record(User, 1).id %>",
+      "user_ids": ["<%= sprig_record(User, 1).id %>"],
       "description": "Bacon ipsum dolor sit amet pork chop venison chicken, chuck pork loin ham swine. Prosciutto pork rump salami ribeye. Flank pork chop porchetta sausage boudin, doner shankle pig salami kielbasa. Pork jerky meatball ham capicola meatloaf beef pig kielbasa ball tip pancetta pastrami. Corned beef beef ribs leberkas shankle venison jerky jowl short ribs shank brisket ground round cow. Pastrami shankle ball tip ham hock capicola landjaeger kielbasa. Beef ribs venison corned beef flank.",
       "contact_info": "bacon@organization.com"
     },
     {
       "sprig_id": 2,
       "name": "Latin Organization",
-      "owner_id": 1,
-      "user_ids": [1, 2],
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis, orci non lacinia pellentesque, tellus mi auctor neque, a euismod tortor diam id nunc. Vivamus id nisl at nibh bibendum adipiscing. Nullam convallis elit non orci venenatis, ac hendrerit nisi rutrum. Donec sed quam nec urna sodales dignissim. Nullam ipsum est, euismod non nulla euismod, pulvinar ornare dui. Nulla pretium purus ut semper dapibus. Nam consequat, dolor a hendrerit ullamcorper, odio mi accumsan turpis, et ullamcorper risus orci porttitor augue. Etiam at adipiscing felis, sit amet lobortis elit. Etiam pharetra sem sed felis semper pulvinar. Ut pretium luctus luctus. Phasellus ullamcorper felis et euismod dignissim. In vel tristique eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer sollicitudin gravida urna, et pretium sem molestie et.",
+      "owner_id": "<%= sprig_record(User, 1).id %>",
+      "user_ids": ["<%= sprig_record(User, 1).id %>", "<%= sprig_record(User, 2).id %>"],
+      "description": "<%= Faker::Lorem.paragraph %>",
       "contact_info": "latin@organization.com"
     }
   ]
