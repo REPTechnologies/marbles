@@ -9,12 +9,27 @@
       model: Entities.User
     });
 
-    function setCurrentUser(currentUser) {
-      return new Entities.User(currentUser || {});
+    var currentUser = {};
+
+    function getUserEntity(userData) {
+      return new Entities.User(userData || {});
     }
 
-    Marbles.respond.setHandler('set:current:user', function (currentUser) {
-      return setCurrentUser(currentUser);
+    Marbles.respond.setHandler('set:current:user', function (userData) {
+      currentUser = getUserEntity(userData);
+    });
+
+    Marbles.respond.setHandler('get:current:user', function () {
+      return currentUser;
+    });
+
+    Marbles.respond.setHandler('destroy:current:user', function () {
+      currentUser.clear();
+    });
+
+    Marbles.respond.setHandler('update:current:user', function (userData) {
+      $('meta[name="csrf-token"]').attr('content', userData.csrf_token);
+      currentUser.set(userData);
     });
 
   });

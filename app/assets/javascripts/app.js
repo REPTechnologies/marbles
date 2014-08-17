@@ -9,29 +9,15 @@
   window.M.respond = window.M.reqres;
 
   //local variables
-  var currentUser = {};
   var foci = [];
   var scopes = [];
   var eventTypes = [];
 
   Marbles.on('before:start', function (options) {
-    currentUser = Marbles.request('set:current:user', options.currentUser);
+    Marbles.request('set:current:user', options.currentUser);
     foci = Marbles.request('set:focus:list', options.foci);
     scopes = Marbles.request('set:scope:list', options.scopes);
     eventTypes = Marbles.request('set:event:type:list', options.eventTypes);
-  });
-
-  Marbles.respond.setHandler('get:current:user', function () {
-    return currentUser;
-  });
-
-  Marbles.respond.setHandler('destroy:current:user', function () {
-    currentUser.clear();
-  });
-
-  Marbles.respond.setHandler('update:current:user', function (user) {
-    currentUser.set(user);
-    return currentUser;
   });
 
   Marbles.respond.setHandler('get:focus:list', function () {

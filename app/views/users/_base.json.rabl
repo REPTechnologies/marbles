@@ -11,3 +11,7 @@ end
 child :userpolls do
   attributes :id, :poll_id
 end
+
+node :csrf_token do
+  form_authenticity_token
+end
