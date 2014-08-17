@@ -6,7 +6,7 @@
     {
       "sprig_id": 1,
       "title": "Halloween Bacon Dance",
-      "held_at": "20:00",
+      "held_at": "02:00",
       "held_on": "2014-10-31",
       "location": "<%= Faker::Address.street_address %>",
       "description": "<%= Faker::Lorem.paragraphs.join(' ') %>",
@@ -15,12 +15,13 @@
       "cost": 8.00,
       "primary_focus_id": "<%= sprig_record(Focus, 3).id %>",
       "secondary_focus_id": "<%= sprig_record(Focus, 2).id %>",
-      "organization_id": "<%= sprig_record(Organization, 1).id %>"
+      "organization_id": "<%= sprig_record(Organization, 1).id %>",
+      "tag_list": ["dance", "social", "connect", "excitement", "music", "bacon", "halloween"]
     },
     {
       "sprig_id": 2,
       "title": "Halloween Latin Dance",
-      "held_at": "18:00",
+      "held_at": "00:00",
       "held_on": "2014-10-31",
       "location": "<%= Faker::Address.street_address %>",
       "description": "<%= Faker::Lorem.paragraphs.join(' ') %>",
@@ -28,36 +29,39 @@
       "seats": 20,
       "primary_focus_id": "<%= sprig_record(Focus, 3).id %>",
       "secondary_focus_id": "<%= sprig_record(Focus, 2).id %>",
-      "organization_id": "<%= sprig_record(Organization, 2).id %>"
+      "organization_id": "<%= sprig_record(Organization, 2).id %>",
+      "tag_list": ["dance", "social", "connect", "excitement", "music", "latin", "halloween"]
     },
     {
       "sprig_id": 3,
       "title": "Bacon Parade",
-      "held_at": "10:00",
+      "held_at": "16:00",
       "held_on": "2014-07-04",
       "location": "<%= Faker::Address.street_address %>",
       "description": "<%= Faker::Lorem.paragraphs.join(' ') %>",
       "event_type": "other",
       "seats": 500,
       "primary_focus_id": "<%= sprig_record(Focus, 2).id %>",
-      "organization_id": "<%= sprig_record(Organization, 1).id %>"
+      "organization_id": "<%= sprig_record(Organization, 1).id %>",
+      "tag_list": ["parade", "excitement", "bacon"]
     },
     {
       "sprig_id": 4,
       "title": "Latin Parade",
-      "held_at": "08:00",
+      "held_at": "14:00",
       "held_on": "2014-07-04",
       "location": "<%= Faker::Address.street_address %>",
       "description": "<%= Faker::Lorem.paragraphs.join(' ') %>",
       "event_type": "other",
       "seats": 500,
       "primary_focus_id": "<%= sprig_record(Focus, 2).id %>",
-      "organization_id": "<%= sprig_record(Organization, 2).id %>"
+      "organization_id": "<%= sprig_record(Organization, 2).id %>",
+      "tag_list": ["parade", "excitement", "latin"]
     },
     {
       "sprig_id": 5,
       "title": "Bacon Users Group",
-      "held_at": "17:30",
+      "held_at": "11:30",
       "held_on": "2014-08-15",
       "location": "<%= Faker::Address.street_address %>",
       "description": "<%= Faker::Lorem.paragraphs.join(' ') %>",
@@ -65,12 +69,13 @@
       "seats": 50,
       "primary_focus_id": "<%= sprig_record(Focus, 6).id %>",
       "secondary_focus_id": "<%= sprig_record(Focus, 5).id %>",
-      "organization_id": "<%= sprig_record(Organization, 1).id %>"
+      "organization_id": "<%= sprig_record(Organization, 1).id %>",
+      "tag_list": ["bacon", "discuss", "nutrition", "connect", "networking"]
     },
     {
       "sprig_id": 6,
       "title": "Bacon Gala",
-      "held_at": "19:00",
+      "held_at": "01:00",
       "held_on": "2014-11-20",
       "location": "<%= Faker::Address.street_address %>",
       "description": "<%= Faker::Lorem.paragraphs.join(' ') %>",
@@ -78,7 +83,8 @@
       "seats": 150,
       "primary_focus_id": "<%= sprig_record(Focus, 1).id %>",
       "secondary_focus_id": "<%= sprig_record(Focus, 4).id %>",
-      "organization_id": "<%= sprig_record(Organization, 1).id %>"
+      "organization_id": "<%= sprig_record(Organization, 1).id %>",
+      "tag_list": ["bacon", "social", "nutrition", "career", "networking", "purpose"]
     }
   ]
 }
