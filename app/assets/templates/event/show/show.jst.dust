@@ -14,7 +14,7 @@
   {#organization_attributes}
   <div class="row">
     <div class="col-xs-8">
-      <span class="glyphicon glyphicon-star-empty"></span> <span class="organization-name btn-link">{name}</span>
+      <span class="follow-org glyphicon glyphicon-star-empty"></span> <span class="organization-name btn-link">{name}</span>
     </div>
   </div>
   {/organization_attributes}

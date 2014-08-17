@@ -29,6 +29,21 @@ body {
   @include single-box-shadow($default-box-shadow-color, 1px, 1px);
 }
 
+.card > h1:first-child,
+.card > .row > div > h1:first-child,
+.card > h2:first-child,
+.card > .row > div > h2:first-child,
+.card > h3:first-child,
+.card > .row > div > h3:first-child,
+.card > h4:first-child,
+.card > .row > div > h4:first-child,
+.card > h5:first-child,
+.card > .row > div > h5:first-child,
+.card > h6:first-child,
+.card > .row > div > h6:first-child {
+  margin-top: 0;
+}
+
 #page {
   @include width-min;
   background-color: $primary-color;

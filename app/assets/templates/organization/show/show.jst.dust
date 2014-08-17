@@ -1,7 +1,50 @@
 <div class="card">
   <div class="row">
     <div class="col-xs-12">
-      <h2>{name}</h2>
+      <h2>
+        {name}<br/>
+        <small class="follow-org"><span class="glyphicon glyphicon-star-empty"></span> {num_followers}</small>
+      </h2>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <h3>Description</h3>
+      <p>{?description}{description}{:else}Description coming soon!{/description}</p>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <h3>Logo</h3>
+      <p>{?logo}{logo}{:else}Logo coming soon!{/logo}</p>
+    </div>
+  </div>
+</div>
+<h3>Upcoming Events</h3>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      Event 3
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      Event 3
+    </div>
+  </div>
+</div>
+<h3>Previous Events</h3>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      Event 1
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      Event 2
     </div>
   </div>
 </div>
