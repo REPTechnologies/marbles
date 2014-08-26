@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.2'
+gem 'rails', '4.1.5'
 
 # Use interactors for layer between controllers and models
 # See http://eng.joingrouper.com/blog/2014/03/03/rails-the-missing-parts-interactors
