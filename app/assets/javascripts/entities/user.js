@@ -11,12 +11,8 @@
 
     var currentUser = {};
 
-    function getUserEntity(userData) {
-      return new Entities.User(userData || {});
-    }
-
-    Marbles.respond.setHandler('set:current:user', function (userData) {
-      currentUser = getUserEntity(userData);
+    Marbles.commands.setHandler('set:current:user', function (userData) {
+      currentUser = new Entities.User(userData || {});
     });
 
     Marbles.respond.setHandler('get:current:user', function () {

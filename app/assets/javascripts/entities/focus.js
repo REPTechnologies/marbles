@@ -11,14 +11,14 @@
       model: Entities.Focus
     });
 
-    var API = {
-      setFoci: function (foci) {
-        return new Entities.FocusCollection(foci || {});
-      }
-    };
+    var foci = [];
 
-    Marbles.respond.setHandler('set:focus:list', function (foci) {
-      return API.setFoci(foci);
+    Marbles.commands.setHandler('set:focus:list', function (fociData) {
+      foci = new Entities.FocusCollection(fociData || {});
+    });
+
+    Marbles.respond.setHandler('get:focus:list', function () {
+      return foci;
     });
 
   });

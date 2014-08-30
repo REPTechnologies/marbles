@@ -9,7 +9,7 @@
       this.ui.orgInput.filter('select, input').not('.hidden').prop('disabled', false);
     }
 
-    Organization.Picker = Marionette.ItemView.extend({
+    Organization.Picker = Marbles.ItemView.extend({
       template: 'add/organization/picker',
       modelEvents: {
         change: 'render'

@@ -3,7 +3,7 @@
 
   Marbles.module('EventApp.Card', function (Card, Marbles, Backbone, Marionette, $, _) {
 
-    Card.View = Marionette.ItemView.extend({
+    Card.View = Marbles.ItemView.extend({
       template: 'event/card/show',
       className: 'event',
       templateHelpers: function () {return Marbles.EventApp.TemplateHelpers;},

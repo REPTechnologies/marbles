@@ -13,7 +13,7 @@
       $('[name="event_type"]').val(this.model.get('name')).change();
     }
 
-    Type.View = Marionette.ItemView.extend({
+    Type.View = Marbles.ItemView.extend({
       template: 'add/type/view',
       className: 'type btn btn-default',
       events: {

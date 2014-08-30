@@ -4,7 +4,7 @@
   "use strict";
 
   Marbles.module('AddApp.New.Details', function (Details, Marbles, Backbone, Marionette, $, _) {
-    Details.View = Marionette.ItemView.extend({
+    Details.View = Marbles.ItemView.extend({
       template: 'add/new/details'
     });
   });

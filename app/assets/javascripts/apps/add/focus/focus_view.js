@@ -75,7 +75,7 @@
       });
     }
 
-    Focus.View = Marionette.ItemView.extend({
+    Focus.View = Marbles.ItemView.extend({
       template: 'add/focus/view',
       className: 'focus col-sm-4'
     });

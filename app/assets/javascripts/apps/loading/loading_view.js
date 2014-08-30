@@ -7,7 +7,7 @@
 
     };
 
-    Loading.View = Marionette.ItemView.extend({
+    Loading.View = Marbles.ItemView.extend({
       template: 'loading/show',
       className: 'loading-container',
       onShow: function () {

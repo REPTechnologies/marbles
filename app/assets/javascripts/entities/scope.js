@@ -9,8 +9,14 @@
       model: Entities.Scope
     });
 
-    Marbles.respond.setHandler('set:scope:list', function (scopes) {
-      return new Entities.ScopeCollection(scopes || {});
+    var scopes = [];
+
+    Marbles.commands.setHandler('set:scope:list', function (scopesData) {
+      scopes = new Entities.ScopeCollection(scopesData || {});
+    });
+
+    Marbles.respond.setHandler('get:scope:list', function () {
+      return scopes;
     });
 
   });

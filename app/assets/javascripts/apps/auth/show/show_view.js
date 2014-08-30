@@ -37,7 +37,7 @@
       initSignUpModal(this, modals.signUpModal);
     }
 
-    Show.View = Marionette.ItemView.extend({
+    Show.View = Marbles.ItemView.extend({
       template: 'auth/show/show',
       templateHelpers: M.fn.removeArguments(Routes),
       modelEvents: {

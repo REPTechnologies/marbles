@@ -11,14 +11,14 @@
       model: Entities.EventType
     });
 
-    var API = {
-      setEventTypes: function (eventTypes) {
-        return new Entities.EventTypeCollection(eventTypes || {});
-      }
-    };
+    var eventTypes = [];
 
-    Marbles.respond.setHandler('set:event:type:list', function (eventTypes) {
-      return API.setEventTypes(eventTypes);
+    Marbles.commands.setHandler('set:event:type:list', function (eventTypesData) {
+      eventTypes = new Entities.EventTypeCollection(eventTypesData || {});
+    });
+
+    Marbles.respond.setHandler('get:event:type:list', function () {
+      return eventTypes;
     });
 
   });

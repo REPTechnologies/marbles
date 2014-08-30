@@ -63,11 +63,11 @@
       this.ui.fileInput.click();
     }
 
-    Picture.View = Marionette.ItemView.extend({
+    Picture.View = Marbles.ItemView.extend({
       template: 'add/picture/view'
     });
 
-    Picture.Picker = Marionette.ItemView.extend({
+    Picture.Picker = Marbles.ItemView.extend({
       template: 'add/picture/picker',
       className: 'col-xs-12',
       onRender: initFileUpload,

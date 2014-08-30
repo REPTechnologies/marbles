@@ -8,7 +8,7 @@
       this.trigger('scope:' + (this.$el.hasClass('btn-primary') ? 'add' : 'remove'));
     }
 
-    Scope.View = Marionette.ItemView.extend({
+    Scope.View = Marbles.ItemView.extend({
       template: 'add/scope/view',
       className: 'scope btn btn-default',
       events: {
