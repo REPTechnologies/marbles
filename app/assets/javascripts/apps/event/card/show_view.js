@@ -5,7 +5,7 @@
 
     Card.View = Marbles.ItemView.extend({
       template: 'event/card/show',
-      className: 'event',
+      className: 'event col-xs-12',
       templateHelpers: function () {return Marbles.EventApp.TemplateHelpers;},
       events: {
         'click .title': function () {
