@@ -61,6 +61,10 @@
       return events;
     });
 
+    Marbles.respond.setHandler('new:event', function () {
+      return new Entities.Event();
+    });
+
   });
 
 }());

@@ -88,17 +88,23 @@
       });
     }
 
-    function onShow(layout) {
-      addViewsToLayout(layout);
-      bindModels(layout);
-      listenToTriggers(layout);
-    }
+    New.Controller = Marbles.Controller.extend({
+      initialize: function initializeFn() {
+        var event = Marbles.request('new:event');
 
-    New.Controller = {
-      showNew: function () {
-        Marbles.mainRegion.show(M.fn.getLayout(New, onShow, new Marbles.Entities.Event()));
+        this.layout = this.getLayoutView(event);
+        this.listenTo(this.layout, 'show', function showFn() {
+          addViewsToLayout(this.layout);
+          bindModels(this.layout);
+          listenToTriggers(this.layout);
+        });
+
+        this.show(this.layout);
+      },
+      getLayoutView: function getLayoutViewFn(event) {
+        return new New.Layout({model: event});
       }
-    };
+    });
   });
 
 }());

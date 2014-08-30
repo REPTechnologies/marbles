@@ -4,7 +4,7 @@
   Marbles.module('AddApp', function (AddApp, Marbles, Backbone, Marionette, $, _) {
     AddApp.Router = Marionette.AppRouter.extend({
       appRoutes: {
-        add: 'showNew'
+        add: 'newEvent'
       }
     });
 
@@ -12,10 +12,14 @@
       M.fn.nav('add');
     });
 
+    var demux = {
+      newEvent: function () {
+        return new AddApp.New.Controller();
+      }
+    };
+
     Marbles.addInitializer(function () {
-      AddApp.router = new AddApp.Router({
-        controller: AddApp.New.Controller
-      });
+      AddApp.router = new AddApp.Router({controller: demux});
     });
   });
 
