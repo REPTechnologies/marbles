@@ -43,9 +43,10 @@
       EventApp.router = new EventApp.Router({controller: demux});
     });
 
-    Marbles.respond.setHandler('event:list:view', function (events) {
-      return new EventApp.List.View({
-        collection: events
+    Marbles.commands.setHandler('show:event:list', function (region, events) {
+      return new EventApp.List.Controller({
+        region: region,
+        events: events
       });
     });
   });
