@@ -1,7 +1,5 @@
-/*jslint indent: 2, nomen: true*/
-/*global Marbles */
 (function () {
-  "use strict";
+  'use strict';
 
   Marbles.module('HeaderApp', function (HeaderApp, Marbles, Backbone, Marionette, $, _) {
     this.startWithParent = false;
@@ -14,7 +12,7 @@
 
     HeaderApp.on('start', function() {
       var headerLayout = API.showHeader();
-      Marbles.module('AuthApp').start(headerLayout);
+      Marbles.execute('start:auth', headerLayout);
     });
   });
 

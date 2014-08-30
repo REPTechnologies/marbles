@@ -1,13 +1,17 @@
-/*jslint indent: 2, nomen: true*/
-/*global Marbles */
 (function () {
-  "use strict";
+  'use strict';
 
   Marbles.module('AuthApp', function (AuthApp, Marbles, Backbone, Marionette, $, _) {
     this.startWithParent = false;
 
-    AuthApp.on('start', function (layout) {
-      AuthApp.Show.Controller.showAuth(layout);
+    Marbles.commands.setHandler('start:auth', function (layout) {
+      return new AuthApp.Show.Controller({
+        region: layout.authRegion
+      });
+    });
+
+    Marbles.commands.setHandler('new:session', function () {
+      window.location = Routes.new_user_session_path();
     });
   });
 

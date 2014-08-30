@@ -19,7 +19,7 @@
       return currentUser;
     });
 
-    Marbles.respond.setHandler('destroy:current:user', function () {
+    Marbles.commands.setHandler('destroy:current:user', function () {
       currentUser.clear();
     });
 

@@ -7,25 +7,24 @@
       $.ajax(Routes.destroy_user_session_path(), {
         type: 'DELETE'
       }).always(function () {
-        Marbles.request('destroy:current:user');
-        window.location = Routes.new_user_session_path();
+        Marbles.execute('destroy:current:user');
+        Marbles.execute('new:session');
       });
     }
 
-    function getAuthView(currentUser) {
-      var authView = new Show.View({
-        model: currentUser
-      });
-      authView.on('auth:log:out', logOut);
-      return authView;
-    }
+    Show.Controller = Marbles.Controller.extend({
+      initialize: function initializeFn() {
+        var user = Marbles.request('get:current:user');
 
-    Show.Controller = {
-      showAuth: function (layout) {
-        var currentUser = Marbles.request('get:current:user');
-        layout.authRegion.show(getAuthView(currentUser));
+        this.view = this.getView(user);
+        this.listenTo(this.view, 'auth:log:out', logOut);
+
+        this.show(this.view);
+      },
+      getView: function (user) {
+        return new Show.View({model: user});
       }
-    };
+    });
   });
 
 }());
