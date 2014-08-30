@@ -13,10 +13,14 @@
       M.fn.nav('organization/' + args.id);
     });
 
+    var demux = {
+      showOrganization: function showOrganizationFn(id) {
+        return new OrganizationApp.Show.Controller({id: id});
+      }
+    };
+
     Marbles.addInitializer(function () {
-      OrganizationApp.router = new OrganizationApp.Router({
-        controller: new OrganizationApp.Show.Controller()
-      });
+      OrganizationApp.router = new OrganizationApp.Router({controller: demux});
     });
   });
 

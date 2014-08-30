@@ -28,15 +28,19 @@
       }
     };
 
+    var demux = {
+      showEvent: function showEventFn(id) {
+        return new EventApp.Show.Controller({id: id});
+      }
+    };
+
     Marbles.vent.on('event:show', function () {
       var args = new Args([{id: Args.INT | Args.Required}], arguments);
       M.fn.nav('event/' + args.id);
     });
 
     Marbles.addInitializer(function () {
-      EventApp.router = new EventApp.Router({
-        controller: new EventApp.Show.Controller()
-      });
+      EventApp.router = new EventApp.Router({controller: demux});
     });
   });
 

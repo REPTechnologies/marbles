@@ -13,7 +13,7 @@
       onShow: function () {
         this.$el.spin(spinOptions);
       },
-      onClose: function () {
+      onDestroy: function () {
         this.$el.spin(false);
       }
     });

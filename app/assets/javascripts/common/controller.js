@@ -9,9 +9,9 @@
       Marbles.execute('register:instance', this, this._instance_id);
       Marbles.Controller.__super__.constructor.apply(this, arguments);
     },
-    close: function closeController() {
+    destroy: function destroyController() {
       Marbles.execute('unregister:instance', this, this._instance_id);
-      Marbles.Controller.__super__.close.apply(this, arguments);
+      Marbles.Controller.__super__.destroy.apply(this, arguments);
     },
     show: function showView(view, options) {
       options = options || {};
@@ -34,7 +34,7 @@
         return;
       }
       this._mainView = view;
-      this.listenTo(view, 'close', this.close);
+      this.listenTo(view, 'destroy', this.destroy);
     }
   });
 
