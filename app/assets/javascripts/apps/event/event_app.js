@@ -42,6 +42,12 @@
     Marbles.addInitializer(function () {
       EventApp.router = new EventApp.Router({controller: demux});
     });
+
+    Marbles.respond.setHandler('event:list:view', function (events) {
+      return new EventApp.List.View({
+        collection: events
+      });
+    });
   });
 
 }());

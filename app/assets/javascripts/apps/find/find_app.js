@@ -4,7 +4,7 @@
   Marbles.module('FindApp', function (FindApp, Marbles, Backbone, Marionette, $, _) {
     FindApp.Router = Marionette.AppRouter.extend({
       appRoutes: {
-        find: 'showList'
+        find: 'findEvents'
       }
     });
 
@@ -12,10 +12,14 @@
       M.fn.nav('find');
     });
 
+    var demux = {
+      findEvents: function () {
+        return new FindApp.Find.Controller();
+      }
+    };
+
     Marbles.addInitializer(function () {
-      FindApp.router = new FindApp.Router({
-        controller: FindApp.List.Controller
-      });
+      FindApp.router = new FindApp.Router({controller: demux});
     });
   });
 
