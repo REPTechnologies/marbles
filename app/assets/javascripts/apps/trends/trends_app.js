@@ -12,10 +12,14 @@
       M.fn.nav('trends');
     });
 
+    var demux = {
+      showTrends: function () {
+        return new TrendsApp.Show.Controller();
+      }
+    };
+
     Marbles.addInitializer(function () {
-      TrendsApp.router = new TrendsApp.Router({
-        controller: TrendsApp.Show.Controller
-      });
+      TrendsApp.router = new TrendsApp.Router({controller: demux});
     });
   });
 

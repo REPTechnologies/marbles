@@ -12,10 +12,14 @@
       M.fn.nav('');
     });
 
-    WelcomeApp.addInitializer(function () {
-      WelcomeApp.router = new WelcomeApp.Router({
-        controller: WelcomeApp.Show.Controller
-      });
+    var demux = {
+      showWelcome: function () {
+        return new WelcomeApp.Show.Controller();
+      }
+    };
+
+    Marbles.addInitializer(function () {
+      WelcomeApp.router = new WelcomeApp.Router({controller: demux});
     });
   });
 

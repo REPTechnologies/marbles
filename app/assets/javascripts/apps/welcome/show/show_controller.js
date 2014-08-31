@@ -1,14 +1,16 @@
-/*jslint indent: 2, nomen: true*/
-/*global Marbles */
 (function () {
-  "use strict";
+  'use strict';
 
-  Marbles.module("WelcomeApp.Show", function (Show, Marbles, Backbone, Marionette, $, _) {
-    Show.Controller = {
-      showWelcome: function () {
-        Marbles.mainRegion.show(M.fn.getLayout(Show));
+  Marbles.module('WelcomeApp.Show', function (Show, Marbles, Backbone, Marionette, $, _) {
+    Show.Controller = Marbles.Controller.extend({
+      initialize: function initializeFn() {
+        this.layout = this.getLayoutView();
+        this.show(this.layout);
+      },
+      getLayoutView: function getLayoutViewFn() {
+        return new Show.Layout();
       }
-    };
+    });
   });
 
 }());
