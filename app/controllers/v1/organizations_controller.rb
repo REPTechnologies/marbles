@@ -5,7 +5,7 @@ class V1::OrganizationsController < ApiController
   # GET /organizations
   # GET /organizations.json
   def index
-    @organizations = Organization.all
+    @organizations = eager_organization.all
   end
 
   # GET /organizations/1
@@ -62,6 +62,10 @@ class V1::OrganizationsController < ApiController
     def set_organization
       @organization = Organization.find(params[:id])
     end
+
+  def eager_organization
+    Organization.includes(:upcoming_events, :recent_events)
+  end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def organization_params
