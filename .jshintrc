@@ -13,5 +13,5 @@
   "jquery": true,
   "devel": true,
   "validthis": true,
-  "predef": ["window", "Marbles", "M", "Routes", "gon", "Marionette", "Backbone", "Args", "dust", "tinycolor", "moment", "_", "$", "jQuery", "document", "JST", "resizeFooter", "AvsAnSimple"]
+  "predef": ["window", "Marbles", "M", "Routes", "gon", "Marionette", "Backbone", "Args", "dust", "tinycolor", "moment", "_", "$", "jQuery", "document", "JST", "resizeFooter", "AvsAnSimple", "setFooterPosition"]
 }
