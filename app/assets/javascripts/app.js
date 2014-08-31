@@ -2,17 +2,36 @@
   'use strict';
 
   var Marbles = new Marionette.Application({
+    environment: gon.environment,
     regions: {
       headerRegion: '#header-region',
       mainRegion: '#main-region',
       footerRegion: '#footer-region'
     },
     register: function registerFn(instance, id) {
-      this.registry = this.registry || {};
-      this.registry[id] = instance;
+      this._registry = this._registry || {};
+      this._registry[id] = instance;
     },
     unregister: function unregisterFn(instance, id) {
-      delete this.registry[id]; 
+      delete this._registry[id];
+    },
+    resetRegistry: function resetRegistryFn() {
+      var count = this.getRegistrySize();
+      _.each(this._registry, function (controller) {
+        if (controller && controller.region) {
+          controller.region.empty();
+        }
+      });
+      var leakCount = this.getRegistrySize();
+      var msg = 'There were ' + count + ' controllers in the registry, there are now ' + leakCount;
+      if (leakCount > 0) {
+        console.warn(msg, this._registry);
+      } else {
+        console.log(msg);
+      }
+    },
+    getRegistrySize: function getRegistrySizeFn() {
+      return _.size(this._registry);
     },
     naviate: function navigateFn(route, options) {
       options = options || {};
@@ -44,11 +63,15 @@
   });
 
   Marbles.commands.setHandler('register:instance', function (instance, id) {
-    Marbles.register(instance, id);
+    if (Marbles.environment !== 'production') {
+      Marbles.register(instance, id);
+    }
   });
 
   Marbles.commands.setHandler('unregister:instance', function (instance, id) {
-    Marbles.unregister(instance, id);
+    if (Marbles.environment !== 'production') {
+      Marbles.unregister(instance, id);
+    }
   });
 
   Marbles.on('start', function () {
