@@ -6,6 +6,8 @@
       template: 'organization/show/show',
       className: 'organization',
       regions: {
+        upcomingEventsRegion: '#upcoming-events-region',
+        recentEventsRegion: '#recent-events-region'
       }
     });
   });

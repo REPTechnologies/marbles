@@ -1,0 +1,7 @@
+.organization .event-list {
+  @include flex-stretch;
+
+  .event {
+    @include flex-stretch;
+  }
+}

@@ -28,3 +28,10 @@ $tiny-text-size: 8px;
 @mixin width-min() {
   min-width: $min-width;
 }
+
+@mixin flex-stretch() {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+}

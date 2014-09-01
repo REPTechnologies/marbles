@@ -55,9 +55,11 @@
       return event;
     });
 
-    Marbles.respond.setHandler('get:event:list', function () {
-      var events = new Entities.EventCollection();
-      events.fetch();
+    Marbles.respond.setHandler('get:event:list', function (eventsData) {
+      var events = new Entities.EventCollection(eventsData);
+      if (!eventsData) {
+        events.fetch();
+      }
       return events;
     });
 
