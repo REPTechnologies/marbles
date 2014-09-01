@@ -7,7 +7,7 @@
 
     Marbles.commands.setHandler('when:fetched', function (entities, callback) {
       var promises = _.chain([entities]).flatten().pluck('_fetch').value();
-      $.when.apply($, promises).done(callback);
+      $.when.apply($, promises).done(callback).done(setFooterPosition);
     });
 
     function nestedToData(data) {
