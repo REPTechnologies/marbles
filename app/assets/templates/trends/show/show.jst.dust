@@ -1,1 +1,50 @@
-<h2>Trends Page</h2>
+<div class="row">
+  <div class="col-sm-9">
+    <ul class="nav nav-pills">
+      <li><a href="#">All-time</a></li>
+      <li class="active"><a href="#">Yearly</a></li>
+      <li><a href="#">Monthly</a></li>
+      <li><a href="#">Weekly</a></li>
+    </ul>
+  </div>
+  <div class="col-sm-3 text-right">
+    <form class="form-inline" role="form">
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></div>
+          <select class="form-control" name="period-month">
+            <optgroup label="2014">
+              <option>September</option>
+              <option>October</option>
+              <option>November</option>
+              <option>December</option>
+            </optgroup>
+            <optgroup label="2015">
+              <option>January</option>
+            </optgroup>
+          </select>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<h3>Trends</h3>
+<div class="foci-trends-region">
+  <p>Chart Here</p>
+</div>
+<ul id="stats-nav" class="nav nav-tabs nav-justified" role="tablist">
+  <li class="active">
+    <a href="#summary-region" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-dashboard"></span> Summary</a>
+  </li>
+  <li>
+    <a href="#stats-region" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-stats"></span> Stats</a>
+  </li>
+  <li>
+    <a href="#activity-region" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-tasks"></span> Activity</a>
+  </li>
+</ul>
+<div class="tab-content">
+  <div class="tab-pane active" id="summary-region">Summary Content</div>
+  <div class="tab-pane" id="stats-region">Stats Content</div>
+  <div class="tab-pane" id="activity-region">Activity Content</div>
+</div>
