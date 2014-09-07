@@ -13,6 +13,9 @@
 //= require select2
 //= require jquery.spin
 //= require AvsAn-simple
+//= require d3
+//= require crossfilter
+//= require dc
 //= require bootstrap
 //= require underscore
 //= require underscore.string
