@@ -28,10 +28,7 @@
     </form>
   </div>
 </div>
-<h3>Trends</h3>
-<div class="foci-trends-region">
-  <p>Chart Here</p>
-</div>
+<div id="foci-line-region"></div>
 <ul id="stats-nav" class="nav nav-tabs nav-justified" role="tablist">
   <li class="active">
     <a href="#summary-region" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-dashboard"></span> Summary</a>

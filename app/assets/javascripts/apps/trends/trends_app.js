@@ -21,6 +21,13 @@
     Marbles.addInitializer(function () {
       TrendsApp.router = new TrendsApp.Router({controller: demux});
     });
+
+    Marbles.commands.setHandler('show:foci:line:chart', function (region, ndx) {
+      return new TrendsApp.FociLine.Controller({
+        region: region,
+        ndx: ndx
+      });
+    });
   });
 
 }());

@@ -26,4 +26,9 @@
     time: convertValue(formatTime, parseTime)
   };
 
+  M.format = {
+    date: d3.time.format('%Y-%m-%d'),
+    monthName: d3.time.format('%B')
+  };
+
 }());

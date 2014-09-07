@@ -1,0 +1,8 @@
+<div class="col-xs-8">
+  <h3>Trends</h3>
+  <div id="foci-line-chart"></div>
+</div>
+<div class="col-xs-4">
+  <h3>Most Recent</h3>
+  <div id="most-recent-poll"></div>
+</div>
