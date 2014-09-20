@@ -31,17 +31,13 @@
 <div id="foci-line-region"></div>
 <ul id="stats-nav" class="nav nav-tabs nav-justified" role="tablist">
   <li class="active">
-    <a href="#summary-region" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-dashboard"></span> Summary</a>
+    <a id="summary-region-tab" role="tab"><span class="glyphicon glyphicon-dashboard"></span> Summary</a>
   </li>
   <li>
-    <a href="#stats-region" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-stats"></span> Stats</a>
+    <a id="stats-region-tab" role="tab"><span class="glyphicon glyphicon-stats"></span> Stats</a>
   </li>
   <li>
-    <a href="#activity-region" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-tasks"></span> Activity</a>
+    <a id="activity-region-tab" role="tab"><span class="glyphicon glyphicon-tasks"></span> Activity</a>
   </li>
 </ul>
-<div class="tab-content">
-  <div class="tab-pane active" id="summary-region">Summary Content</div>
-  <div class="tab-pane" id="stats-region">Stats Content</div>
-  <div class="tab-pane" id="activity-region">Activity Content</div>
-</div>
+<div id="tab-content-region"></div>

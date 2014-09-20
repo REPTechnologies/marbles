@@ -22,10 +22,18 @@
       TrendsApp.router = new TrendsApp.Router({controller: demux});
     });
 
-    Marbles.commands.setHandler('show:foci:line:chart', function (region, ndx) {
+    Marbles.commands.setHandler('show:foci:line:chart', function (region, ndxPoll) {
       return new TrendsApp.FociLine.Controller({
         region: region,
-        ndx: ndx
+        ndx: ndxPoll
+      });
+    });
+
+    Marbles.commands.setHandler('show:trends:summary', function (region, ndxPoll, ndxEvent) {
+      return new TrendsApp.Summary.Controller({
+        region: region,
+        ndxPoll: ndxPoll,
+        ndxEvent: ndxEvent
       });
     });
   });

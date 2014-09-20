@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-sm-4">
+    <h4>Polls Taken</h4>
+  </div>
+  <div class="col-sm-4">
+    <div class="row">
+      <div class="col-sm-6">
+        <h4><i class="fa fa-level-up"></i> Trending Up</h4>
+      </div>
+      <div class="col-sm=6">
+        <h4><i class="fa fa-level-down"></i> Trending Down</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <h4>Event Breakdown</h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-4">
+    <h4>Events Attended</h4>
+  </div>
+  <div class="col-sm-4">
+    <h4>Rcommendations</h4>
+  </div>
+  <div class="col-sm-4">
+    <h4>Metrics</h4>
+  </div>
+</div>

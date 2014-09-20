@@ -47,6 +47,7 @@
           var ndxEvent = crossfilter(eventData.events);
 
           Marbles.execute('show:foci:line:chart', this.layout.fociLineRegion, ndxPoll);
+          Marbles.execute('show:trends:summary', this.layout.tabContentRegion, ndxPoll, ndxEvent);
           dc.renderAll();
         }, this));
       },
