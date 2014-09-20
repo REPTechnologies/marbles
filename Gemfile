@@ -25,6 +25,7 @@ gem 'sqlite3'
 gem 'sass-rails', '~> 4.0'
 gem 'bootstrap-sass', '~> 3.2'
 gem 'compass-rails', '~> 1.1'
+gem 'font-awesome-sass', '~> 4.2'
 
 # Form Builder that generates boostrap compatibile html
 gem 'bootstrap_form', '~> 2.1'
