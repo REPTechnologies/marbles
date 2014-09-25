@@ -7,8 +7,18 @@
       className: 'row',
       initialize: function initializeFn(options) {
         this.ndx = options.ndx;
-        this.monthDim = this.ndx.dimension(function (d) {return d.month;});
-        this.fociAveragesByMonth = this.monthDim.group().reduce(function addFn(p, v) {
+        this.monthDim = this.ndx.dimension(_.property('month'));
+        this.fociAveragesByMonth = this.monthDim.group().reduce.apply({}, this.reducers);
+      },
+      onShow: function onShowFn() {
+        this.fociChart = this.initChart();
+        this.addLineCharts();
+      },
+      onDestroy: function onDestroyFn() {
+        this.monthDim.dispose();
+      },
+      reducers: [
+        function addFn(p, v) {
           var focus = v.focus;
           p.foci[focus] = p.foci[focus] || {count: 0, sum: 0, avg: 0};
           ++p.foci[focus].count;
@@ -23,38 +33,43 @@
           return p;
         }, function initFn() {
           return {foci: {}};
+        }
+      ],
+      initChart: function initChartFn() {
+        var xScale = d3.time.scale().domain([
+          new Date(2014, 0, 1),
+          new Date(2014, 11, 31)
+        ]);
+
+        var titleFormat = function titleFormatFn(d) {
+          return this.layer + '\nAverage Score in ' + M.format.monthName(d.key)
+              + ': ' + d.value.foci[this.layer].avg;
+        };
+
+        return dc.compositeChart('#foci-line-chart').options({
+          width: 750,
+          dimension: this.monthDim,
+          x: xScale,
+          xUnits: d3.time.months,
+          brushOn: false,
+          elasticY: true,
+          title: titleFormat
         });
       },
-      onShow: function onShowFn() {
-        this.fociChart = dc.compositeChart('#foci-line-chart')
-          .width(750)
-          .dimension(this.monthDim)
-          .x(d3.time.scale().domain([new Date(2014, 0, 1), new Date(2014, 11, 31)]))
-          .xUnits(d3.time.months)
-          .brushOn(false)
-          .elasticY(true)
-          .title(function (d) {
-            return this.layer + '\nAverage Score in ' + M.format.monthName(d.key) + ': ' + d.value.foci[this.layer].avg;
-          });
-
-        var lineCharts = [];
-        var focusAvgFn = function getFocusAvgFn(focus) {
-          return function (d) {
-            return d.value.foci[focus.name].avg;
-          };
-        };
-        _.each(gon.foci, function (focus) {
-          lineCharts.push(dc.lineChart(this.fociChart)
-            .group(this.fociAveragesByMonth, focus.name)
-            .valueAccessor(focusAvgFn(focus))
-            .ordinalColors([focus.color])
-          );
+      addLineCharts: function addLineChartsFn() {
+        var lineCharts = _.map(gon.foci, function (focus) {
+          return dc.lineChart(this.fociChart).options({
+            valueAccessor: this._focusAvg(focus),
+            ordinalColors: [focus.color]
+          }).group(this.fociAveragesByMonth, focus.name);
         }, this);
 
         this.fociChart.compose(lineCharts);
       },
-      onDestroy: function onDestroyFn() {
-        this.monthDim.dispose();
+      _focusAvg: function focusAvgFn(focus) {
+        return function (d) {
+          return d.value.foci[focus.name].avg;
+        };
       }
     });
   });
