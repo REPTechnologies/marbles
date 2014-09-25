@@ -24,7 +24,6 @@
         }, function initFn() {
           return {foci: {}};
         });
-        console.dir(this.fociAveragesByMonth.top(Infinity));
       },
       onShow: function onShowFn() {
         this.fociChart = dc.compositeChart('#foci-line-chart')
