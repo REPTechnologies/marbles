@@ -10,19 +10,21 @@
     return d.getDate();
   }
 
-  function pollFactory(year, months, days) {
+  function pollFactory(year, months) {
     var answers = [];
     for (var i = 1; i <= months; ++i) {
       var month = _.string.lpad(i, 2, '0');
+      var lastDay = lastDayOfMonth(year, i);
+      var days = randomInRange(1, lastDay);
       for (var j = 0; j < days; ++j) {
-        var lastDay = lastDayOfMonth(year, i);
         var day = _.string.lpad(randomInRange(1, lastDay), 2, '0');
         _.each(gon.foci, function (focus) {
           answers.push({
             date: year + '-' + month + '-' + day,
             focus: focus.name,
             color: focus.color,
-            score: randomInRange(0, 100)
+            score: randomInRange(0, 100),
+            poll: {id: year + month + day} 
           });
         });
       }
