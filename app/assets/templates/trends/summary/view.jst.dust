@@ -20,6 +20,7 @@
 <div class="row">
   <div class="col-sm-4">
     <h4>Events Attended</h4>
+    <div id="event-frequency-chart"></div>
   </div>
   <div class="col-sm-4">
     <h4>Rcommendations</h4>

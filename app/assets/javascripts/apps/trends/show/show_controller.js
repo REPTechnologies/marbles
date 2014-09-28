@@ -28,6 +28,25 @@
     return answers;
   }
 
+  function eventFactory(year, months) {
+    var events = [];
+    for (var i = 1; i <= months; ++i) {
+      var month = _.string.lpad(i, 2, '0');
+      var lastDay = lastDayOfMonth(year, i);
+      var days = _.random(1, 2 * lastDay / 7);
+      for (var j = 0; j < days; ++j) {
+        var day = _.string.lpad(_.random(1, lastDay), 2, '0');
+        events.push({
+          id: year + month + day,
+          date: year + '-' + month + '-' + day,
+          primaryFocus: gon.foci[0],
+          secondaryFocus: gon.foci[1]
+        });
+      }
+    }
+    return events;
+  }
+
   Marbles.module('TrendsApp.Show', function (Show, Marbles, Backbone, Marionette, $, _) {
     Show.Controller = Marbles.Controller.extend({
       initialize: function initializeFn() {
@@ -55,9 +74,7 @@
       getEventData: function getEventDataFn() {
         var deferred = $.Deferred();
         deferred.resolveWith(this, [{
-          events: [
-            {id: 1, date: '2014-07-04'}
-          ]
+          events: eventFactory('2014', 8)
         }]);
         deferred.done(this.processEventData);
         return deferred.promise();
@@ -65,7 +82,7 @@
       getPollData: function getPollDataFn() {
         var deferred = $.Deferred();
         deferred.resolveWith(this, [{
-          answers: pollFactory('2014', 8, 10)
+          answers: pollFactory('2014', 8)
         }]);
         deferred.done(this.processPollData);
         return deferred.promise();

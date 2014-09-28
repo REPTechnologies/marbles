@@ -13,9 +13,14 @@
           container: '#poll-frequency-chart',
           ndxPoll: this.ndxPoll
         });
+        this.eventFreqChart = new Summary.Chart.EventFrequencyChart({
+          container: '#event-frequency-chart',
+          ndxEvent: this.ndxEvent
+        });
       },
       onDestroy: function onDestroyFn() {
         this.pollFreqChart.destroy();
+        this.eventFreqChart.destroy();
       }
     });
   });
