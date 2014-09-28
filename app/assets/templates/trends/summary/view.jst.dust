@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-sm-4">
     <h4>Polls Taken</h4>
-    <div id="poll-frequecy-chart"></div>
+    <div id="poll-frequency-chart"></div>
   </div>
   <div class="col-sm-4">
     <div class="row">
