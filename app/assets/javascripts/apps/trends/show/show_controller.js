@@ -6,36 +6,52 @@
     return d.getDate();
   }
 
-  function pollFactory(year, months) {
+  function getDays(numDays, lastDay) {
+    var days = [];
+    for (var i = 0; i < numDays; ++i) {
+      days.push(_.string.lpad(_.random(1, lastDay), 2, '0'));
+    }
+    days.sort();
+    return days;
+  }
+
+  function pollFactory(year, numMonths) {
     var answers = [];
-    for (var i = 1; i <= months; ++i) {
+    var foci = _.map(gon.foci, _.clone);
+    for (var i = 1; i <= numMonths; ++i) {
       var month = _.string.lpad(i, 2, '0');
       var lastDay = lastDayOfMonth(year, i);
-      var days = _.random(1, lastDay);
-      for (var j = 0; j < days; ++j) {
-        var day = _.string.lpad(_.random(1, lastDay), 2, '0');
-        _.each(gon.foci, function (focus) {
+      var numDays = _.random(1, lastDay);
+      var days = getDays(numDays, lastDay);
+      for (var j = 0; j < numDays; ++j) {
+        var day = days[j];
+        _.each(foci, function (focus) {
+          var previous = focus.previous || 50;
+          var score = _.random(0, 100);
           answers.push({
             date: year + '-' + month + '-' + day,
             focus: focus.name,
             color: focus.color,
-            score: _.random(0, 100),
+            score: score,
+            change: score - previous,
             poll: {id: year + month + day} 
           });
+          focus.previous = score;
         });
       }
     }
     return answers;
   }
 
-  function eventFactory(year, months) {
+  function eventFactory(year, numMonths) {
     var events = [];
-    for (var i = 1; i <= months; ++i) {
+    for (var i = 1; i <= numMonths; ++i) {
       var month = _.string.lpad(i, 2, '0');
       var lastDay = lastDayOfMonth(year, i);
-      var days = _.random(1, 2 * lastDay / 7);
-      for (var j = 0; j < days; ++j) {
-        var day = _.string.lpad(_.random(1, lastDay), 2, '0');
+      var numDays = _.random(1, 2 * lastDay / 7);
+      var days = getDays(numDays, lastDay);
+      for (var j = 0; j < numDays; ++j) {
+        var day = days[j];
         events.push({
           id: year + month + day,
           date: year + '-' + month + '-' + day,
