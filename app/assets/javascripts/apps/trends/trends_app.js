@@ -36,6 +36,14 @@
         ndxEvent: ndxEvent
       });
     });
+
+    Marbles.commands.setHandler('show:trends:summary:trending', function (region, ndxPoll, up) {
+      return new TrendsApp.Summary.Trending.Controller({
+        region: region,
+        ndxPoll: ndxPoll,
+        up: !!up
+      });
+    });
   });
 
 }());

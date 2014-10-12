@@ -90,7 +90,7 @@
       getEventData: function getEventDataFn() {
         var deferred = $.Deferred();
         deferred.resolveWith(this, [{
-          events: eventFactory('2014', 8)
+          events: eventFactory('2014', 9)
         }]);
         deferred.done(this.processEventData);
         return deferred.promise();
@@ -98,7 +98,7 @@
       getPollData: function getPollDataFn() {
         var deferred = $.Deferred();
         deferred.resolveWith(this, [{
-          answers: pollFactory('2014', 8)
+          answers: pollFactory('2014', 9)
         }]);
         deferred.done(this.processPollData);
         return deferred.promise();
@@ -110,9 +110,11 @@
         });
       },
       processPollData: function processPollDataFn(data) {
+        var now = moment();
         data.answers.forEach(function (answer) {
           answer.dd = M.format.date.parse(answer.date);
           answer.month = d3.time.month(answer.dd);
+          answer.weightedChange = answer.change * Math.max(0, 1 - 0.03 * now.diff(answer.dd, 'days'));
         });
       }
     });

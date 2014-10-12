@@ -2,8 +2,12 @@
   'use strict';
 
   Marbles.module('TrendsApp.Summary', function (Summary, Marbles, Backbone, Marionette, $, _) {
-    Summary.View = Marionette.ItemView.extend({
-      template: 'trends/summary/view',
+    Summary.Layout = Marionette.LayoutView.extend({
+      template: 'trends/summary/show',
+      regions: {
+        trendingUpRegion: '#trending-up-region',
+        trendingDownRegion: '#trending-down-region'
+      },
       initialize: function initializeFn(options) {
         this.ndxPoll = options.ndxPoll;
         this.ndxEvent = options.ndxEvent;
