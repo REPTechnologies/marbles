@@ -27,13 +27,14 @@
         var day = days[j];
         _.each(foci, function (focus) {
           var previous = focus.previous || 50;
-          var score = _.random(0, 100);
+          var change = _.random(-20, 20);
+          var score = Math.max(Math.min(previous + change, 100), 0);
           answers.push({
             date: year + '-' + month + '-' + day,
             focus: focus.name,
             color: focus.color,
             score: score,
-            change: score - previous,
+            change: change,
             poll: {id: year + month + day} 
           });
           focus.previous = score;
@@ -114,7 +115,9 @@
         data.answers.forEach(function (answer) {
           answer.dd = M.format.date.parse(answer.date);
           answer.month = d3.time.month(answer.dd);
-          answer.weightedChange = answer.change * Math.max(0, 1 - 0.03 * now.diff(answer.dd, 'days'));
+          var days = now.diff(answer.dd, 'days');
+          var weight = Math.max(0, 1 - 0.03 * days);
+          answer.weightedChange = answer.change * weight;
         });
       }
     });
