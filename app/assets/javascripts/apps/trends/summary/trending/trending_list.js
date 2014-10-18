@@ -2,8 +2,17 @@
   'use strict';
 
   Marbles.module('TrendsApp.Summary.Trending', function (Trending, Marbles, Backbone, Marionette, $, _) {
-    Trending.List = Marionette.ItemView.extend({
+
+    Trending.View = Marionette.ItemView.extend({
+      template: 'trends/summary/trending/view',
+      tagName: 'li',
+      className: 'list-group-item'
+    });
+
+    Trending.List = Marionette.CompositeView.extend({
       template: 'trends/summary/trending/list',
+      childView: Trending.View,
+      childViewContainer: 'ol',
       initialize: function initializeFn(options) {
         this.ndxPoll = options.ndxPoll;
         this.up = options.up;
@@ -23,15 +32,14 @@
           this.trends = this.trends.reverse(); 
         }
 
-        console.dir(this.trends);
-      },
-      onShow: function onShowFn() {
-        
+        this.collection = new Marbles.Entities.TrendCollection(this.trends);
       },
       onDestroy: function onDestroyFn() {
         this.focusDim.dispose();
+        this.scoreChangeByFocus.dispose();
       }
     });
+
   });
 
 }());

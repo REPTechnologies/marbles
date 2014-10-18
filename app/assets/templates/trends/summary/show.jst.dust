@@ -9,7 +9,7 @@
         <h4><i class="fa fa-level-up"></i> Trending Up</h4>
         <div id="trending-up-region"></div>
       </div>
-      <div class="col-sm=6">
+      <div class="col-sm-6">
         <h4><i class="fa fa-level-down"></i> Trending Down</h4>
         <div id="trending-down-region"></div>
       </div>
