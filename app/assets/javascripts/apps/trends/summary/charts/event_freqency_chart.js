@@ -24,13 +24,10 @@
 
     EventFrequencyChart.prototype.getChartOptions = function (config) {
       return _.extend({
-        width: 360,
-        height: 200,
         dimension: this.eventMonthDim,
         group: this.eventCountByMonth,
         x: this.getXScale(config),
         xUnits: d3.time.months,
-        brushOn: false,
         elasticY: true,
       }, config.chartOptions);
     };

@@ -21,10 +21,15 @@
           container: '#event-frequency-chart',
           ndxEvent: this.ndxEvent
         });
+        this.eventBreakdownChart = new Summary.Chart.EventBreakdownChart({
+          container: '#event-breakdown-chart',
+          ndxEvent: this.ndxEvent
+        });
       },
       onDestroy: function onDestroyFn() {
         this.pollFreqChart.destroy();
         this.eventFreqChart.destroy();
+        this.eventBreakdownChart.destroy();
       }
     });
   });

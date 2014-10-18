@@ -46,14 +46,11 @@
 
     PollFrequencyChart.prototype.getChartOptions = function (config) {
       return _.extend({
-        width: 360,
-        height: 200,
         dimension: this.pollMonthDim,
         group: this.pollCountByMonth,
         valueAccessor: _.compose(_.property('count'), _.property('value')),
         x: this.getXScale(config),
         xUnits: d3.time.months,
-        brushOn: false,
         elasticY: true,
       }, config.chartOptions);
     };

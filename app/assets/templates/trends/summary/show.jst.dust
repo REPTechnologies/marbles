@@ -17,6 +17,7 @@
   </div>
   <div class="col-sm-4">
     <h4>Event Breakdown</h4>
+    <div id="event-breakdown-chart"></div>
   </div>
 </div>
 <div class="row">

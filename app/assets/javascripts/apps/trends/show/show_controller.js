@@ -55,9 +55,8 @@
         var day = days[j];
         events.push({
           id: year + month + day,
-          date: year + '-' + month + '-' + day,
-          primaryFocus: gon.foci[0],
-          secondaryFocus: gon.foci[1]
+          held_on: year + '-' + month + '-' + day,
+          primary_focus: _.sample(gon.foci)
         });
       }
     }
@@ -106,7 +105,7 @@
       },
       processEventData: function processEventDataFn(data) {
         data.events.forEach(function (event) {
-          event.dd = M.format.date.parse(event.date);
+          event.dd = M.format.date.parse(event.held_on);
           event.month = d3.time.month(event.dd);
         });
       },
