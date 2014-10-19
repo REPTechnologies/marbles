@@ -44,6 +44,13 @@
         up: !!up
       });
     });
+
+    Marbles.commands.setHandler('show:trends:summary:recommended', function (region, ndxPoll) {
+      return new TrendsApp.Summary.Recommended.Controller({
+        region: region,
+        ndxPoll: ndxPoll
+      });
+    });
   });
 
 }());

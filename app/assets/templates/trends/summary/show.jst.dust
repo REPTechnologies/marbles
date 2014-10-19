@@ -27,6 +27,7 @@
   </div>
   <div class="col-sm-4">
     <h4>Recommendations</h4>
+    <div id="recommended-foci-region"></div>
   </div>
   <div class="col-sm-4">
     <h4>Metrics</h4>

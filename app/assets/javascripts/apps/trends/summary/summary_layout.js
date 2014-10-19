@@ -6,7 +6,8 @@
       template: 'trends/summary/show',
       regions: {
         trendingUpRegion: '#trending-up-region',
-        trendingDownRegion: '#trending-down-region'
+        trendingDownRegion: '#trending-down-region',
+        recommendedFociRegion: '#recommended-foci-region'
       },
       initialize: function initializeFn(options) {
         this.ndxPoll = options.ndxPoll;
