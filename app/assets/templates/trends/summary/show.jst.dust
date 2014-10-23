@@ -31,5 +31,6 @@
   </div>
   <div class="col-sm-4">
     <h4>Metrics</h4>
+    <div id="metrics-region"></div>
   </div>
 </div>

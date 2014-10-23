@@ -51,6 +51,13 @@
         ndxPoll: ndxPoll
       });
     });
+
+    Marbles.commands.setHandler('show:trends:summary:metrics', function (region, ndxEvent) {
+      return new TrendsApp.Summary.Metrics.Controller({
+        region: region,
+        ndxEvent: ndxEvent
+      });
+    });
   });
 
 }());

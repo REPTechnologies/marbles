@@ -22,6 +22,7 @@
         Marbles.execute('show:trends:summary:trending', this.layout.trendingUpRegion, this.ndxPoll, true);
         Marbles.execute('show:trends:summary:trending', this.layout.trendingDownRegion, this.ndxPoll, false);
         Marbles.execute('show:trends:summary:recommended', this.layout.recommendedFociRegion, this.ndxPoll);
+        Marbles.execute('show:trends:summary:metrics', this.layout.metricsRegion, this.ndxEvent);
       }
     });
   });

@@ -7,7 +7,8 @@
       regions: {
         trendingUpRegion: '#trending-up-region',
         trendingDownRegion: '#trending-down-region',
-        recommendedFociRegion: '#recommended-foci-region'
+        recommendedFociRegion: '#recommended-foci-region',
+        metricsRegion: '#metrics-region'
       },
       initialize: function initializeFn(options) {
         this.ndxPoll = options.ndxPoll;
