@@ -28,6 +28,10 @@
       currentUser.set(userData);
     });
 
+    Marbles.respond.setHandler('get:current:user:join:date', function () {
+      return currentUser.get('created_at');
+    });
+
   });
 
 }());

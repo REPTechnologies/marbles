@@ -15,31 +15,29 @@
     return days;
   }
 
-  function pollFactory(year, numMonths) {
+  function pollFactory() {
     var answers = [];
     var foci = _.map(gon.foci, _.clone);
-    for (var i = 1; i <= numMonths; ++i) {
-      var month = _.string.lpad(i, 2, '0');
-      var lastDay = lastDayOfMonth(year, i);
-      var numDays = _.random(1, lastDay);
-      var days = getDays(numDays, lastDay);
-      for (var j = 0; j < numDays; ++j) {
-        var day = days[j];
-        _.each(foci, function (focus) {
-          var previous = focus.previous || 50;
-          var change = _.random(-20, 20);
-          var score = Math.max(Math.min(previous + change, 100), 0);
-          answers.push({
-            date: year + '-' + month + '-' + day,
-            focus: focus.name,
-            color: focus.color,
-            score: score,
-            change: change,
-            poll: {id: year + month + day} 
-          });
-          focus.previous = score;
+    var time = moment().subtract(400, 'days');
+    for (var i = 0; i <= 400; ++i) {
+      var day = '' + time.date();
+      var month = '' + (time.month() + 1);
+      var year = '' + time.year();
+      _.each(foci, function (focus) {
+        var previous = focus.previous || 50;
+        var change = _.random(-10, 10);
+        var score = Math.max(Math.min(previous + change, 100), 0);
+        answers.push({
+          date: year + '-' + month + '-' + day,
+          focus: focus.name,
+          color: focus.color,
+          score: score,
+          change: change,
+          poll: {id: year + month + day} 
         });
-      }
+        focus.previous = score;
+      });
+      time.add(1, 'days');
     }
     return answers;
   }

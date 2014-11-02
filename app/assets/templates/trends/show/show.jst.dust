@@ -1,27 +1,17 @@
 <div class="row">
-  <div class="col-sm-9">
-    <ul class="nav nav-pills">
-      <li><a href="#">All-time</a></li>
-      <li class="active"><a href="#">Yearly</a></li>
-      <li><a href="#">Monthly</a></li>
-      <li><a href="#">Weekly</a></li>
-    </ul>
-  </div>
-  <div class="col-sm-3 text-right">
+  <div class="col-sm-12">
     <form class="form-inline" role="form">
       <div class="form-group">
         <div class="input-group">
           <div class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></div>
-          <select class="form-control" name="period-month">
-            <optgroup label="2014">
-              <option>September</option>
-              <option>October</option>
-              <option>November</option>
-              <option>December</option>
-            </optgroup>
-            <optgroup label="2015">
-              <option>January</option>
-            </optgroup>
+          <select class="form-control" name="time-frame" id="time-frame-select">
+            <option value="7" selected>Last 7 Days</option>
+            <option value="14">Last 14 Days</option>
+            <option value="30">Last 30 Days</option>
+            <option value="90">Last 3 Months</option>
+            <option value="182">Last 6 Months</option>
+            <option value="365">Last Year</option>
+            <option value="">All Time</option>
           </select>
         </div>
       </div>
