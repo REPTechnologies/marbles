@@ -53,10 +53,13 @@
       var days = getDays(numDays, lastDay);
       for (var j = 0; j < numDays; ++j) {
         var day = days[j];
+        var confirmed = !!_.random(0,1);
         events.push({
           id: year + month + day,
           held_on: year + '-' + month + '-' + day,
-          primary_focus: _.sample(gon.foci)
+          primary_focus: _.sample(gon.foci),
+          confirmed: confirmed,
+          new_org: confirmed && !!_.random(0,1)
         });
       }
     }

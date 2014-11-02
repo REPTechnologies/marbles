@@ -1,8 +1,8 @@
 <h4>Follow Through:&nbsp;
-  <span class="label label-success" data-toggle="tooltip" title="60 of 100">60%</span>
+  <span class="label label-success" data-toggle="tooltip" title="{confirmed} of {total}">{percentConfirmed}%</span>
 </h4>
 <p>The percentage of events that you confirmed attendence for.</p>
 <h4>Adventure:&nbsp;
-  <span class="label label-success" data-toggle="tooltip" title="46 of 100">46%</span>
+  <span class="label label-success" data-toggle="tooltip" title="{newOrg} of {confirmed}">{percentNewOrg}%</span>
 </h4>
 <p>The percentage of events you attended that were put on by Organizations you had not been involved with before.</p>
