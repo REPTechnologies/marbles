@@ -33,7 +33,7 @@
     };
 
     EventFrequencyChart.prototype.destroy = function () {
-      this.eventCountByMonths.dispose();
+      this.eventCountByMonth.dispose();
       this.eventMonthDim.dispose();
     };
 

@@ -72,18 +72,42 @@
 
         this.layout = this.getLayoutView();
         this.listenTo(this.layout, 'show', this.showCharts);
+        this.listenTo(this.layout, 'show:summary:tab', this.showSummary);
+        this.listenTo(this.layout, 'show:stats:tab', this.showStats);
+        this.listenTo(this.layout, 'show:activity:tab', this.showActivity);
 
-        this.show(this.layout);
+        $.when(this.pollDataPromise, this.eventDataPromise)
+          .done($.proxy(function (pollData, eventData) {
+            this.ndxPoll = crossfilter(pollData.answers);
+            this.ndxEvent = crossfilter(eventData.events);
+
+            this.show(this.layout);
+          }, this));
       },
       showCharts: function showChartsFn() {
-        $.when(this.pollDataPromise, this.eventDataPromise).done($.proxy(function (pollData, eventData) {
-          var ndxPoll = crossfilter(pollData.answers);
-          var ndxEvent = crossfilter(eventData.events);
-
-          Marbles.execute('show:foci:line:chart', this.layout.fociLineRegion, ndxPoll);
-          Marbles.execute('show:trends:summary', this.layout.tabContentRegion, ndxPoll, ndxEvent);
+          Marbles.execute('show:foci:line:chart', this.layout.fociLineRegion, this.ndxPoll);  
+          this.showSummary();
+      },
+      showSummary: function showSummaryFn() {
+        if (this.currentTab !== 'summary') {
+          Marbles.execute('show:trends:summary', this.layout.tabContentRegion, this.ndxPoll, this.ndxEvent);
+          this.currentTab = 'summary';
           dc.renderAll();
-        }, this));
+        }
+      },
+      showStats: function showStatsFn() {
+        if (this.currentTab !== 'stats') {
+          Marbles.execute('show:trends:stats', this.layout.tabContentRegion, this.ndxPoll, this.ndxEvent);
+          this.currentTab = 'stats';
+          dc.renderAll();
+        }
+      },
+      showActivity: function showActivityFn() {
+        if (this.currentTab != 'activity') {
+          Marbles.execute('show:trends:activity', this.layout.tabContentRegion, this.ndxPoll, this.ndxEvent);
+          this.currentTab = 'activity';
+          dc.renderAll();
+        }
       },
       getLayoutView: function getLayoutViewFn() {
         return new Show.Layout();

@@ -17,6 +17,11 @@
       events: {
         'change @ui.timeFrameSelect': 'changeTimeFrame'
       },
+      triggers: {
+        'click #summary-region-tab': 'show:summary:tab',
+        'click #stats-region-tab': 'show:stats:tab',
+        'click #activity-region-tab': 'show:activity:tab'
+      },
       onShow: function() {
         this.setTimeFrame();
       },

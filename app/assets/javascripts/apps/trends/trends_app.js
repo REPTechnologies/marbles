@@ -22,18 +22,34 @@
       TrendsApp.router = new TrendsApp.Router({controller: demux});
     });
 
-    Marbles.commands.setHandler('show:foci:line:chart', function (region, ndxPoll) {
-      return new TrendsApp.FociLine.Controller({
-        region: region,
-        ndx: ndxPoll
-      });
-    });
-
     Marbles.commands.setHandler('show:trends:summary', function (region, ndxPoll, ndxEvent) {
       return new TrendsApp.Summary.Controller({
         region: region,
         ndxPoll: ndxPoll,
         ndxEvent: ndxEvent
+      });
+    });
+
+    Marbles.commands.setHandler('show:trends:stats', function (region, ndxPoll, ndxEvent) {
+      return new TrendsApp.Stats.Controller({
+        region: region,
+        ndxPoll: ndxPoll,
+        ndxEvent: ndxEvent
+      });
+    });
+
+    Marbles.commands.setHandler('show:trends:activity', function (region, ndxPoll, ndxEvent) {
+      return new TrendsApp.Activity.Controller({
+        region: region,
+        ndxPoll: ndxPoll,
+        ndxEvent: ndxEvent
+      });
+    });
+
+    Marbles.commands.setHandler('show:foci:line:chart', function (region, ndxPoll) {
+      return new TrendsApp.FociLine.Controller({
+        region: region,
+        ndx: ndxPoll
       });
     });
 
