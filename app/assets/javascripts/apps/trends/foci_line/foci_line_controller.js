@@ -4,11 +4,14 @@
   Marbles.module('TrendsApp.FociLine', function (FociLine, Marbles, Backbone, Marionette, $, _) {
     FociLine.Controller = Marbles.Controller.extend({
       initialize: function initializeFn(options) {
-        this.layout = this.getView(options.ndx);
+        this.ndxPoll = options.ndx;
+        this.layout = this.getView(this.ndxPoll);
 
         Marbles.vent.on('time:frame:change', _.bind(function(timeFrame) {
           this.layout.changeTimeFrame(timeFrame);
         }, this));
+        
+        this.listenTo(this.layout, 'show', this.showRecent);
 
         this.show(this.layout);
       },
@@ -16,6 +19,9 @@
         return new FociLine.View({
           ndx: ndx
         });
+      },
+      showRecent: function() {
+        Marbles.execute('show:trends:recent', this.layout.recentRegion, this.ndxPoll);
       }
     });
   });

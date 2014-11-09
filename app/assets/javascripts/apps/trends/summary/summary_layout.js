@@ -8,7 +8,8 @@
         trendingUpRegion: '#trending-up-region',
         trendingDownRegion: '#trending-down-region',
         recommendedFociRegion: '#recommended-foci-region',
-        metricsRegion: '#metrics-region'
+        metricsRegion: '#metrics-region',
+        recentRegion: '#recent-region'
       },
       initialize: function initializeFn(options) {
         this.ndxPoll = options.ndxPoll;

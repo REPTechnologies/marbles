@@ -58,6 +58,13 @@
         ndxEvent: ndxEvent
       });
     });
+
+    Marbles.commands.setHandler('show:trends:recent', function (region, ndxPoll) {
+      return new TrendsApp.Recent.Controller({
+        region: region,
+        ndxPoll: ndxPoll
+      });
+    });
   });
 
 }());

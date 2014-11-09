@@ -2,9 +2,12 @@
   'use strict';
 
   Marbles.module('TrendsApp.FociLine', function (FociLine, Marbles, Backbone, Marionette, $, _) {
-    FociLine.View = Marionette.ItemView.extend({
+    FociLine.View = Marionette.LayoutView.extend({
       template: 'trends/foci_line/view',
       className: 'row',
+      regions: {
+        recentRegion: '#recent-region'
+      },
       initialize: function initializeFn(options) {
         this.ndx = options.ndx;
         this.timeDim = this.ndx.dimension(_.property('dd'));
@@ -45,6 +48,7 @@
       initChart: function initChartFn() {
         return dc.compositeChart('#foci-line-chart').options({
           width: 750,
+          height: 247,
           dimension: this.timeDim,
           x: d3.time.scale().domain([moment().subtract(400, 'days').toDate(), new Date()]),
           xUnits: d3.time.days,

@@ -4,5 +4,5 @@
 </div>
 <div class="col-xs-4">
   <h3>Most Recent</h3>
-  <div id="most-recent-poll"></div>
+  <div id="recent-region"></div>
 </div>
