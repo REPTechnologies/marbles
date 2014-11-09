@@ -18,8 +18,8 @@
   function pollFactory() {
     var answers = [];
     var foci = _.map(gon.foci, _.clone);
-    var time = moment().subtract(400, 'days');
-    for (var i = 0; i <= 400; ++i) {
+    var time = moment();
+    for (var i = 0; i <= 200; ++i) {
       var day = '' + time.date();
       var month = '' + (time.month() + 1);
       var year = '' + time.year();
@@ -37,7 +37,7 @@
         });
         focus.previous = score;
       });
-      time.add(1, 'days');
+      time.subtract(_.random(1, 3), 'days');
     }
     return answers;
   }
@@ -132,6 +132,7 @@
         data.events.forEach(function (event) {
           event.dd = M.format.date.parse(event.held_on);
           event.month = d3.time.month(event.dd);
+          event.day = event.dd.getDay() + '.' + M.format.dayOfWeek(event.dd);
         });
       },
       processPollData: function processPollDataFn(data) {
@@ -139,6 +140,7 @@
         data.answers.forEach(function (answer) {
           answer.dd = M.format.date.parse(answer.date);
           answer.month = d3.time.month(answer.dd);
+          answer.day = answer.dd.getDay() + '.' + M.format.dayOfWeek(answer.dd);
           var days = now.diff(answer.dd, 'days');
           var weight = Math.max(0, 1 - 0.03 * days);
           answer.weightedChange = answer.change * weight;

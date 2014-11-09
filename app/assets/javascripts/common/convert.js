@@ -28,7 +28,8 @@
 
   M.format = {
     date: d3.time.format('%Y-%m-%d'),
-    monthName: d3.time.format('%B')
+    monthName: d3.time.format('%B'),
+    dayOfWeek: d3.time.format('%a')
   };
 
 }());
