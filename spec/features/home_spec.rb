@@ -19,7 +19,11 @@ describe "Marbles", :type => :feature, :js => true do
 
     it "displays the trends page" do
       visit "/trends"
-      expect(page).to have_content("Trends Page")
+      expect(page).to have_content("Trends")
+      expect(page).to have_content("Most Recent")
+      expect(page).to have_content("Summary")
+      expect(page).to have_content("Stats")
+      expect(page).to have_content("Activity")
     end
 
   end
