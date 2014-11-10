@@ -15,12 +15,10 @@
         timeFrameSelect: '#time-frame-select'
       },
       events: {
-        'change @ui.timeFrameSelect': 'changeTimeFrame'
-      },
-      triggers: {
-        'click #summary-region-tab': 'show:summary:tab',
-        'click #stats-region-tab': 'show:stats:tab',
-        'click #activity-region-tab': 'show:activity:tab'
+        'change @ui.timeFrameSelect': 'changeTimeFrame',
+        'click #summary-region-tab': 'showSummaryTab',
+        'click #stats-region-tab': 'showStatsTab',
+        'click #activity-region-tab': 'showActivityTab'
       },
       onShow: function() {
         this.setTimeFrame();
@@ -39,7 +37,21 @@
       changeTimeFrame: function changeTimeFrameFn() {
         this.setTimeFrame();
         Marbles.vent.trigger('time:frame:change', timeFrame);
-      }
+      },
+      activateTab: function activateTabFn(tab) {
+        this.$el.find('#stats-nav .active').removeClass('active');
+        this.$el.find('#' + tab + '-region-tab').parent().addClass('active');
+        this.trigger('show:' + tab + ':tab');
+      },
+      showSummaryTab: function showSummaryTabFn() {
+        this.activateTab('summary');
+      },
+      showStatsTab: function showStatsTabFn() {
+        this.activateTab('stats');
+      },
+      showActivityTab: function showActivityTabFn() {
+        this.activateTab('activity');
+      },
     });
 
     Marbles.respond.setHandler('get:time:frame', function() {
