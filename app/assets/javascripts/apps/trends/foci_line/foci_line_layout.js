@@ -54,7 +54,10 @@
           xUnits: d3.time.days,
           brushOn: false,
           elasticY: true,
-          title: this._titleFormat
+          yAxisPadding: 5,
+          title: this._titleFormat,
+          yAxisLabel: 'Score',
+          xAxisLabel: 'Time'
         });
       },
       addLineCharts: function addLineChartsFn() {

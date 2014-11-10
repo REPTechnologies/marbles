@@ -30,18 +30,16 @@
       });
     });
 
-    Marbles.commands.setHandler('show:trends:stats', function (region, ndxPoll, ndxEvent) {
+    Marbles.commands.setHandler('show:trends:stats', function (region, ndxPoll) {
       return new TrendsApp.Stats.Controller({
         region: region,
-        ndxPoll: ndxPoll,
-        ndxEvent: ndxEvent
+        ndxPoll: ndxPoll
       });
     });
 
-    Marbles.commands.setHandler('show:trends:activity', function (region, ndxPoll, ndxEvent) {
+    Marbles.commands.setHandler('show:trends:activity', function (region, ndxEvent) {
       return new TrendsApp.Activity.Controller({
         region: region,
-        ndxPoll: ndxPoll,
         ndxEvent: ndxEvent
       });
     });

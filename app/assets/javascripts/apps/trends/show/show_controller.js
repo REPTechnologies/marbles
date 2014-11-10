@@ -18,7 +18,7 @@
   function pollFactory() {
     var answers = [];
     var foci = _.map(gon.foci, _.clone);
-    var time = moment();
+    var time = moment().subtract(400, 'days');
     for (var i = 0; i <= 200; ++i) {
       var day = '' + time.date();
       var month = '' + (time.month() + 1);
@@ -37,7 +37,7 @@
         });
         focus.previous = score;
       });
-      time.subtract(_.random(1, 3), 'days');
+      time.add(2, 'days');
     }
     return answers;
   }
@@ -97,14 +97,14 @@
       },
       showStats: function showStatsFn() {
         if (this.currentTab !== 'stats') {
-          Marbles.execute('show:trends:stats', this.layout.tabContentRegion, this.ndxPoll, this.ndxEvent);
+          Marbles.execute('show:trends:stats', this.layout.tabContentRegion, this.ndxPoll);
           this.currentTab = 'stats';
           dc.renderAll();
         }
       },
       showActivity: function showActivityFn() {
         if (this.currentTab != 'activity') {
-          Marbles.execute('show:trends:activity', this.layout.tabContentRegion, this.ndxPoll, this.ndxEvent);
+          Marbles.execute('show:trends:activity', this.layout.tabContentRegion, this.ndxEvent);
           this.currentTab = 'activity';
           dc.renderAll();
         }

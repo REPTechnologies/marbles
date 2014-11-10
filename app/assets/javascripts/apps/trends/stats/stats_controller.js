@@ -5,15 +5,13 @@
     Stats.Controller = Marbles.Controller.extend({
       initialize: function initializeFn(options) {
         this.ndxPoll = options.ndxPoll;
-        this.ndxEvent = options.ndxEvent;
         this.layout = this.getLayoutView();
 
         this.show(this.layout);
       },
       getLayoutView: function getLayoutViewFn() {
         return new Stats.Layout({
-          ndxPoll: this.ndxPoll,
-          ndxEvent: this.ndxEvent
+          ndxPoll: this.ndxPoll
         });
       }
     });
