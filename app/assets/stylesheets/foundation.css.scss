@@ -44,6 +44,10 @@ body {
   margin-top: 0;
 }
 
+.row.margin-bottom {
+  margin-bottom: $margin-size;
+}
+
 #page {
   @include width-min;
   background-color: $primary-color;
