@@ -7,7 +7,6 @@
       this.focusDim = this.ndxPoll.dimension(_.property('focus'));
       this.consistencyByFocus = this.focusDim.group()
         .reduce.apply(null, this.getReducers());
-      console.dir(this.consistencyByFocus.top(Infinity));
 
       this.initialize(config);
     }
