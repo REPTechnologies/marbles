@@ -1,5 +1,5 @@
-<h4>Metric:&nbsp;
-  <span class="label label-success" data-toggle="tooltip" title="Title">Value</span>
+<h4 id="poll-count-display">Number of Polls Taken:&nbsp;
+  <span class="label label-success number-display"></span>
 </h4>
 <p>Description</p>
 <h4>Metric:&nbsp;
