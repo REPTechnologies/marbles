@@ -5,7 +5,7 @@
     Stats.Layout = Marionette.LayoutView.extend({
       template: 'trends/stats/show',
       regions: {
-        
+        metricsRegion: '#metrics-region'
       },
       initialize: function initializeFn(options) {
         this.ndxPoll = options.ndxPoll;
