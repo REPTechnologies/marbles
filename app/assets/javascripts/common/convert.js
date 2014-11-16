@@ -30,7 +30,10 @@
     date: d3.time.format('%Y-%m-%d'),
     monthName: d3.time.format('%B'),
     dayOfWeek: d3.time.format('%a'),
-    number: d3.format('.3g')
+    number: d3.format('.3g'),
+    round: function formatRound(d) {
+      return Math.round(d);
+    }
   };
 
 }());
