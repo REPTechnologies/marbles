@@ -1,6 +1,19 @@
 (function () {
   'use strict';
 
+  var $window = $(window);
+  var resizingCharts = [];
+
+  $window.resize(function chartResize() {
+    dc.disableTransitions = true;
+    _.each(resizingCharts, function resizeEach(config) {
+      config.chart.width(config.container.innerWidth())
+      config.chart.rescale();
+    });
+    dc.renderAll();
+    dc.disableTransitions = false;
+  });
+
   // Define common utility functions
   M.fn = {
     getLayout: function getLayoutFn() {
@@ -88,6 +101,13 @@
       }
 
       return amount.join('.');
+    },
+    resizeChart: function resizeChartFn(chart, container) {
+      resizingCharts.push({
+        chart: chart,
+        container: container
+      });
+      chart.width(container.innerWidth());
     }
   };
 

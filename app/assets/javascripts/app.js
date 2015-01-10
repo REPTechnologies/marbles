@@ -33,7 +33,7 @@
     getRegistrySize: function getRegistrySizeFn() {
       return _.size(this._registry);
     },
-    naviate: function navigateFn(route, options) {
+    navigate: function navigateFn(route, options) {
       options = options || {};
       Backbone.history.navigate(route, options);
     },

@@ -8,6 +8,9 @@
       regions: {
         recentRegion: '#recent-region'
       },
+      ui: {
+        fociLineContainer: '#foci-line-chart'
+      },
       initialize: function initializeFn(options) {
         this.ndx = options.ndx;
         this.timeDim = this.ndx.dimension(_.property('dd'));
@@ -15,6 +18,7 @@
       },
       onShow: function onShowFn() {
         this.fociChart = this.initChart();
+        M.fn.resizeChart(this.fociChart, this.ui.fociLineContainer.parent());
         this.addLineCharts();
         setTimeout(_.bind(function () {
           this.fociChart.focus(Marbles.request('get:time:frame'));
@@ -47,7 +51,6 @@
       ],
       initChart: function initChartFn() {
         return dc.compositeChart('#foci-line-chart').options({
-          width: 750,
           height: 247,
           dimension: this.timeDim,
           x: d3.time.scale().domain([moment().subtract(400, 'days').toDate(), new Date()]),

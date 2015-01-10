@@ -6,7 +6,7 @@
       this.ndxPoll = config.ndxPoll;
       this.pollDayDim = this.ndxPoll.dimension(_.property('day'));
       this.pollCountByDay = this.pollDayDim.group().reduceCount();
-      
+
       this.initialize(config);
     }
 
@@ -16,6 +16,7 @@
       this.chart.xAxis().tickFormat(function (v) {
         return v.split('.')[1];
       });
+      M.fn.resizeChart(this.chart, $(config.container).parent());
     };
 
     PollFrequencyChart.prototype.getChartOptions = function (config) {
