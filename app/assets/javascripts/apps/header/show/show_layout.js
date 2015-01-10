@@ -12,7 +12,8 @@
         'click #header-find': 'header:find',
         'click #header-add': 'header:add',
         'click #header-trends': 'header:trends',
-        'click .header-logo': 'header:logo'
+        'click .header-logo': 'header:logo',
+        'click #header-poll': 'header:poll'
       }
     });
   });

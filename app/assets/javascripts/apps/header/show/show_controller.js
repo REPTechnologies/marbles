@@ -33,6 +33,9 @@
         this.listenTo(this.layout, 'header:logo', function () {
           Marbles.vent.trigger('welcome:show');
         });
+        this.listenTo(this.layout, 'header:poll', function () {
+          Marbles.vent.trigger('poll:show');
+        });
       }
     });
   });
