@@ -42,7 +42,7 @@
     return answers;
   }
 
-  function eventFactory(year, numMonths) {
+  /*function eventFactory(year, numMonths) {
     var events = [];
     for (var i = 1; i <= numMonths; ++i) {
       var month = _.string.lpad(i, 2, '0');
@@ -62,13 +62,13 @@
       }
     }
     return events;
-  }
+  }*/
 
   Marbles.module('TrendsApp.Show', function (Show, Marbles, Backbone, Marionette, $, _) {
     Show.Controller = Marbles.Controller.extend({
       initialize: function initializeFn() {
         this.pollDataPromise = this.getPollData();
-        this.eventDataPromise = this.getEventData();
+        //this.eventDataPromise = this.getEventData();
 
         this.layout = this.getLayoutView();
         this.listenTo(this.layout, 'show', this.showCharts);
@@ -76,10 +76,10 @@
         this.listenTo(this.layout, 'show:stats:tab', this.showStats);
         this.listenTo(this.layout, 'show:activity:tab', this.showActivity);
 
-        $.when(this.pollDataPromise, this.eventDataPromise)
+        $.when(this.pollDataPromise)//, this.eventDataPromise)
           .done($.proxy(function (pollData, eventData) {
             this.ndxPoll = crossfilter(pollData.answers);
-            this.ndxEvent = crossfilter(eventData.events);
+            //this.ndxEvent = crossfilter(eventData.events);
 
             this.show(this.layout);
           }, this));
@@ -90,7 +90,7 @@
       },
       showSummary: function showSummaryFn() {
         if (this.currentTab !== 'summary') {
-          Marbles.execute('show:trends:summary', this.layout.tabContentRegion, this.ndxPoll, this.ndxEvent);
+          Marbles.execute('show:trends:summary', this.layout.tabContentRegion, this.ndxPoll);//, this.ndxEvent);
           this.currentTab = 'summary';
           dc.renderAll();
         }
@@ -112,14 +112,14 @@
       getLayoutView: function getLayoutViewFn() {
         return new Show.Layout();
       },
-      getEventData: function getEventDataFn() {
+      /*getEventData: function getEventDataFn() {
         var deferred = $.Deferred();
         deferred.resolveWith(this, [{
           events: eventFactory('2014', 9)
         }]);
         deferred.done(this.processEventData);
         return deferred.promise();
-      },
+      },*/
       getPollData: function getPollDataFn() {
         var deferred = $.Deferred();
         deferred.resolveWith(this, [{
@@ -128,13 +128,13 @@
         deferred.done(this.processPollData);
         return deferred.promise();
       },
-      processEventData: function processEventDataFn(data) {
+      /*processEventData: function processEventDataFn(data) {
         data.events.forEach(function (event) {
           event.dd = M.format.date.parse(event.held_on);
           event.month = d3.time.month(event.dd);
           event.day = event.dd.getDay() + '.' + M.format.dayOfWeek(event.dd);
         });
-      },
+      },*/
       processPollData: function processPollDataFn(data) {
         var now = moment();
         data.answers.forEach(function (answer) {

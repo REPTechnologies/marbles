@@ -5,7 +5,7 @@
     Summary.Controller = Marbles.Controller.extend({
       initialize: function initializeFn(options) {
         this.ndxPoll = options.ndxPoll;
-        this.ndxEvent = options.ndxEvent;
+        //this.ndxEvent = options.ndxEvent;
         this.layout = this.getLayoutView();
 
         this.listenTo(this.layout, 'show', this.showTrending);
@@ -14,15 +14,15 @@
       },
       getLayoutView: function getLayoutViewFn() {
         return new Summary.Layout({
-          ndxPoll: this.ndxPoll,
-          ndxEvent: this.ndxEvent
+          ndxPoll: this.ndxPoll//,
+          //ndxEvent: this.ndxEvent
         });
       },
       showTrending: function showTrendingFn() {
         Marbles.execute('show:trends:summary:trending', this.layout.trendingUpRegion, this.ndxPoll, true);
         Marbles.execute('show:trends:summary:trending', this.layout.trendingDownRegion, this.ndxPoll, false);
         Marbles.execute('show:trends:summary:recommended', this.layout.recommendedFociRegion, this.ndxPoll);
-        Marbles.execute('show:trends:summary:metrics', this.layout.metricsRegion, this.ndxEvent);
+        /*Marbles.execute('show:trends:summary:metrics', this.layout.metricsRegion, this.ndxEvent);*/
       }
     });
   });

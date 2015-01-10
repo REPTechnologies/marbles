@@ -3,7 +3,7 @@
     <h4>Polls Taken</h4>
     <div id="poll-frequency-chart"></div>
   </div>
-  <div class="col-sm-4">
+  <div class="col-sm-8">
     <div class="row">
       <div class="col-sm-6">
         <h4><i class="fa fa-level-up"></i> Trending Up</h4>
@@ -15,22 +15,26 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-4">
+  <!-- <div class="col-sm-4">
     <h4>Event Breakdown</h4>
     <div id="event-breakdown-chart"></div>
-  </div>
+  </div> -->
 </div>
 <div class="row">
-  <div class="col-sm-4">
+  <!-- <div class="col-sm-4">
     <h4>Events Attended</h4>
     <div id="event-frequency-chart"></div>
+  </div> -->
+  <div class="col-sm-8">
+    <h4>Score Consistency</h4>
+    <div id="poll-consistency-chart"></div>
   </div>
   <div class="col-sm-4">
     <h4>Recommendations</h4>
     <div id="recommended-foci-region"></div>
   </div>
-  <div class="col-sm-4">
+  <!-- <div class="col-sm-4">
     <h4>Metrics</h4>
     <div id="metrics-region"></div>
-  </div>
+  </div> -->
 </div>

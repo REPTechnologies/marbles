@@ -21,7 +21,7 @@
 <div class="panel">
   <div id="foci-line-region" class="panel-body"></div>
 </div>
-<ul id="stats-nav" class="nav nav-tabs nav-justified" role="tablist">
+<!-- <ul id="stats-nav" class="nav nav-tabs nav-justified" role="tablist">
   <li class="active">
     <a id="summary-region-tab" role="tab"><span class="glyphicon glyphicon-dashboard"></span> Summary</a>
   </li>
@@ -31,7 +31,7 @@
   <li>
     <a id="activity-region-tab" role="tab"><span class="glyphicon glyphicon-tasks"></span> Activity</a>
   </li>
-</ul>
+</ul> -->
 <div class="panel">
   <div id="tab-content-region" class="panel-body"></div>
 </div>

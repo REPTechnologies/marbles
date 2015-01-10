@@ -16,9 +16,9 @@
       },
       events: {
         'change @ui.timeFrameSelect': 'changeTimeFrame',
-        'click #summary-region-tab': 'showSummaryTab',
+        /*'click #summary-region-tab': 'showSummaryTab',
         'click #stats-region-tab': 'showStatsTab',
-        'click #activity-region-tab': 'showActivityTab'
+        'click #activity-region-tab': 'showActivityTab'*/
       },
       onShow: function() {
         this.setTimeFrame();
@@ -42,7 +42,7 @@
         this.$el.find('#stats-nav .active').removeClass('active');
         this.$el.find('#' + tab + '-region-tab').parent().addClass('active');
         this.trigger('show:' + tab + ':tab');
-      },
+      }/*,
       showSummaryTab: function showSummaryTabFn() {
         this.activateTab('summary');
       },
@@ -51,7 +51,7 @@
       },
       showActivityTab: function showActivityTabFn() {
         this.activateTab('activity');
-      },
+      }*/
     });
 
     Marbles.respond.setHandler('get:time:frame', function() {
