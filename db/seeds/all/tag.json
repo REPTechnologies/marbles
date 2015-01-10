@@ -94,6 +94,26 @@
     {
       "sprig_id": 23,
       "name": "support"
+    },
+    {
+      "sprig_id": 24,
+      "name": "confidence"
+    },
+    {
+      "sprig_id": 25,
+      "name": "clarity"
+    },
+    {
+      "sprig_id": 26,
+      "name": "reliability"
+    },
+    {
+      "sprig_id": 27,
+      "name": "motivation"
+    },
+    {
+      "sprig_id": 28,
+      "name": "belonging"
     }
   ]
 }

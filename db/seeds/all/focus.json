@@ -6,38 +6,51 @@
     {
       "sprig_id": 1,
       "id": 1,
-      "name": "Sense of Purpose & Meaning",
-      "color": "#993399"
+      "name": "Purpose and Emotional Clarity",
+      "color": "#191970",
+      "description": "Anja Chakra - a sense of intuition, overall life-purpose. It's self-realization and the ability to have insights.  How do you feel about your right to \"see\" clearly?"
     },
     {
       "sprig_id": 2,
       "id": 2,
-      "name": "Creativity & Excitement",
-      "color": "#0099ff"
+      "name": "Decision Making & Reliability",
+      "color": "#1e90ff",
+      "description": "Visuddha Charka - a sense of self-expression, truthfulness, loyalty. How do you feel about your right to speak, be heard, and trust?"
     },
     {
       "sprig_id": 3,
       "id": 3,
-      "name": "Relationships & Social Interaction",
-      "color": "#009966"
+      "name": "Relationships & Confidence",
+      "color": "#228b22",
+      "description": "Anahata Chakra - a sense of contentment, compassion. It's about your relationships, openness, forgiveness of self and others. How do you feel about your right to accept yourself for who you are?"
     },
     {
       "sprig_id": 4,
       "id": 4,
-      "name": "Career & Academics",
-      "color": "#ffff00"
+      "name": "Academics & Motivation",
+      "color": "#ffcc33",
+      "description": "Manipura Charka - a sense of control, the \"self.\" It's how you feel about your vocation, personal power, your self-confidence. How valuable and influential do you feel about your right to think and contribute?"
     },
     {
       "sprig_id": 5,
       "id": 5,
       "name": "Stress & Emotional Wellbeing",
-      "color": "#ff9933"
+      "color": "#f57415",
+      "description": "Svadisthana Chakra - a sense of feeling, the creative and life force. It's how you sense, your vitality, sexuality, intimacy, and creativity. How sparked and energized are you about your right to experience and feel?"
     },
     {
       "sprig_id": 6,
       "id": 6,
-      "name": "Nutrition, Sleep & Exercise",
-      "color": "#ff3333"
+      "name": "Sleep, Nutrition, & Exercise",
+      "color": "#cc0033",
+      "description": "Muladhara Chakra - a sense of survival, the basic instinct, like having food, water, shelter, you know...the essentials. How do you feel about satisfying your basic needs and right to live?"
+    },
+    {
+      "sprig_id": 7,
+      "id": 7,
+      "name": "Sense of Self and Belonging",
+      "color": "#6e006e",
+      "description": "Sahasrara Chakra - a sense of connection. It's trusting the universe and the course of life, a sense of the bigger picture. How connected and trusting do you feel about your right to experience consciousness?"
     }
   ]
 }
