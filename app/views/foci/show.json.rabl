@@ -1,3 +1,3 @@
 object @focus
 
-attributes :id, :name, :color
+attributes :id, :name, :color, :description

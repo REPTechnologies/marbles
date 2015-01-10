@@ -31,6 +31,7 @@
           date: year + '-' + month + '-' + day,
           focus: focus.name,
           color: focus.color,
+          description: focus.description,
           score: score,
           change: change,
           poll: {id: year + month + day} 

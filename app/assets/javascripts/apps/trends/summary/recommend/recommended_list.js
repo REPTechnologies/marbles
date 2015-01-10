@@ -38,13 +38,14 @@
           function addFn(p, v) {
             if (date <= v.dd) {
               date = v.dd;
-              p = v.score;
+              p.score = v.score;
+              p.description = v.description;
             }
             return p;
           }, function removeFn(p, v) {
             return p;
           }, function initFn() {
-            return 0;
+            return {score: 0, description: ''};
           }
         ];
       }
