@@ -1,0 +1,13 @@
+{
+  "options": {
+    "find_existing_by": ["id"]
+  },
+  "records": [
+    {
+      "sprig_id": 1,
+      "id": 1,
+      "version": 1,
+      "name": "Pilot Study Poll v1"
+    }
+  ]
+}

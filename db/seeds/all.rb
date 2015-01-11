@@ -24,6 +24,20 @@ def tag
   }
 end
 
+def poll
+  {
+    :class => Poll,
+    :source => all_path('poll.json')
+  }
+end
+
+def question
+  {
+    :class => Question,
+    :source => all_path('question.json')
+  }
+end
+
 def seeds_all
-  [focus, scope, tag]
+  [focus, scope, tag, poll, question]
 end

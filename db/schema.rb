@@ -11,16 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140817173820) do
+ActiveRecord::Schema.define(version: 20150111202628) do
 
   create_table "answers", force: true do |t|
     t.integer  "slider"
     t.integer  "question_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "userpoll_id"
   end
 
   add_index "answers", ["question_id"], name: "index_answers_on_question_id"
+  add_index "answers", ["userpoll_id"], name: "index_answers_on_userpoll_id"
 
   create_table "attendees_events", id: false, force: true do |t|
     t.integer "event_id",    null: false
@@ -104,7 +106,6 @@ ActiveRecord::Schema.define(version: 20140817173820) do
     t.string   "name"
     t.string   "description"
     t.integer  "organization_id"
-    t.integer  "question_id"
     t.boolean  "isValid"
     t.datetime "creationDateTime"
     t.datetime "created_at"
@@ -112,19 +113,19 @@ ActiveRecord::Schema.define(version: 20140817173820) do
   end
 
   add_index "polls", ["organization_id"], name: "index_polls_on_organization_id"
-  add_index "polls", ["question_id"], name: "index_polls_on_question_id"
 
   create_table "questions", force: true do |t|
     t.string   "name"
     t.string   "description"
     t.integer  "slidermin"
     t.integer  "slidermax"
-    t.boolean  "hasAllocation"
     t.integer  "primary_focus_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "poll_id"
   end
 
+  add_index "questions", ["poll_id"], name: "index_questions_on_poll_id"
   add_index "questions", ["primary_focus_id"], name: "index_questions_on_primary_focus_id"
 
   create_table "questions_secondary_focus", id: false, force: true do |t|
@@ -159,13 +160,11 @@ ActiveRecord::Schema.define(version: 20140817173820) do
 
   create_table "userpolls", force: true do |t|
     t.integer  "poll_id"
-    t.integer  "answer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
   end
 
-  add_index "userpolls", ["answer_id"], name: "index_userpolls_on_answer_id"
   add_index "userpolls", ["poll_id"], name: "index_userpolls_on_poll_id"
   add_index "userpolls", ["user_id"], name: "index_userpolls_on_user_id"
 
@@ -182,6 +181,7 @@ ActiveRecord::Schema.define(version: 20140817173820) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.date     "join_date"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

@@ -1,0 +1,71 @@
+{
+  "options": {
+    "find_existing_by": ["id"]
+  },
+  "records": [
+    {
+      "sprig_id": 1,
+      "id": 1,
+      "poll_id": "<%= sprig_record(Poll, 1).id %>",
+      "slidermin": 0,
+      "slidermax": 100,
+      "primary_focus_id": "<%= sprig_record(Focus, 6).id %>",
+      "description": "How do you feel about satisfying your basic needs and right to live?"
+    },
+    {
+      "sprig_id": 2,
+      "id": 2,
+      "poll_id": "<%= sprig_record(Poll, 1).id %>",
+      "slidermin": 0,
+      "slidermax": 100,
+      "primary_focus_id": "<%= sprig_record(Focus, 5).id %>",
+      "description": "How sparked and energized are you about your right to experience and feel?"
+    },
+    {
+      "sprig_id": 3,
+      "id": 3,
+      "poll_id": "<%= sprig_record(Poll, 1).id %>",
+      "slidermin": 0,
+      "slidermax": 100,
+      "primary_focus_id": "<%= sprig_record(Focus, 4).id %>",
+      "description": "How valuable and influential do you feel about your right to think and contribute?"
+    },
+    {
+      "sprig_id": 4,
+      "id": 4,
+      "poll_id": "<%= sprig_record(Poll, 1).id %>",
+      "slidermin": 0,
+      "slidermax": 100,
+      "primary_focus_id": "<%= sprig_record(Focus, 3).id %>",
+      "description": "How do you feel about your right to accept yourself for who you are?"
+    },
+    {
+      "sprig_id": 5,
+      "id": 5,
+      "poll_id": "<%= sprig_record(Poll, 1).id %>",
+      "slidermin": 0,
+      "slidermax": 100,
+      "primary_focus_id": "<%= sprig_record(Focus, 2).id %>",
+      "description": "How do you feel about your right to speak, be heard, and trust?"
+    },
+    {
+      "sprig_id": 6,
+      "id": 6,
+      "poll_id": "<%= sprig_record(Poll, 1).id %>",
+      "slidermin": 0,
+      "slidermax": 100,
+      "primary_focus_id": "<%= sprig_record(Focus, 1).id %>",
+      "description": "How do you feel about your right to \"see\" clearly?"
+    }
+    ,
+    {
+      "sprig_id": 7,
+      "id": 7,
+      "poll_id": "<%= sprig_record(Poll, 1).id %>",
+      "slidermin": 0,
+      "slidermax": 100,
+      "primary_focus_id": "<%= sprig_record(Focus, 7).id %>",
+      "description": "How connected and trusting do you feel about your right to experience consciousness?"
+    }
+  ]
+}
