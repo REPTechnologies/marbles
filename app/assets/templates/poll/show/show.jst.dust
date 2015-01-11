@@ -1,1 +1,114 @@
-<h3>Poll</h3>
+<div class="panel">
+  <div id="poll-carousel" class="carousel slide" data-ride="carousel" data-wrap="false" data-interval="false">
+
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#poll-carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#poll-carousel" data-slide-to="1"></li>
+      <li data-target="#poll-carousel" data-slide-to="2"></li>
+      <li data-target="#poll-carousel" data-slide-to="3"></li>
+      <li data-target="#poll-carousel" data-slide-to="4"></li>
+      <li data-target="#poll-carousel" data-slide-to="5"></li>
+      <li data-target="#poll-carousel" data-slide-to="6"></li>
+      <li data-target="#poll-carousel" data-slide-to="7"></li>
+    </ol>
+
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1">
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <h3>Focus 1</h3>
+            <p>Description</p>
+            <div>Slider</div>
+          </div>
+          <div class="item">
+            <h3>Focus 2</h3>
+            <p>Description</p>
+            <div>Slider</div>
+          </div>
+          <div class="item">
+            <h3>Focus 3</h3>
+            <p>Description</p>
+            <div>Slider</div>
+          </div>
+          <div class="item">
+            <h3>Focus 4</h3>
+            <p>Description</p>
+            <div>Slider</div>
+          </div>
+          <div class="item">
+            <h3>Focus 5</h3>
+            <p>Description</p>
+            <div>Slider</div>
+          </div>
+          <div class="item">
+            <h3>Focus 6</h3>
+            <p>Description</p>
+            <div>Slider</div>
+          </div>
+          <div class="item">
+            <h3>Focus 7</h3>
+            <p>Description</p>
+            <div>Slider</div>
+          </div>
+          <div class="item">
+            <h3>Summary</h3>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <span class="badge">14</span>
+                Focus 1
+              </li>
+              <li class="list-group-item">
+                <span class="badge">14</span>
+                Focus 2
+              </li>
+              <li class="list-group-item">
+                <span class="badge">14</span>
+                Focus 3
+              </li>
+              <li class="list-group-item">
+                <span class="badge">14</span>
+                Focus 4
+              </li>
+              <li class="list-group-item">
+                <span class="badge">14</span>
+                Focus 5
+              </li>
+              <li class="list-group-item">
+                <span class="badge">14</span>
+                Focus 6
+              </li>
+              <li class="list-group-item">
+                <span class="badge">14</span>
+                Focus 7
+              </li>
+            </ul>
+            <p class="text-right">
+              <button id="submit-poll-btn" type="button" class="btn btn-primary">Submit</button>
+            </p>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="row">
+          <div class="col-xs-6 text-left">
+            <a class="btn btn-default" href="#poll-carousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              Previous
+            </a>
+          </div>
+          <div class="col-xs-6 text-right">
+            <a class="btn btn-default" href="#poll-carousel" role="button" data-slide="next">
+              Next
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>

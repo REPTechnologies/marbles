@@ -1,0 +1,19 @@
+#poll-carousel {
+  & > .row {
+    padding-bottom: 60px;
+  }
+
+  .carousel-inner {
+    margin-bottom: 10px;
+  }
+
+  .carousel-indicators {
+    li {
+      border-color: $dark-text-color;
+    }
+
+    .active {
+      background-color: $dark-text-color;
+    }
+  }
+}
