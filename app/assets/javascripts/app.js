@@ -51,6 +51,7 @@
     Marbles.execute('set:focus:list', options.foci);
     Marbles.execute('set:scope:list', options.scopes);
     Marbles.execute('set:event:type:list', options.eventTypes);
+    Marbles.execute('set:active:poll', options.poll);
   });
 
   Marbles.respond.setHandler('default:region', function () {

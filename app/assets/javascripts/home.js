@@ -12,7 +12,8 @@
       currentUser: gon.current_user,
       foci: gon.foci,
       scopes: gon.scopes,
-      eventTypes: gon.event_types
+      eventTypes: gon.event_types,
+      poll: gon.poll
     });
 
     resizeFooter();
