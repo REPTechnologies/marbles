@@ -30,7 +30,7 @@ describe "Add Page", :type => :feature, :js => true  do
 
     it "selects a secondary focus" do
       find('.focus-pool').all('.focus').last.drag_to find_by_id('secondary-drop')
-      expect(find_by_id('secondary_focus_id', :visible => false).value).to eq('6')
+      expect(find_by_id('secondary_focus_id', :visible => false).value).to eq('7')
     end
   end
 

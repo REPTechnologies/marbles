@@ -5,6 +5,6 @@ FactoryGirl.define do
     version 1
     name "MyString"
     description "MyString"
-    isValid false
+    active true
   end
 end

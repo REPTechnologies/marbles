@@ -4,8 +4,7 @@ FactoryGirl.define do
   factory :question do
     name "MyString"
     description "MyString"
-    slidermin 1
-    slidermax 1
-    hasAllocation false
+    slider_min 1
+    slider_max 100
   end
 end
