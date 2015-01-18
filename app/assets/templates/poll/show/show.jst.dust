@@ -27,10 +27,12 @@
           {#questions}
           <div class="item{?active} active{/active}">
             <h4>{description}</h4>
-            <input id="question{id}" data-question-id="{id}" type="text"
-                   data-slider-tooltip="hide" data-slider-step="1"
-                   data-slider-min="{slider_min}" data-slider-max="{slider_max}"
-                   data-slider-value="{slider_min}"/>
+            <div class="answer">
+              <input id="question{id}" data-question-id="{id}" type="text" class="slider"
+                     data-slider-tooltip="hide" data-slider-step="1"
+                     data-slider-min="{slider_min}" data-slider-max="{slider_max}"
+                     data-slider-value="{slider_min}"/>
+            </div>
           </div>
           {/questions}
           <div class="item">

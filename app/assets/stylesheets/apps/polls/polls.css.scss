@@ -5,9 +5,20 @@
 
   .carousel-inner {
     margin-bottom: 10px;
+
+    .answer {
+      padding: 0 10px;
+      margin: 20px 0;
+    }
+
+    .slider-horizontal {
+      width: 100%;
+    }
   }
 
   .carousel-indicators {
+    bottom: 10px;
+
     li {
       border-color: $dark-text-color;
     }

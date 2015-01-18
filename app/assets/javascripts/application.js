@@ -17,6 +17,7 @@
 //= require crossfilter
 //= require dc
 //= require bootstrap
+//= require bootstrap-slider
 //= require underscore
 //= require underscore.string
 //= require backbone
