@@ -12,5 +12,8 @@ class HomeController < ApplicationController
     
     @scopes = Scope.all
     gon.rabl template: "app/views/scopes/index.json.rabl", as: "scopes"
+
+    @poll = Poll.find_by active: true
+    gon.rabl template: "app/views/polls/show.json.rabl", as: "poll"
   end
 end
