@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150111202628) do
+ActiveRecord::Schema.define(version: 20150118161108) do
 
   create_table "answers", force: true do |t|
     t.integer  "slider"
@@ -106,7 +106,7 @@ ActiveRecord::Schema.define(version: 20150111202628) do
     t.string   "name"
     t.string   "description"
     t.integer  "organization_id"
-    t.boolean  "isValid"
+    t.boolean  "active"
     t.datetime "creationDateTime"
     t.datetime "created_at"
     t.datetime "updated_at"
