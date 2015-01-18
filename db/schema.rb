@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150118161108) do
+ActiveRecord::Schema.define(version: 20150118162903) do
 
   create_table "answers", force: true do |t|
     t.integer  "slider"
@@ -117,8 +117,8 @@ ActiveRecord::Schema.define(version: 20150118161108) do
   create_table "questions", force: true do |t|
     t.string   "name"
     t.string   "description"
-    t.integer  "slidermin"
-    t.integer  "slidermax"
+    t.integer  "slider_min"
+    t.integer  "slider_max"
     t.integer  "primary_focus_id"
     t.datetime "created_at"
     t.datetime "updated_at"
