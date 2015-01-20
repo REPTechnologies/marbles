@@ -28,5 +28,20 @@ describe "Marbles", :type => :feature, :js => true do
       expect(page).to have_content("Recommendations")
     end
 
+    it "displays the mission page" do
+      visit "/mission"
+      expect(page).to have_content("Mission Page")
+    end
+
+    it "displays the add page" do
+      visit "/help"
+      expect(page).to have_content("Help Page")
+    end
+
+    it "displays the add page" do
+      visit "/contact"
+      expect(page).to have_content("Contact Page")
+    end
+
   end
 end
