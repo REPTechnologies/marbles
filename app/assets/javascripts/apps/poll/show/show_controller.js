@@ -7,6 +7,9 @@
         var poll = Marbles.request('get:active:poll');
         poll.get('questions').at(0).set('active', true);
 
+        var userpoll = Marbles.request('new:userpoll');
+        userpoll.set('poll_id', poll.get('id'));
+
         this.layout = this.getLayoutView(poll);
         this.show(this.layout);
       },
