@@ -1,6 +1,6 @@
-class V1::UserpollsController < ApiController
+class V1::UserpollsController < AuthenticatedApiController
   respond_to :json
-  before_action :set_userpoll, only: [:show]
+  before_action :set_userpoll, only: :show
 
   # GET /userpolls
   # GET /userpolls.json
