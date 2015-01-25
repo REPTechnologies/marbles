@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150118162903) do
+ActiveRecord::Schema.define(version: 20150125170121) do
 
   create_table "answers", force: true do |t|
     t.integer  "slider"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20150118162903) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "userpoll_id"
+    t.integer  "change"
   end
 
   add_index "answers", ["question_id"], name: "index_answers_on_question_id"
@@ -181,6 +182,7 @@ ActiveRecord::Schema.define(version: 20150118162903) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.date     "join_date"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
