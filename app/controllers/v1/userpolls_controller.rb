@@ -35,7 +35,7 @@ class V1::UserpollsController < AuthenticatedApiController
     end
 
     def eager_userpoll
-      Userpoll.includes(:answers)
+      Userpoll.includes(answers: {question: :primary_focus})
     end
 
     def userpoll_context

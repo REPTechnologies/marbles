@@ -10,6 +10,6 @@ class V1::AnswersController < AuthenticatedApiController
   private
     # Use callbacks to share common setup or constraints between actions.
     def eager_answer
-      Answer.includes(:question)
+      Answer.includes(question: :primary_focus)
     end
 end
