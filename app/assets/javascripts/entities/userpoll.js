@@ -17,7 +17,7 @@
 
     Marbles.respond.setHandler('new:userpoll', function () {
       var userpoll = new Entities.Userpoll();
-      userpoll.set('answers', Marbles.request('new:answers'));
+      userpoll.get('answers').add(Marbles.request('new:answers'));
       return userpoll;
     });
 

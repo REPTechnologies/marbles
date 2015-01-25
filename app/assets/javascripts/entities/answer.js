@@ -3,16 +3,7 @@
 
   Marbles.module('Entities', function (Entities, Marbles, Backbone, Marionette, $, _) {
 
-    Entities.Answer = Marbles.RelationalModel.extend({
-      relations: [{
-        type: Backbone.HasOne,
-        key: 'question',
-        relatedModel: 'Question',
-        collectionType: 'QuestionCollection',
-        includeInJSON: 'id',
-        keyDestination: 'question_id'
-      }]
-    });
+    Entities.Answer = Marbles.RelationalModel.extend({});
 
     Entities.AnswerCollection = Backbone.Collection.extend({
       model: Entities.Answer
@@ -28,7 +19,7 @@
         this.push(Marbles.request('new:answer'));
       }, answers);
 
-      return new Entities.AnswerCollection(answers);
+      return answers;
     });
 
   });

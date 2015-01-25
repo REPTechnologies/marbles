@@ -13,11 +13,11 @@
       options.contentType = 'application/json';
       var data = {};
       if (model.paramRoot) {
-        data[model.paramRoot] = toData(model, options);
+        data[model.paramRoot] = JSON.parse(toData(model, options));
+        options.data = JSON.stringify(data);
       } else {
-        data = toData(model, options);
+        options.data = toData(model, options);
       }
-      options.data = JSON.stringify(data);
     }
 
     var promise = sync(method, model, options);

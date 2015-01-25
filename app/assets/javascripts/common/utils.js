@@ -43,7 +43,9 @@
           delete bindings[key];
         });
       }
-      view.binder.bind(view.model, view.el, bindings, options);
+      var model = options.model;
+      delete options.model;
+      view.binder.bind(model || view.model, view.el, bindings, options);
     },
     nav: function nav (fragment, options) {
       options = options || {};
