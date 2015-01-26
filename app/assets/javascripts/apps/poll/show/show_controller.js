@@ -50,13 +50,17 @@
         return new Show.Layout({model: poll});
       },
       pollSubmit: function pollSubmitFn() {
-        var valid = this.userpoll.save({}, {
-          success: saveSuccess,
-          error: saveFailure
-        });
+        if (Marbles.request('is:current:user:authenticated')) {
+          var valid = this.userpoll.save({}, {
+            success: saveSuccess,
+            error: saveFailure
+          });
 
-        if (!valid) {
-          Marbles.commands.execute('error:invalid', this.userpoll.validationError);
+          if (!valid) {
+            Marbles.commands.execute('error:invalid', this.userpoll.validationError);
+          }
+        } else {
+          Marbles.execute('show:login:modal');
         }
       }
     });

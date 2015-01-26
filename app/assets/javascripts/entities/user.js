@@ -32,6 +32,10 @@
       return currentUser.get('created_at');
     });
 
+    Marbles.respond.setHandler('is:current:user:authenticated', function () {
+      return !!(currentUser.get && currentUser.get('email'));
+    });
+
   });
 
 }());

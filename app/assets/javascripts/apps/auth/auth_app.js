@@ -13,6 +13,10 @@
     Marbles.commands.setHandler('new:session', function () {
       window.location = Routes.new_user_session_path();
     });
+
+    Marbles.commands.setHandler('show:login:modal', function () {
+      Marbles.headerRegion.currentView.authRegion.$el.find('.log-in').click();
+    });
   });
 
 }());

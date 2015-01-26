@@ -38,11 +38,8 @@
       this.listenTo(view, 'destroy', this.destroy);
     },
     _requireLogin: function requireLoginFn() {
-      if (this.requireLogin) {
-        var currentUser = Marbles.request('get:current:user');
-        if (!currentUser.get('email')) {
-          window.location = Routes.user_session_path();
-        }
+      if (this.requireLogin && !Marbles.request('is:current:user:authenticated')) {
+        Marbles.execute('new:session');
       }
     }
   });
