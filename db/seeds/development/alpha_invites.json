@@ -1,0 +1,31 @@
+{
+  "options": {
+    "find_existing_by": ["email"]
+  },
+  "records": [
+    {
+      "sprig_id": 1,
+      "email": "dev5@email.com"
+    },
+    {
+      "sprig_id": 2,
+      "email": "dev6@email.com"
+    },
+    {
+      "sprig_id": 3,
+      "email": "dev1@email.com"
+    },
+    {
+      "sprig_id": 4,
+      "email": "dev2@email.com"
+    },
+    {
+      "sprig_id": 5,
+      "email": "dev3@email.com"
+    },
+    {
+      "sprig_id": 6,
+      "email": "dev4@email.com"
+    }
+  ]
+}

@@ -7,4 +7,15 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :events, :foreign_key => "attendee_id", :join_table => "attendees_events"
   has_and_belongs_to_many :organizations
   has_many :userpolls, :inverse_of => :user
+
+  before_validation :alpha_invited?
+
+  private
+
+    def alpha_invited?
+      unless AlphaInvite.exists?(email: email)
+        errors.add :email, "is not on our invite list"
+      end
+    end
+
 end
