@@ -76,7 +76,9 @@ body {
   left: 0;
 }
 
-.accent {
+.accent,
+.accent a,
+a.accent {
   color: $accent-color;
 }
 

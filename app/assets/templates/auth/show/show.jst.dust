@@ -1,28 +1,18 @@
 {?email}
   <div class="authenticated row">
-    <div class="col-xs-8">
-      <a href="{edit_user_registration_path}" class="edit-user btn-link">{email}</a>
-    </div>
-    <div class="col-xs-4 text-right">
+    <div class="col-xs-12 text-right">
+      <a href="{edit_user_registration_path}" class="edit-user btn-link">{email}</a>&nbsp;
       <button class="log-out btn btn-link btn-xs">Log Out</button>
     </div>
   </div>
 {:else}
   <div class="not-authenticated row">
-    <div class="col-xs-6">
-      <button class="log-in btn btn-link btn-xs" data-toggle="modal" data-target="#log-in-modal">Log In</button>
-    </div>
-    <div class="col-xs-6 text-right">
-      <button class="sign-up btn btn-link btn-xs" data-toggle="modal" data-target="#sign-up-modal">Sign Up</a>
+    <div class="col-xs-12 text-right">
+      <button class="log-in btn btn-default" data-toggle="modal" data-target="#log-in-modal">Log In</button>&nbsp;
+      <button class="sign-up btn btn-default" data-toggle="modal" data-target="#sign-up-modal">Sign Up</a>
     </div>
   </div>
 {/email}
-
-<div class="row center">
-  <div class="col-xs-12">
-    <input type="search" placeholder="Search" name="search" class="form-control"/>
-  </div>
-</div>
 
 {>"modals/auth/login"/}
 {>"modals/auth/signup"/}
