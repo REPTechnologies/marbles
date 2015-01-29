@@ -1,13 +1,29 @@
 {?email}
   <div class="authenticated row">
     <div class="col-xs-12 text-right">
-      <a href="{edit_user_registration_path}" class="edit-user btn-link">{email}</a>&nbsp;
-      <button class="log-out btn btn-link btn-xs">Log Out</button>
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="user-menu" data-toggle="dropdown" aria-expanded="true">
+          <span class="glyphicon glyphicon-cog"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="user-menu">
+          <li role="presentation">
+            <a role="menuitem" tabindex="-1"
+               href="{edit_user_registration_path}" class="edit-user ">{email}</a>
+          </li>
+          <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="#" class="log-out">Log Out</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 {:else}
   <div class="not-authenticated row">
-    <div class="col-xs-12 text-right">
+    <div class="col-xs-12 visible-xs text-right">
+      <button class="log-in btn btn-default btn-sm" data-toggle="modal" data-target="#log-in-modal">Log In</button>&nbsp;
+      <button class="sign-up btn btn-default btn-sm" data-toggle="modal" data-target="#sign-up-modal">Sign Up</a>
+    </div>
+    <div class="col-xs-12 hidden-xs text-right">
       <button class="log-in btn btn-default" data-toggle="modal" data-target="#log-in-modal">Log In</button>&nbsp;
       <button class="sign-up btn btn-default" data-toggle="modal" data-target="#sign-up-modal">Sign Up</a>
     </div>
