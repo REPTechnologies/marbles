@@ -1,1 +1,53 @@
-<h2>Welcome Page</h2>
+<section class="section" id="banner">
+  <div class="container">
+  </div>
+</section>
+
+<section class="section" id="howItWorks">
+  <div class="container">
+    <div class="sectionHeader">
+    <h1>How marbles works</h1>
+    </div>
+    <div class="row">
+      <div id="phoneFinger" class="col-lg-6 col-md-6 col-sm-offset-3 col-md-offset-0 col-lg-offset-0 col-xs-offset-2">
+        {>"phoneRateSystemFinger"/}
+      </div>
+      <div id="ratingExplained" class="col-lg-6 col-md-6 col-sm-offset-3 col-md-offset-0 col-lg-offset-0 col-xs-offset-1">
+        {>"ratingSystemExplained"/}
+      </div>
+    </div>
+    <div class="sectionBottomHeader">
+      <span class="lineTextWhite">Rate what's most </span>
+      <span class="lineTextorange">important </span>
+      <span class="lineTextWhite">to </span>
+      <span class="lineTextorange">you.</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="trackProgress">
+  <div class="container">
+    <div class="sectionHeader">
+    <h1>Track your progress</h1>
+    </div>
+    <div class="row col-lg-offset-4 col-md-offset-3 col-sm-offset-3 col-xs-offset-2" id="trackMonitors">
+        {>"trackMonitors"/}
+    </div>
+    <div class="sectionBottomHeader" style="color: white;">
+      <h1>Use our app to see trends and monitor your activity</h1>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="callToAction">
+  <div class="container">
+  </div>
+</section>
+
+<section class="section" id="comingSoon">
+  <div class="container">
+    <div class="sectionHeader">
+    <h1>Coming Soon!</h1>
+    </div>
+  </div>
+</section>

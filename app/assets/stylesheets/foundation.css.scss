@@ -129,3 +129,104 @@ body {
 .dc-chart {
   float: none !important;
 }
+
+
+
+/*
+Sleep (zzzz), Nutrition, and Exercise:  Red - #e74c3c
+
+Stress and Emotional Well-being:  Orange - #e67e22
+
+Career and Academics:  Yellow - #f1c40f
+
+Relationships and Social Connection:  Green - #26a65b
+
+Speaking Openly and Expression:  Blue - #3498db
+
+Sense of Vision, Purpose, and Meaning:  Purple - #9b59b6
+
+Connection, Identity, and Culture:  Gray - #95a5a6, DB0A5B
+
+Other colors for color scheme
+
+Clouds - #ecf0f1
+
+Light Black - #34495e
+
+Dark Black - #2c3e50
+
+NEW COLOR SCHEME ----------------------
+
+#191970 "Purpose and Emotional Clarity" DARK BLUE
+#1e90ff"Decision Making & Reliability"   NORMAL BLUE
+#228b22 Relationships & Confidence"       GREEN
+#ffcc33"Academics & Motivation"           YELLOW
+#f57415"Stress & Emotional Wellbeing"      ORANGE
+#cc0033” Sleep, Nutrition, & Exercise"      MAJENTA/PINK
+#6e006e" Sense of Self and Belonging         PURPLE
+*/
+
+/*------------------ ALAN's CODE ----- */
+#banner{
+  background: image-url('University-of-Minnesota.png') no-repeat center center;
+  height: 320px;
+  border-radius: 4px;
+}
+#howItWorks{
+  background-color: #3498db;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+#ratingExplained{
+  margin-top: 100px;
+}
+@media screen and (max-width: 545px){
+  .fingerPhone{
+    height: 40px;
+  }
+}
+.sectionHeader{
+  text-align: center;
+  color: white;
+  padding: 20px 0;
+}
+.sectionBottomHeader{
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.lineTextWhite{
+  font-family: Hero, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 36px;
+  color: white;
+}
+.lineTextorange{
+  font-family: Hero, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 36px;
+  color: #e67e22;
+}
+
+#trackProgress{
+  background-color: #e67e22;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+#trackMonitors{
+  text-align-last: center;
+}
+
+#callToAction{
+  background: image-url('UMN-NorthrupMall.png') no-repeat center center;
+  height: 320px;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+#comingSoon{
+  background-color: #3498db;
+  height: 100px;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+
