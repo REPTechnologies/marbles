@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150128033911) do
+ActiveRecord::Schema.define(version: 20150130000051) do
 
   create_table "alpha_invites", force: true do |t|
     t.string   "email"
@@ -130,6 +130,7 @@ ActiveRecord::Schema.define(version: 20150128033911) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "poll_id"
+    t.integer  "sequence"
   end
 
   add_index "questions", ["poll_id"], name: "index_questions_on_poll_id"
