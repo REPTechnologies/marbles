@@ -22,6 +22,10 @@
       return activePoll;
     });
 
+    Marbles.respond.setHandler('get:poll:length', function () {
+      return activePoll.get('questions').length;
+    });
+
   });
 
 }());

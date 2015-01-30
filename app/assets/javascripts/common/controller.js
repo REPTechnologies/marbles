@@ -7,6 +7,7 @@
       this.region = options.region || Marbles.request('default:region');
       this._instance_id = _.uniqueId('controller');
       Marbles.execute('register:instance', this, this._instance_id);
+      this._requireLogin();
       Marbles.Controller.__super__.constructor.apply(this, arguments);
     },
     destroy: function destroyController() {
@@ -35,6 +36,11 @@
       }
       this._mainView = view;
       this.listenTo(view, 'destroy', this.destroy);
+    },
+    _requireLogin: function requireLoginFn() {
+      if (this.requireLogin && !Marbles.request('is:current:user:authenticated')) {
+        Marbles.execute('new:session');
+      }
     }
   });
 

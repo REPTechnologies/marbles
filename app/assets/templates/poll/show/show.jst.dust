@@ -28,16 +28,16 @@
           <div class="item{?active} active{/active}">
             <h4>{description}</h4>
             <div class="answer">
-              <input id="question{id}" data-question-id="{id}" type="text" class="slider"
-                     data-slider-tooltip="hide" data-slider-step="1"
+              <input id="question{id}" data-question-id="{id}" type="text"
+                     class="slider-input" data-slider-tooltip="hide"
                      data-slider-min="{slider_min}" data-slider-max="{slider_max}"
-                     data-slider-value="{slider_min}"/>
+                     data-slider-value="{slider_min}" data-slider-step="1"/>
             </div>
           </div>
           {/questions}
           <div class="item">
             <h3>Summary</h3>
-            <ul class="list-group">
+            <ul class="answers list-group">
               {#questions}
               <li class="list-group-item">
                 <span class="badge">0</span>

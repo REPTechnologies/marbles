@@ -17,15 +17,18 @@ describe "Marbles", :type => :feature, :js => true do
       expect(page).to have_content("Primary Focus")
     end
 
-    it "displays the trends page" do
+    it "displays the poll page" do
+      visit "/poll"
+      expect(page).to have_content("Previous")
+      expect(page).to have_content("Next")
+    end
+
+    it "displays the login page if unathenticated on the trends page" do
       visit "/trends"
-      expect(page).to have_content("Trends")
-      expect(page).to have_content("Most Recent")
-      expect(page).to have_content("Polls Taken")
-      expect(page).to have_content("Trending Up")
-      expect(page).to have_content("Trending Down")
-      expect(page).to have_content("Score Consistency")
-      expect(page).to have_content("Recommendations")
+      expect(page).to have_content("Log In")
+      expect(page).to have_content("Remember me")
+      expect(page).to have_content("Sign up")
+      expect(page).to have_content("Forgot your password?")
     end
 
     it "displays the mission page" do

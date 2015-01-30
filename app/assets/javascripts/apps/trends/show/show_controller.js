@@ -15,34 +15,6 @@
     return days;
   }
 
-  function pollFactory() {
-    var answers = [];
-    var foci = _.map(gon.foci, _.clone);
-    var time = moment().subtract(400, 'days');
-    for (var i = 0; i <= 200; ++i) {
-      var day = '' + time.date();
-      var month = '' + (time.month() + 1);
-      var year = '' + time.year();
-      _.each(foci, function (focus) {
-        var previous = focus.previous || 50;
-        var change = _.random(-10, 10);
-        var score = Math.max(Math.min(previous + change, 100), 0);
-        answers.push({
-          date: year + '-' + month + '-' + day,
-          focus: focus.name,
-          color: focus.color,
-          description: focus.description,
-          score: score,
-          change: change,
-          poll: {id: year + month + day} 
-        });
-        focus.previous = score;
-      });
-      time.add(2, 'days');
-    }
-    return answers;
-  }
-
   /*function eventFactory(year, numMonths) {
     var events = [];
     for (var i = 1; i <= numMonths; ++i) {
@@ -67,6 +39,7 @@
 
   Marbles.module('TrendsApp.Show', function (Show, Marbles, Backbone, Marionette, $, _) {
     Show.Controller = Marbles.Controller.extend({
+      requireLogin: true,
       initialize: function initializeFn() {
         this.pollDataPromise = this.getPollData();
         //this.eventDataPromise = this.getEventData();
@@ -79,7 +52,7 @@
 
         $.when(this.pollDataPromise)//, this.eventDataPromise)
           .done($.proxy(function (pollData, eventData) {
-            this.ndxPoll = crossfilter(pollData.answers);
+            this.ndxPoll = crossfilter(pollData);
             //this.ndxEvent = crossfilter(eventData.events);
 
             this.show(this.layout);
@@ -122,12 +95,7 @@
         return deferred.promise();
       },*/
       getPollData: function getPollDataFn() {
-        var deferred = $.Deferred();
-        deferred.resolveWith(this, [{
-          answers: pollFactory('2014', 9)
-        }]);
-        deferred.done(this.processPollData);
-        return deferred.promise();
+        return $.getJSON(Routes.v1_answers_path()).done(this.processPollData);
       },
       /*processEventData: function processEventDataFn(data) {
         data.events.forEach(function (event) {
@@ -136,12 +104,21 @@
           event.day = event.dd.getDay() + '.' + M.format.dayOfWeek(event.dd);
         });
       },*/
-      processPollData: function processPollDataFn(data) {
+      processPollData: function processPollDataFn(answers) {
         var now = moment();
-        data.answers.forEach(function (answer) {
+        answers.forEach(function (answer) {
+          answer.date = answer.created_at.split('T')[0];
+          answer.poll = {id: answer.userpoll_id};
+
+          var focus = answer.question.primary_focus;
+          answer.focus = focus.name;
+          answer.color = focus.color;
+          answer.description = focus.description;
+
           answer.dd = M.format.date.parse(answer.date);
           answer.month = d3.time.month(answer.dd);
           answer.day = answer.dd.getDay() + '.' + M.format.dayOfWeek(answer.dd);
+
           var days = now.diff(answer.dd, 'days');
           var weight = Math.max(0, 1 - 0.03 * days);
           answer.weightedChange = answer.change * weight;

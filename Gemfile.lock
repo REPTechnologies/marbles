@@ -179,6 +179,7 @@ GEM
       mini_portile (= 0.6.0)
     oj (2.10.2)
     orm_adapter (0.5.0)
+    pg (0.18.1)
     poltergeist (1.5.1)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
@@ -207,6 +208,11 @@ GEM
       sprockets-rails (~> 2.0)
     rails-observers (0.1.2)
       activemodel (~> 4.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.3)
+    rails_stdout_logging (0.0.3)
     railties (4.1.5)
       actionpack (= 4.1.5)
       activesupport (= 4.1.5)
@@ -343,10 +349,12 @@ DEPENDENCIES
   marionette_dust (~> 0.1)
   modernizr-rails (~> 2.7)
   oj (~> 2.7)
+  pg (~> 0.18)
   poltergeist
   rabl (~> 0.9)
   railroady
   rails (= 4.1.5)
+  rails_12factor (= 0.0.3)
   rmagick (~> 2.13)
   rspec-collection_matchers
   rspec-legacy_formatters

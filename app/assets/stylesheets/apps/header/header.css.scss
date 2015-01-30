@@ -1,12 +1,12 @@
 #header-region {
-  height: $header-height * 2;
+  height: $header-height;
   background-color: $white-color;
   z-index: 100;
   @include single-box-shadow;
 }
 
 #fake-header {
-  height: $header-height * 2;
+  height: $header-height;
   visibility: hidden;
 }
 
@@ -17,6 +17,7 @@ header {
 
 .header-logo {
   cursor: pointer;
+  vertical-align: middle;
 }
 
 .header-button {
@@ -29,7 +30,13 @@ header {
   text-align: center;
   padding-top: $padding-size;
   cursor: pointer;
-  
+}
+
+.header-link {
+  margin: 0 0 0 8px;
+  font-size: 22px;
+  vertical-align: middle;
+
   .accent {
     font-family: Hero, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
@@ -48,6 +55,11 @@ header {
     margin-top: 0;
     padding-top: 0;
     text-align: left;
+  }
+
+  .header-link {
+    margin: 0 0 0 $margin-size;
+    font-size: 26px;
   }
 }
 

@@ -59,8 +59,8 @@ body {
 }
 
 #messages-region {
-  top: 100px;
-  z-index: 90;
+  top: 79px;
+  z-index: 2000;
 }
 
 #messages {
@@ -76,7 +76,9 @@ body {
   left: 0;
 }
 
-.accent {
+.accent,
+.accent a,
+a.accent {
   color: $accent-color;
 }
 

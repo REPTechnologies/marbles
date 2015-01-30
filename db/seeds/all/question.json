@@ -10,7 +10,8 @@
       "slider_min": 0,
       "slider_max": 100,
       "primary_focus_id": "<%= sprig_record(Focus, 6).id %>",
-      "description": "How do you feel about satisfying your basic needs and right to live?"
+      "description": "How grounded, connected, safe, and capable of survival you feel?",
+      "sequence": 1
     },
     {
       "sprig_id": 2,
@@ -19,7 +20,8 @@
       "slider_min": 0,
       "slider_max": 100,
       "primary_focus_id": "<%= sprig_record(Focus, 5).id %>",
-      "description": "How sparked and energized are you about your right to experience and feel?"
+      "description": "How sparked, energized, and inspired do you feel?",
+      "sequence": 2
     },
     {
       "sprig_id": 3,
@@ -28,7 +30,8 @@
       "slider_min": 0,
       "slider_max": 100,
       "primary_focus_id": "<%= sprig_record(Focus, 4).id %>",
-      "description": "How valuable and influential do you feel about your right to think and contribute?"
+      "description": "How influencial, valuable, and capable do you feel",
+      "sequence": 3
     },
     {
       "sprig_id": 4,
@@ -37,7 +40,8 @@
       "slider_min": 0,
       "slider_max": 100,
       "primary_focus_id": "<%= sprig_record(Focus, 3).id %>",
-      "description": "How do you feel about your right to accept yourself for who you are?"
+      "description": "How open, accepting, and content do you feel?",
+      "sequence": 4
     },
     {
       "sprig_id": 5,
@@ -46,7 +50,8 @@
       "slider_min": 0,
       "slider_max": 100,
       "primary_focus_id": "<%= sprig_record(Focus, 2).id %>",
-      "description": "How do you feel about your right to speak, be heard, and trust?"
+      "description": "How trusting, reliable, decisive, and committed do you feel?",
+      "sequence": 5
     },
     {
       "sprig_id": 6,
@@ -55,9 +60,9 @@
       "slider_min": 0,
       "slider_max": 100,
       "primary_focus_id": "<%= sprig_record(Focus, 1).id %>",
-      "description": "How do you feel about your right to \"see\" clearly?"
-    }
-    ,
+      "description": "How clear, purposeful, intentional, and intuitive do you feel?",
+      "sequence": 6
+    },
     {
       "sprig_id": 7,
       "id": 7,
@@ -65,7 +70,8 @@
       "slider_min": 0,
       "slider_max": 100,
       "primary_focus_id": "<%= sprig_record(Focus, 7).id %>",
-      "description": "How connected and trusting do you feel about your right to experience consciousness?"
+      "description": "How connected, supported, comfortable, and belonging do you feel?",
+      "sequence": 7
     }
   ]
 }

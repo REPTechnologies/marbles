@@ -1,9 +1,11 @@
 (function () {
+  'use strict';
 
   function displayAlert() {
     var args = new Args([
       {value: Args.STRING | Args.Required},
-      {key: Args.STRING | Args.Optional, _default: 'error'}
+      {key: Args.STRING | Args.Optional, _default: 'error'},
+      {prefix: Args.STRING | Args.Optional, _default: ''}
     ], arguments);
 
     dust.render('alert', args, function (err, out) {
@@ -11,13 +13,17 @@
     });
   }
 
-  function displayErrors(errors) {
+  function displayErrors(errors, prefix) {
     if ($.isArray(errors)) {
       $.each(errors, function (i, error) {
-        displayAlert(error);
+        displayAlert(error, {prefix: prefix});
+      });
+    } else if ($.isPlainObject(errors)) {
+      $.each(errors, function (key, error) {
+        displayErrors(error, _.str.titleize(_.str.humanize(key)) + ' ');
       });
     } else {
-      displayAlert(errors);
+      displayAlert(errors, {prefix: prefix});
     }
   }
 
