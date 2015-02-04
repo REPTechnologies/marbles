@@ -10,7 +10,7 @@
       "slider_min": 0,
       "slider_max": 100,
       "primary_focus_id": "<%= sprig_record(Focus, 6).id %>",
-      "description": "How grounded, connected, safe, and capable of survival you feel?",
+      "description": "How grounded, safe, and capable of survival you feel?",
       "sequence": 1
     },
     {
@@ -30,7 +30,7 @@
       "slider_min": 0,
       "slider_max": 100,
       "primary_focus_id": "<%= sprig_record(Focus, 4).id %>",
-      "description": "How influencial, valuable, and capable do you feel",
+      "description": "How influencial, valuable, and capable do you feel?",
       "sequence": 3
     },
     {
