@@ -50,7 +50,7 @@
       "slider_min": 0,
       "slider_max": 100,
       "primary_focus_id": "<%= sprig_record(Focus, 2).id %>",
-      "description": "How trusting, reliable, decisive, and committed do you feel?",
+      "description": "How dedicated, reliable, and decisive do you feel?",
       "sequence": 5
     },
     {
