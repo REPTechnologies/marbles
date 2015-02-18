@@ -1,5 +1,6 @@
 <section class="section" id="banner">
   <div class="container">
+  <h1 id="bannerText">Discover local events and<br> activities that help you<br> live a better life</h1>
   </div>
 </section>
 
@@ -41,13 +42,35 @@
 
 <section class="section" id="callToAction">
   <div class="container">
+      <h1 id="callToActionText" class="sectionHeader">Start your journey here.</h1>
   </div>
 </section>
 
 <section class="section" id="comingSoon">
   <div class="container">
-    <div class="sectionHeader">
+    <div class="sectionHeader col-md-12 ">
     <h1>Coming Soon!</h1>
     </div>
+  </div>
+</section>
+
+<section class="section" id="eventList">
+  <div class="container">
+    <div class="sectionHeader">
+    <h1>Marbles notifies you about relevant events near 
+your campus</h1>
+    </div>
+    <div class="row">
+      <div id="phoneFinger" class="col-md-6 text-center">
+        {>"monitorWithEvents"/}
+      </div>
+      <div id="ratingExplained" class="col-md-6 text-center">
+        {>"eventGrid"/}
+      </div>
+    </div>
+    <h1  class="sectionHeader">
+Our sorting algorithm matches events that suit your 
+needs. Eliminiate the clutter.
+    </h1>
   </div>
 </section>

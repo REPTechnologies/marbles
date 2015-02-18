@@ -170,7 +170,7 @@ NEW COLOR SCHEME ----------------------
 
 /*------------------ ALAN's CODE ----- */
 #banner{
-  background: image-url('University-of-Minnesota.png') no-repeat center center;
+  background: image-url('University-of-Minnesota.jpg') no-repeat center center;
   height: 320px;
   border-radius: 4px;
 }
@@ -180,6 +180,7 @@ NEW COLOR SCHEME ----------------------
   margin-top: 20px;
 }
 #ratingExplained{
+  padding-top: 50px;
 }
 @media screen and (max-width: 545px){
   .fingerPhone{
@@ -201,6 +202,7 @@ NEW COLOR SCHEME ----------------------
   font-size: 36px;
   color: white;
 }
+
 .lineTextorange{
   font-family: Hero, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 36px;
@@ -217,7 +219,7 @@ NEW COLOR SCHEME ----------------------
 }
 
 #callToAction{
-  background: image-url('UMN-NorthrupMall.png') no-repeat center center;
+  background: image-url('large.jpg') no-repeat center center;
   height: 320px;
   border-radius: 4px;
   margin-top: 20px;
@@ -228,6 +230,25 @@ NEW COLOR SCHEME ----------------------
   height: 100px;
   margin-top: 20px;
   border-radius: 4px;
+  margin-bottom: 20px;
 }
 
+#bannerText{
+  color: white;
+  padding-top: 70px;
+  padding-left: 40px;
+}
+#callToActionText{
+  color: white;
+  padding-top: 50px;
+}
 
+#eventList{
+  background-color: #e67e22;
+}
+
+//Peace of mind<--- We're selling this!
+//Call to action<----Problem presents itself
+//Trigger>Action>Reward/Investment
+//Down to earth>Connet to audience
+//
