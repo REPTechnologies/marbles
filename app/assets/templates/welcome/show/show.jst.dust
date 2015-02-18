@@ -68,8 +68,7 @@ your campus</h1>
         {>"eventGrid"/}
       </div>
     </div>
-    <h1  class="sectionHeader">
-Our sorting algorithm matches events that suit your 
+    <h1  class="sectionHeader">Our sorting algorithm matches events that suit your 
 needs. Eliminiate the clutter.
     </h1>
   </div>
