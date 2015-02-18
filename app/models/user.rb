@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :organizations
   has_many :userpolls, :inverse_of => :user
 
-  before_validation :alpha_invited?
+##  before_validation :alpha_invited?
 
   private
 
