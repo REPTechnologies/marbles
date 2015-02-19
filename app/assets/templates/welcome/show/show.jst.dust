@@ -1,1 +1,23 @@
 <h2>Welcome Page</h2>
+
+<section class="section" id="howItWorks">
+  <div class="container">
+    <div class="sectionHeader">
+      <h1>How marbles works</h1>
+    </div>
+    <div class="row">
+      <div id="phoneFinger" class="col-md-6 text-center">
+        {>"phoneRateSystemFinger"/}
+      </div>
+      <div id="ratingExplained" class="col-md-6 text-center">
+        {>"ratingSystemExplained"/}
+      </div>
+    </div>
+    <div class="sectionBottomHeader">
+      <span class="lineTextWhite">Rate what's most </span>
+      <span class="lineTextorange">important </span>
+      <span class="lineTextWhite">to </span>
+      <span class="lineTextorange">you.</span>
+    </div>
+  </div>
+</section>
