@@ -1,1 +1,75 @@
-<h2>Welcome Page</h2>
+<section class="section" id="banner">
+  <div class="container">
+  <h1 id="bannerText">Discover local events and<br> activities that help you<br> live a better life</h1>
+  </div>
+</section>
+
+<section class="section" id="howItWorks">
+  <div class="container">
+    <div class="sectionHeader">
+    <h1>How marbles works</h1>
+    </div>
+    <div class="row">
+      <div id="phoneFinger" class="col-md-6 text-center">
+        {>"phoneRateSystemFinger"/}
+      </div>
+      <div id="ratingExplained" class="col-md-6 text-center">
+        {>"ratingSystemExplained"/}
+      </div>
+    </div>
+    <div class="sectionBottomHeader">
+      <span class="lineTextWhite">Rate what's most </span>
+      <span class="lineTextorange">important </span>
+      <span class="lineTextWhite">to </span>
+      <span class="lineTextorange">you.</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="trackProgress">
+  <div class="container">
+    <div class="sectionHeader">
+    <h1>Track your progress</h1>
+    </div>
+    <div  id="trackMonitors" class="row text-center">
+        {>"trackMonitors"/}
+    </div>
+    <div class="sectionBottomHeader" style="color: white;">
+      <h1>Use our app to see trends and monitor your activity</h1>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="callToAction">
+  <div class="container">
+      <h1 id="callToActionText" class="sectionHeader">Start your journey here.</h1>
+  </div>
+</section>
+
+<section class="section" id="comingSoon">
+  <div class="container">
+    <div class="sectionHeader col-md-12 ">
+    <h1>Coming Soon!</h1>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="eventList">
+  <div class="container">
+    <div class="sectionHeader">
+    <h1>Marbles notifies you about relevant events near 
+your campus</h1>
+    </div>
+    <div class="row">
+      <div id="phoneFinger" class="col-md-6 text-center">
+        {>"monitorWithEvents"/}
+      </div>
+      <div id="ratingExplained" class="col-md-6 text-center">
+        {>"eventGrid"/}
+      </div>
+    </div>
+    <h1  class="sectionHeader">Our sorting algorithm matches events that suit your 
+needs. Eliminiate the clutter.
+    </h1>
+  </div>
+</section>
