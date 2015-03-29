@@ -4,7 +4,7 @@ describe "Marbles", :type => :feature, :js => true do
   describe "Marionette Routing" do
     it "displays the welcome page by default" do
       visit root_path
-      expect(page).to have_content("Welcome!")
+      expect(page).to have_content("Welcome to our marbles.mx alpha!")
     end
 
     it "displays the find page" do
