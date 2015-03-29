@@ -4,7 +4,7 @@ describe "Marbles", :type => :feature, :js => true do
   describe "Marionette Routing" do
     it "displays the welcome page by default" do
       visit root_path
-      expect(page).to have_content("Welcome Page")
+      expect(page).to have_content("Welcome to our marbles.mx alpha!")
     end
 
     it "displays the find page" do
@@ -33,17 +33,17 @@ describe "Marbles", :type => :feature, :js => true do
 
     it "displays the mission page" do
       visit "/mission"
-      expect(page).to have_content("Mission Page")
+      expect(page).to have_content("Our Mission is to help people feel good about themselves.")
     end
 
     it "displays the add page" do
       visit "/help"
-      expect(page).to have_content("Help Page")
+      expect(page).to have_content("Visit our FAQS at marbles.mx or contact us at marbles.mx with any questions.")
     end
 
     it "displays the add page" do
       visit "/contact"
-      expect(page).to have_content("Contact Page")
+      expect(page).to have_content("Contact us at marbles@reptech.io")
     end
 
   end
