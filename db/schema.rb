@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150329211103) do
+ActiveRecord::Schema.define(version: 20150330152739) do
 
   create_table "alpha_invites", force: true do |t|
     t.string   "email"
@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(version: 20150329211103) do
 
   create_table "foci", force: true do |t|
     t.string   "name"
-    t.text     "description", limit: 255
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "color"
