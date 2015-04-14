@@ -5,11 +5,16 @@
     var args = new Args([
       {value: Args.STRING | Args.Required},
       {key: Args.STRING | Args.Optional, _default: 'error'},
-      {prefix: Args.STRING | Args.Optional, _default: ''}
+      {prefix: Args.STRING | Args.Optional, _default: ''},
+      {timeout: Args.INT | Args.Optional, _default: 3000} // 3 second fade-out default
     ], arguments);
 
     dust.render('alert', args, function (err, out) {
-      $('#messages').append(out);
+      var $alertNode = $(out).appendTo($('#messages'));
+      window.setTimeout(function () {
+        // Removes the alert from the DOM (see http://getbootstrap.com/javascript/#alerts)
+        $alertNode.alert('close');
+      }, args.timeout);
     });
   }
 
